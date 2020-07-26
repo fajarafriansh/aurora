@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: heading
-  label: Posts
+  label: Content
 upload_dir: ''
 public_path: https://res.cloudinary.com/{{ CLOUD_NAME }}/image/upload/c_scale,w_auto:100,dpr_auto
 front_matter_path: https://res.cloudinary.com/{{ CLOUD_NAME }}/image/upload
