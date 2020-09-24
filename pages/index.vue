@@ -3,7 +3,7 @@
     <section>
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold">Articles</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+        <div class="mt-4 space-y-4">
           <ArticleCard
             v-for="article in articles"
             :key="article.title"
@@ -11,6 +11,14 @@
             :description="article.description"
             :author="article.author"
             :date="article.date.toLocaleDateString()"
+          />
+        </div>
+        <div class="w-1/3">
+          <SidebarList
+            v-for="article in articles"
+            :key="article.title"
+            :title="article.title"
+            :author="article.author"
           />
         </div>
       </div>
