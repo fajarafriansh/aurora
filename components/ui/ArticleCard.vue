@@ -1,6 +1,9 @@
 <template>
-  <nuxt-link class="flex text-gray-800 rounded shadow-md" :to="`/${slug}`">
-    <div class="w-3/4 p-6">
+  <nuxt-link
+    class="flex flex-col-reverse lg:flex-row text-gray-800 rounded shadow-md"
+    :to="`/${slug}`"
+  >
+    <div class="w-full lg:w-2/3 p-6">
       <header class="text-2xl font-bold">{{ title }}</header>
       <p class="mt-4">{{ description }}</p>
       <footer class="flex items-center mt-6">
@@ -16,9 +19,9 @@
       </footer>
     </div>
     <img
-      class="w-1/4 h-auto object-cover"
-      :src="author.image"
-      :alt="author.name"
+      class="w-full lg:w-1/3 h-48 lg:h-auto object-cover"
+      :src="cover"
+      :alt="title"
     />
   </nuxt-link>
 </template>
@@ -31,6 +34,10 @@ export default {
       default: null,
     },
     slug: {
+      type: String,
+      default: null,
+    },
+    cover: {
       type: String,
       default: null,
     },
