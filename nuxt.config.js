@@ -1,4 +1,7 @@
 export default {
+	// Nuxt rendering mode (https://nuxtjs.org/api/configuration-mode)
+  mode: 'universal',
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
