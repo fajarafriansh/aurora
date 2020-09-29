@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="flex" :to="`/${slug}`">
+  <nuxt-link class="flex space-x-4" :to="`/${slug}`">
     <h1 class="text-5xl font-semibold">01</h1>
     <div>
       <h1 class="text-base font-semibold mb-2">{{ title }}</h1>
