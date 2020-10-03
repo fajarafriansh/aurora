@@ -1,29 +1,31 @@
 <template>
-  <nuxt-link
-    class="flex flex-col-reverse lg:flex-row text-gray-800 rounded shadow-md"
-    :to="`/${slug}`"
-  >
-    <div class="w-full lg:w-2/3 p-6">
-      <header class="text-2xl font-bold">{{ title }}</header>
-      <p class="mt-4">{{ description }}</p>
-      <footer class="flex items-center mt-6">
-        <img
-          class="w-20 h-20 object-cover rounded-full border-4 border-teal-500"
-          :src="author.image"
-          :alt="author.name"
-        />
-        <div class="ml-6">
-          <p class="text-xl font-bold">{{ author.name }}</p>
-          <p class="text-sm mt-1">{{ date }}</p>
-        </div>
-      </footer>
-    </div>
-    <img
-      class="w-full lg:w-1/3 h-48 lg:h-auto object-cover"
-      :src="cover"
-      :alt="title"
-    />
-  </nuxt-link>
+  <div class="md:w-1/2 lg:w-full px-4 pt-10 lg:pt-6">
+    <nuxt-link
+      class="flex flex-col-reverse lg:flex-row text-gray-800 rounded shadow-md"
+      :to="`/${slug}`"
+    >
+      <div class="w-full lg:w-2/3 p-6">
+        <header class="text-2xl font-bold">{{ title }}</header>
+        <p class="mt-4">{{ description }}</p>
+        <footer class="flex items-center mt-6">
+          <img
+            class="w-12 h-12 object-cover rounded-full border-2 border-teal-500"
+            :src="author.image"
+            :alt="author.name"
+          />
+          <div class="ml-6">
+            <p class="text-base font-semibold">{{ author.name }}</p>
+            <p class="text-sm">{{ date | formatDate }}</p>
+          </div>
+        </footer>
+      </div>
+      <img
+        class="w-full lg:w-1/3 h-48 lg:h-auto object-cover"
+        :src="cover"
+        :alt="title"
+      />
+    </nuxt-link>
+  </div>
 </template>
 
 <script>

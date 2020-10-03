@@ -11,8 +11,8 @@
       />
       <div class="mt-10 lg:flex lg:space-x-8">
         <section class="lg:w-2/3">
-          <h3 class="text-2xl font-semibold">All Stories</h3>
-          <div class="mt-4 space-y-4">
+          <section-header>All Stories</section-header>
+          <div class="flex flex-wrap -mx-4">
             <ArticleCard
               v-for="article in articles"
               :key="article.title"
@@ -25,13 +25,14 @@
           </div>
         </section>
         <aside class="lg:w-1/3 mt-8 lg:mt-0">
-          <h3 class="text-2xl font-semibold">Popular</h3>
-          <div class="mt-4 space-y-4">
+          <section-header>Popular</section-header>
+          <div class="mt-6 space-y-4">
             <SidebarList
-              v-for="article in articles"
+              v-for="(article, index) in articles"
               :key="article.title"
               :title="article.title"
               :author="article.author"
+              :index="index + 1"
             />
           </div>
         </aside>
