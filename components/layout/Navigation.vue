@@ -23,17 +23,17 @@
       >
         <nuxt-link
           to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4"
+          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
           >About
         </nuxt-link>
         <nuxt-link
           to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4"
+          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
           >Category
         </nuxt-link>
         <nuxt-link
           to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4"
+          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
           >Contact
         </nuxt-link>
       </nav>
