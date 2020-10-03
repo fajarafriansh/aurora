@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="flex space-x-4" :to="`/${slug}`">
-    <h1 class="text-5xl font-semibold">01</h1>
+    <h1 class="text-5xl font-semibold">{{ index }}</h1>
     <div>
       <h1 class="text-base font-semibold mb-2">{{ title }}</h1>
       <p class="text-sm text-gray-600">{{ author.name }}</p>
@@ -11,6 +11,10 @@
 <script>
 export default {
   props: {
+    index: {
+      type: Number,
+      default: null,
+    },
     title: {
       type: String,
       default: null,
