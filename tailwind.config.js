@@ -18,6 +18,7 @@ module.exports = {
         },
       },
       spacing: {
+        '0.5': '2px',
         '100': '25rem',
       },
     },
