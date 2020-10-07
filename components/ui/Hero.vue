@@ -1,10 +1,10 @@
 <template>
   <nuxt-link
-    class="flex flex-col lg:flex-row text-black rounded shadow-lg"
+    class="flex flex-col lg:flex-row text-black rounded-md shadow-lg"
     :to="`/${slug}`"
   >
     <img
-      class="w-full lg:w-7/12 h-56 lg:h-100 object-cover"
+      class="w-full lg:w-7/12 h-56 lg:h-100 object-cover rounded-t-md lg:rounded-t-none lg:rounded-l-md"
       :src="cover"
       :alt="title"
     />
@@ -14,7 +14,7 @@
           <p class="text-sm font-semibold text-teal-500">
             {{ date | formatDate }}
           </p>
-          <h3 class="text-3xl font-bold mt-2">{{ title }}</h3>
+          <h3 class="h3 mt-2">{{ title }}</h3>
         </header>
         <p class="mt-4">{{ description }}</p>
       </div>

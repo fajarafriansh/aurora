@@ -23,7 +23,7 @@
         <span class="block font-medium">Name</span>
         <input
           required="required"
-          class="appearance-none block w-full border-current border-3 rounded-8 placeholder-pickled-2 focus:border-violet-5 active:border-violet-5 disabled:border-pickled-1 focus:outline-none px-4 py-2 mt-2"
+          class="appearance-none block w-full border-current border-3 rounded-lg placeholder-pickled-2 focus:border-violet-5 active:border-violet-5 disabled:border-pickled-1 focus:outline-none px-4 py-2 mt-2"
         />
       </label>
       <label class="block text-pickled-4 mt-6">
@@ -31,7 +31,7 @@
         <input
           type="email"
           required="required"
-          class="appearance-none block w-full border-current border-3 rounded-8 placeholder-pickled-2 focus:border-violet-5 active:border-violet-5 disabled:border-pickled-1 focus:outline-none px-4 py-2 mt-2"
+          class="appearance-none block w-full border-current border-3 rounded-lg placeholder-pickled-2 focus:border-violet-5 active:border-violet-5 disabled:border-pickled-1 focus:outline-none px-4 py-2 mt-2"
         />
       </label>
       <button

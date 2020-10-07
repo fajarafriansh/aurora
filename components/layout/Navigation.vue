@@ -22,7 +22,7 @@
         </button>
       </div>
       <nav
-        class="lg:flex items-center mt-2 lg:mt-0 py-4 lg-mt-0 space-y-2 lg:space-y-0 lg:space-x-6 text-xl leading-none font-semibold"
+        class="lg:flex items-center mt-2 lg:mt-0 py-4 lg-mt-0 space-y-2 lg:space-y-0 lg:space-x-4 text-lg leading-none font-semibold"
         :class="{ hidden: !showMenu, block: showMenu }"
       >
         <nuxt-link

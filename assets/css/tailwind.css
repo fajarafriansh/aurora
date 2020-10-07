@@ -1,3 +1,65 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html {
+  @apply font-sans text-base antialiased box-border;
+}
+
+*,
+*::before,
+*::after {
+	@apply box-border m-0;
+}
+
+.h1 {
+	@apply text-38;
+}
+
+.h2 {
+	@apply text-38;
+}
+
+.h3 {
+	@apply text-26;
+}
+
+.h4 {
+	@apply text-lg;
+}
+
+.h5 {
+	@apply text-sm tracking-wider font-semibold;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+	@apply font-bold leading-normal;
+}
+
+.h1,
+.h2 {
+	@apply tracking-little-wide;
+}
+
+.h3,
+.h4 {
+	@apply tracking-wide;
+}
+
+@screen md {
+	html {
+		@apply text-lg;
+	}
+
+	.h1,
+	.h2 {
+		@apply text-48;
+	}
+
+	.h3 {
+		@apply text-32;
+	}
+}

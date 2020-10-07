@@ -37,6 +37,16 @@ module.exports = {
       borderWidth: {
         '3': '3px',
       },
+      fontSize: {
+        '62': '62px',
+        '48': '48px',
+        '38': '38px',
+        '32': '32px',
+        '26': '26px',
+      },
+      letterSpacing: {
+        'little-wide': '.01em',
+      },
     },
     container: {
       padding: {

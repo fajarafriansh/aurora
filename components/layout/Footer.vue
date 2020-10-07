@@ -8,21 +8,33 @@
       </div>
       <div class="flex mt-8 md:row-span-2 md:mt-0">
         <div class="w-1/2">
-          <h5 class="uppercase font-semibold">Content</h5>
-          <ul class="mt-4">
-            <li>Stories</li>
-            <li>RSS</li>
+          <h5 class="h5 uppercase">Content</h5>
+          <ul class="mt-4 text-base">
+            <li>
+              <nuxt-link to="/" class="block py-1">Stories</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/" class="block py-1">RSS</nuxt-link>
+            </li>
           </ul>
         </div>
         <div class="w-1/2">
-          <h5 class="uppercase font-semibold">Links</h5>
+          <h5 class="h5 uppercase">Links</h5>
           <ul class="mt-4">
-            <li>Stories</li>
-            <li>RSS</li>
+            <li>
+              <a rel="noopener" target="_blank" href="/" class="block py-1">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a rel="noopener" target="_blank" href="/" class="block py-1">
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="mt-8">
+      <div class="text-sm mt-8">
         <p>
           &copy; 2018-present Aurora by
           <a
