@@ -1,6 +1,6 @@
 <template>
   <header
-    class="top-0 absolute z-50 w-full bg-white py-2 border-b border-gray-300"
+    class="top-0 absolute z-50 w-full bg-white py-2 border-b border-gray-2"
   >
     <div
       class="container mx-auto flex flex-wrap items-center justify-between text-black"
@@ -8,7 +8,11 @@
       <div
         class="w-full relative flex items-center justify-between lg:w-auto lg:static lg:justify-start"
       >
-        <span class="text-2xl lg:text-3xl font-semibold">Aurora</span>
+        <div class="w-32 md:w-48 lg:w-54">
+          <nuxt-link to="/">
+            <Logo />
+          </nuxt-link>
+        </div>
         <button
           class="cursor-pointer lg:hidden outline-none focus:outline-none"
           type="button"

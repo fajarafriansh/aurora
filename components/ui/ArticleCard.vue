@@ -9,7 +9,7 @@
         <p class="mt-4">{{ description }}</p>
         <footer class="flex items-center mt-6">
           <img
-            class="w-12 h-12 object-cover rounded-full border-2 border-teal-500"
+            class="w-12 h-12 object-cover rounded-full border-3 border-teal-500"
             :src="author.image"
             :alt="author.name"
           />

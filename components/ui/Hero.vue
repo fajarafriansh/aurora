@@ -20,12 +20,15 @@
       </div>
       <footer class="flex items-center mt-6 lg:-ml-20">
         <img
-          class="w-20 h-20 object-cover rounded-full border-2 border-teal-500 shadow-lg"
+          class="w-20 h-20 object-cover rounded-full border-3 border-teal-500 shadow-lg"
           :src="author.image"
           :alt="author.name"
         />
         <div class="ml-6">
           <p class="text-base font-semibold">{{ author.name }}</p>
+          <p class="text-sm">
+            {{ date | formatDate }}
+          </p>
         </div>
       </footer>
     </div>
