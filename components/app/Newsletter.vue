@@ -1,7 +1,7 @@
 <template>
   <div
     id="newsletter"
-    class="flex flex-col md:flex-row max-w-screen-md mx-auto"
+    class="flex flex-col md:flex-row"
   >
     <div class="flex-1">
       <h3 class="h3">

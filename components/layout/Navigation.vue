@@ -1,14 +1,12 @@
 <template>
-  <header
-    class="top-0 absolute z-50 w-full bg-white py-2 border-b border-gray-2"
-  >
+  <header class="top-0 absolute z-50 w-full bg-grayscale-6 py-4">
     <div
       class="container mx-auto flex flex-wrap items-center justify-between text-black"
     >
       <div
         class="w-full relative flex items-center justify-between lg:w-auto lg:static lg:justify-start"
       >
-        <div class="w-32 md:w-48 lg:w-54">
+        <div class="w-32 md:w-40">
           <nuxt-link to="/">
             <Logo />
           </nuxt-link>
@@ -21,7 +19,7 @@
           <HumburgerButton />
         </button>
       </div>
-      <nav
+      <!-- <nav
         class="lg:flex items-center mt-2 lg:mt-0 py-4 lg-mt-0 space-y-2 lg:space-y-0 lg:space-x-4 text-lg leading-none font-semibold"
         :class="{ hidden: !showMenu, block: showMenu }"
       >
@@ -40,7 +38,7 @@
           class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
           >Contact
         </nuxt-link>
-      </nav>
+      </nav> -->
     </div>
   </header>
 </template>

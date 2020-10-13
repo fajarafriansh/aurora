@@ -1,7 +1,7 @@
 <template>
-  <section class="mt-16 bg-gradient-to-r from-gray-2 to-gray-1 py-12">
+  <section class="mt-16 bg-dark py-12">
     <div class="container mx-auto">
-      <Newsletter />
+      <Newsletter class="max-w-screen-md mx-auto" />
     </div>
   </section>
 </template>

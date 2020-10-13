@@ -2,8 +2,29 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-html {
-  @apply font-sans text-base antialiased box-border;
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    src: url(~assets/fonts/Inter-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url(~assets/fonts/Inter-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url(~assets/fonts/Inter-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+}
+
+body {
+  @apply bg-grayscale-8 font-inter text-grayscale-4 text-base leading-normal tracking-wide antialiased box-border;
 }
 
 *,
@@ -13,53 +34,63 @@ html {
 }
 
 .h1 {
-	@apply text-38;
+	@apply text-36 text-grayscale-2 font-semibold leading-snug;
 }
 
 .h2 {
-	@apply text-38;
+	@apply text-21 text-grayscale-2 font-semibold leading-normal tracking-normal;
 }
 
 .h3 {
-	@apply text-26;
+	@apply text-21 text-grayscale-2 font-semibold leading-relaxed tracking-normal;
 }
 
 .h4 {
-	@apply text-lg;
+	@apply text-lg text-grayscale-2 font-semibold leading-relaxed tracking-normal;
 }
 
-.h5 {
-	@apply text-sm tracking-wider font-semibold;
+.headline {
+	@apply text-lg font-semibold leading-loose uppercase;
 }
 
-.h1,
-.h2,
-.h3,
-.h4 {
-	@apply font-bold leading-normal;
+.subhead {
+	@apply text-xs font-semibold leading-snug
 }
 
-.h1,
-.h2 {
-	@apply tracking-little-wide;
+.text-body-2 {
+	@apply text-xs text-grayscale-4 leading-relaxed;
 }
 
-.h3,
-.h4 {
-	@apply tracking-wide;
+.callout {
+	@apply text-sm text-grayscale-2 font-semibold leading-normal;
 }
 
 @screen md {
-	html {
-		@apply text-lg;
-	}
-
-	.h1,
 	.h2 {
-		@apply text-48;
+		@apply text-24;
 	}
 
-	.h3 {
-		@apply text-32;
+	.text-body-2 {
+		@apply text-sm;
+	}
+
+	.callout {
+		@apply text-base;
 	}
 }
+
+.category-card:hover div {
+	@apply bg-primary-1 text-grayscale-6 transition duration-300 ease-in-out;
+}
+
+.article-card:hover .callout-shape {
+	@apply text-grayscale-6 transition duration-300 ease-in-out;
+}
+
+.article-card:hover .overlay {
+	@apply opacity-25 transition duration-300 ease-in-out;
+}
+
+/*#footer #logo #text {
+	@apply hidden;
+}*/
