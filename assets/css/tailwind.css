@@ -34,7 +34,7 @@ body {
 }
 
 .h1 {
-	@apply text-36 text-grayscale-2 font-semibold leading-snug;
+	@apply text-26 text-grayscale-2 font-medium leading-snug;
 }
 
 .h2 {
@@ -62,10 +62,13 @@ body {
 }
 
 .callout {
-	@apply text-sm text-grayscale-2 font-semibold leading-normal;
+	@apply text-sm text-grayscale-2 font-medium leading-normal;
 }
 
 @screen md {
+	.h1 {
+		@apply text-36 font-semibold;
+	}
 	.h2 {
 		@apply text-24;
 	}
@@ -75,7 +78,7 @@ body {
 	}
 
 	.callout {
-		@apply text-base;
+		@apply text-base font-semibold;
 	}
 }
 
