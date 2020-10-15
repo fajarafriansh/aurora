@@ -14,9 +14,9 @@
       />
     </div>
     <div class="flex justify-center mt-12">
-      <aurora-link :to="`/slug`" as="link">
-        <span class="flex-1 py-1 border-b-3">See all stories</span>
-      </aurora-link>
+      <link-primary :to="`/slug`">
+        <span class="flex-1 py-1 border-b-3 border-primary-1 hover:border-primary-2 text-xl">See all stories</span>
+      </link-primary>
     </div>
   </section>
 </template>
