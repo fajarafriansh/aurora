@@ -2,9 +2,14 @@
   <div class="bg-grayscale-7 py-2">
     <div class="container mx-auto">
       <div class="flex items-center mt-2">
-        <button class="p-2 mr-4 rounded-md border-2 border-grayscale-5 hover:border-primary-1 hover:text-primary-1 transition duration-150 ease-in-out focus:outline-none" v-show="!showLess" @click="viewLess">
+        <button-bordered
+          v-show="!showLess"
+          class="mr-4"
+          :wide="false"
+          :function="viewLess"
+        >
           <CloseButton />
-        </button>
+        </button-bordered>
         <p class="text-sm font-semibold uppercase leading-none tracking-widest">Categories</p>
       </div>
       <div class="flex items-start justify-between space-x-2 lg:space-x-4 overflow-x-auto" :class="overflowClasses">
@@ -18,7 +23,7 @@
             :borderClasses="borderClasses"
           />
         </div>
-        <button v-show="showLess" class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-6 rounded-lg mt-4 px-4 py-2 lg:p-4 text-center text-sm lg:text-base font-semibold focus:outline-none border-2 border-transparent hover:border-primary-1 hover:text-primary-1 transition duration-150 ease-in-out" @click="viewAll()">All ...</button>
+        <button v-show="showLess" class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold focus:outline-none border-2 border-transparent hover:border-primary-1 hover:text-primary-1 transition duration-150 ease-in-out" @click="viewAll">All ...</button>
       </div>
     </div>
   </div>
