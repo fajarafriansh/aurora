@@ -1,47 +1,15 @@
 <template>
-  <main class="mt-20 lg:mt-32">
+  <main class="mt-16 lg:mt-16">
+    <section>
+      <CategoriesSection :categories="categories" />
+    </section>
     <div class="container mx-auto">
-      <section>
-        <Hero
-          :key="articles[1].title"
-          :title="articles[1].title"
-          :cover="articles[1].cover"
-          :description="articles[1].description"
-          :author="articles[1].author"
-          :date="articles[1].date.toLocaleDateString()"
-        />
-      </section>
-      <div class="mt-10 lg:flex lg:space-x-8">
+      <div class="mt-6 lg:mt-10 lg:flex">
         <section class="lg:w-2/3">
-          <section-header>All Stories</section-header>
-          <div class="flex flex-wrap -mx-4">
-            <ArticleCard
-              v-for="article in articles"
-              :key="article.title"
-              :title="article.title"
-              :cover="article.cover"
-              :description="article.description"
-              :author="article.author"
-              :date="article.date.toLocaleDateString()"
-            />
-          </div>
-          <div class="flex justify-center mt-12">
-            <aurora-link :to="`/slug`" as="link">
-              <span class="flex-1 py-1 border-b-3">See all stories</span>
-            </aurora-link>
-          </div>
+          <PostListSection :articles="articles" />
         </section>
-        <aside class="lg:w-1/3 mt-8 lg:mt-0">
-          <section-header>Popular</section-header>
-          <div class="mt-6 space-y-4">
-            <SidebarList
-              v-for="(article, index) in articles"
-              :key="article.title"
-              :title="article.title"
-              :author="article.author"
-              :index="index + 1"
-            />
-          </div>
+        <aside class="lg:w-1/3 mt-8 lg:mt-0 lg:pl-14">
+          <SidebarSection :showcase="articles[0]" :topics="categories" />
         </aside>
       </div>
     </div>
@@ -54,7 +22,7 @@ export default {
   asyncData() {
     const articles = [
       {
-        title: 'How to make your articles Vuetiful, and its so ease',
+        title: 'How to make your articles Vuetiful, and its so ease. Just try it sometime',
         cover: '/img.jpg',
         description:
           'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
@@ -63,6 +31,7 @@ export default {
           image: '/oni.jpg',
         },
         date: new Date(),
+        category: "Fashion",
       },
       {
         title: 'How to make your articles Vuetiful',
@@ -74,6 +43,7 @@ export default {
           image: '/oni.jpg',
         },
         date: new Date(),
+        category: "Fashion",
       },
       {
         title: 'How to make your articles Vuetiful',
@@ -85,6 +55,7 @@ export default {
           image: '/oni.jpg',
         },
         date: new Date(),
+        category: "Fashion",
       },
       {
         title: 'How to make your articles Vuetiful',
@@ -96,6 +67,7 @@ export default {
           image: '/oni.jpg',
         },
         date: new Date(),
+        category: "Fashion",
       },
       {
         title: 'How to make your articles Vuetiful',
@@ -107,10 +79,46 @@ export default {
           image: '/oni.jpg',
         },
         date: new Date(),
+        category: "Fashion",
       },
     ]
 
-    return { articles }
+    const categories = [
+      {
+        title: '"Fashion"',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Food',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Travel',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Sport',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Nature',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Game',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Design',
+        cover: '/oni.jpg',
+      },
+      {
+        title: 'Film',
+        cover: '/oni.jpg',
+      },
+    ]
+
+    return { articles, categories }
   },
 }
 </script>

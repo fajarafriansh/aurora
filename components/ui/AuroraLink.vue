@@ -3,7 +3,7 @@
     <nuxt-link
       :to="to"
       class="px-4 py-2 font-semibold transition ease-in-out duration-150"
-      :class="linkClases"
+      :class="linkClasses"
     >
       <slot></slot>
     </nuxt-link>
@@ -23,7 +23,7 @@ export default {
     },
   },
   computed: {
-    linkClases() {
+    linkClasses() {
       if (this.as === 'link') {
         return 'text-green text-lg hover:text-violet-4'
       } else {
