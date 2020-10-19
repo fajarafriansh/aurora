@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-16 lg:mt-16">
+  <main>
     <div class="bg-grayscale-8 lg:bg-grayscale-7 py-6 lg:pt-8 lg:pb-12">
       <div class="container mx-auto grid grid-cols-6 lg:grid-cols-12 lg:gap-6">
         <img
@@ -22,5 +22,65 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </article>
     </div>
+    <FeaturedPostSection :posts="posts" />
   </main>
 </template>
+
+<script>
+export default {
+  asyncData() {
+    const posts = [
+      {
+        title: 'How to make your articles Vuetiful, and its so ease. Just try it sometime',
+        cover: '/img.jpg',
+        description:
+          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
+        author: {
+          name: 'Naruto Uzumaki',
+          image: '/oni.jpg',
+        },
+        date: new Date(),
+        category: "Fashion",
+      },
+      {
+        title: 'How to make your articles Vuetiful',
+        cover: '/img.jpg',
+        description:
+          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
+        author: {
+          name: 'Naruto Uzumaki',
+          image: '/oni.jpg',
+        },
+        date: new Date(),
+        category: "Fashion",
+      },
+      {
+        title: 'How to make your articles Vuetiful',
+        cover: '/img.jpg',
+        description:
+          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
+        author: {
+          name: 'Naruto Uzumaki',
+          image: '/oni.jpg',
+        },
+        date: new Date(),
+        category: "Fashion",
+      },
+      {
+        title: 'How to make your articles Vuetiful',
+        cover: '/img.jpg',
+        description:
+          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
+        author: {
+          name: 'Naruto Uzumaki',
+          image: '/oni.jpg',
+        },
+        date: new Date(),
+        category: "Fashion",
+      },
+    ]
+
+    return { posts }
+  },
+}
+</script>

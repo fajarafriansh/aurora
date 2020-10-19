@@ -3,30 +3,30 @@
     <div class="container mx-auto">
       <div class="grid grid-cols-2 lg:grid-cols-3">
         <div class="flex items-center">
-          <nuxt-link to="/" class="w-10 md:w-40">
-            <Logo :responsive="true" />
+          <nuxt-link to="/" class="flex items-center justify-start h-10 w-10 md:w-34">
+            <Logo />
           </nuxt-link>
         </div>
         <div class="row-start-2 col-span-2 lg:row-start-auto lg:col-auto flex flex-wrap items-center justify-center mt-6 lg:mt-0 text-base">
           <link-secondary type="internal" to="/about" class="p-1">
             About
           </link-secondary>
-          <link-secondary type="internal" to="/blog" class="p-1 ml-6">
+          <link-secondary type="internal" to="/blog" class="p-1 ml-4 lg:ml-6">
             Articles
           </link-secondary>
-          <link-secondary type="internal" to="/about" class="p-1 ml-6">
+          <link-secondary type="internal" to="/about" class="p-1 ml-4 lg:ml-6">
             RSS
           </link-secondary>
-          <link-secondary type="internal" to="/about" class="p-1 ml-6">
+          <link-secondary type="internal" to="/about" class="p-1 ml-4 lg:ml-6">
             Contact
           </link-secondary>
         </div>
         <div class="flex items-center justify-end">
           <link-bordered type="outbound" as="button" to="https://twitter.com">
-            <CloseButton />
+            <CloseButton class="h-4" />
           </link-bordered>
           <link-bordered type="outbound" as="button" to="https://instgram.com" class="ml-4">
-            <CloseButton />
+            <CloseButton class="h-4" />
           </link-bordered>
         </div>
       </div>
@@ -45,3 +45,11 @@
     </div>
   </div>
 </template>
+
+<script>
+import Logo from "~/assets/svg/archivil-logo.svg?inline"
+
+export default {
+  components: { Logo },
+}
+</script>

@@ -8,9 +8,9 @@
           :wide="false"
           :function="viewLess"
         >
-          <CloseButton />
+          <CloseButton class="h-4" />
         </button-bordered>
-        <p class="text-sm font-semibold uppercase leading-none tracking-widest">Categories</p>
+        <p class="text-sm font-medium uppercase leading-none tracking-wider">Categories</p>
       </div>
       <div class="flex items-start justify-between space-x-2 lg:space-x-4 overflow-x-auto" :class="overflowClasses">
         <div class="flex items-center justify-start -mx-1 lg:-mx-2 mt-2" :class="wrapClasses">

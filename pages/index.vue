@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-16 lg:mt-16">
+  <main>
     <section>
       <CategoriesSection :categories="categories" />
     </section>
@@ -85,7 +85,7 @@ export default {
 
     const categories = [
       {
-        title: '"Fashion"',
+        title: 'Lecture Notes',
         cover: '/oni.jpg',
       },
       {
