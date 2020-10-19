@@ -3,7 +3,7 @@
     <nuxt-link
       v-if="type === 'internal'"
       :to="to"
-      class="text-grayscale-4 font-semibold hover:text-primary-1 transition duration-150 ease-in-out"
+      class="text-grayscale-4 hover:text-primary-1 transition duration-150 ease-in-out"
       :class="classes + ' ' + wideButton"
     >
       <slot></slot>
@@ -14,7 +14,7 @@
       rel="noopener"
       target="_blank"
       :href="to"
-      class="text-grayscale-4 font-semibold hover:text-primary-1 transition duration-150 ease-in-out"
+      class="text-grayscale-4 hover:text-primary-1 transition duration-150 ease-in-out"
       :class="classes + ' ' + wideButton"
     >
       <slot></slot>
@@ -45,7 +45,9 @@ export default {
   computed: {
     classes() {
       if (this.as === 'button') {
-        return 'block text-center rounded-lg border-2 border-grayscale-5 hover:border-primary-1'
+        return 'block text-center font-semibold rounded-lg border-2 border-grayscale-5 hover:border-primary-1'
+      } else {
+        return 'font-medium'
       }
     },
     wideButton() {

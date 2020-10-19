@@ -38,23 +38,23 @@ body {
 }
 
 .h2 {
-	@apply text-21 text-grayscale-2 font-semibold leading-normal tracking-normal;
+	@apply text-21 text-grayscale-2 font-medium leading-normal tracking-normal;
 }
 
 .h3 {
-	@apply text-21 text-grayscale-2 font-semibold leading-relaxed tracking-normal;
+	@apply text-21 text-grayscale-2 font-medium leading-relaxed tracking-normal;
 }
 
 .h4 {
-	@apply text-lg text-grayscale-2 font-semibold leading-relaxed tracking-normal;
+	@apply text-lg text-grayscale-2 font-medium leading-relaxed tracking-normal;
 }
 
 .headline {
-	@apply text-lg font-semibold leading-loose uppercase;
+	@apply text-lg font-medium leading-loose uppercase;
 }
 
 .subhead {
-	@apply text-xs font-semibold leading-snug
+	@apply text-xs font-medium leading-snug
 }
 
 .text-body-2 {
@@ -77,8 +77,12 @@ body {
 		@apply text-sm;
 	}
 
+	.headline {
+		@apply font-semibold;
+	}
+
 	.callout {
-		@apply text-base font-semibold;
+		@apply text-base;
 	}
 }
 

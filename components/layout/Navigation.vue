@@ -1,50 +1,26 @@
 <template>
-  <header class="top-0 absolute z-50 w-full bg-grayscale-6 py-4">
+  <header class="top-0 h-17 absolute z-50 w-full bg-grayscale-6 py-3">
     <div
-      class="container mx-auto flex flex-wrap items-center justify-between text-black"
+      class="container mx-auto flex items-center justify-between"
     >
-      <div
-        class="w-full relative flex items-center justify-between lg:w-auto lg:static lg:justify-start"
-      >
-        <div class="w-32 md:w-40">
-          <nuxt-link to="/">
-            <Logo />
-          </nuxt-link>
-        </div>
-        <button
-          class="cursor-pointer lg:hidden outline-none focus:outline-none"
-          type="button"
-          @click="toggleNavbar()"
-        >
-          <HumburgerButton />
+      <nuxt-link to="/" class="flex items-center justify-start h-10 w-10 md:w-34">
+        <Logo />
+      </nuxt-link>
+      <div class="flex items-center justify-end ml-6">
+        <SearchBox :search="fetchSuggestions" class="flex-1 max-w-sm" />
+        <button class="ml-8 text-grayscale-4">
+          <CloseButton class="h-4" />
         </button>
       </div>
-      <!-- <nav
-        class="lg:flex items-center mt-2 lg:mt-0 py-4 lg-mt-0 space-y-2 lg:space-y-0 lg:space-x-4 text-lg leading-none font-semibold"
-        :class="{ hidden: !showMenu, block: showMenu }"
-      >
-        <nuxt-link
-          to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
-          >About
-        </nuxt-link>
-        <nuxt-link
-          to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
-          >Category
-        </nuxt-link>
-        <nuxt-link
-          to="/about"
-          class="flex flex-col p-2 md:px-4 lg:px-6 hover:text-violet-4 transition ease-in-out duration-150"
-          >Contact
-        </nuxt-link>
-      </nav> -->
     </div>
   </header>
 </template>
 
 <script>
+import Logo from "~/assets/svg/archivil-logo.svg?inline"
+
 export default {
+  components: { Logo },
   data() {
     return {
       showMenu: false,
@@ -53,6 +29,9 @@ export default {
   methods: {
     toggleNavbar() {
       this.showMenu = !this.showMenu
+    },
+    async fetchSuggestions(searchInput) {
+
     },
   },
 }

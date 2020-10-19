@@ -16,7 +16,7 @@
     </div>
     <div class="article-cover relative w-full">
       <img
-        class="w-full h-48 md::h-auto object-cover"
+        class="w-full h-48 md:h-auto object-cover"
         :src="cover"
         :alt="title"
       />
