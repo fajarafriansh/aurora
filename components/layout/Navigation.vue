@@ -1,5 +1,5 @@
 <template>
-  <header class="top-0 h-17 absolute z-50 w-full bg-grayscale-6 py-3">
+  <header class="top-0 h-17 absolute z-50 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3">
     <div
       class="container mx-auto flex items-center justify-between"
     >
@@ -8,9 +8,7 @@
       </nuxt-link>
       <div class="flex items-center justify-end ml-6">
         <SearchBox :search="fetchSuggestions" class="flex-1 max-w-sm" />
-        <button class="ml-8 text-grayscale-4">
-          <CloseButton class="h-4" />
-        </button>
+        <ColormodePicker class="ml-8" />
       </div>
     </div>
   </header>

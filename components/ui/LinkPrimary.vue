@@ -45,9 +45,9 @@ export default {
   computed: {
     classes() {
       if (this.as === 'button') {
-        return 'block bg-primary-1 text-grayscale-7 text-center font-semibold rounded-lg border-2 border-transparent hover:border-primary-2 hover:bg-primary-2'
+        return 'block bg-primary-2 dark:bg-primary-1 text-grayscale-7 text-center font-semibold rounded-lg border-2 border-transparent hover:border-primary-3 dark-hover:border-primary-2 hover:bg-primary-3 dark-hover:bg-primary-2'
       } else {
-        return 'text-primary-1 hover:text-primary-2 font-medium'
+        return 'text-primary-2 dark:text-primary-1 hover:text-primary-3 dark-hover:text-primary-2 font-medium'
       }
     },
     wideButton() {

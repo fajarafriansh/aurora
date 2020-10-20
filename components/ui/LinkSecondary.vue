@@ -3,7 +3,7 @@
     <nuxt-link
       v-if="type === 'internal'"
       :to="to"
-      class="text-grayscale-4 hover:text-primary-1 transition duration-150 ease-in-out"
+      class="text-grayscale-5 dark:text-grayscale-4 hover:text-primary-2 dark-hover:text-primary-1 transition duration-150 ease-in-out"
       :class="classes + ' ' + wideButton"
     >
       <slot></slot>
@@ -14,7 +14,7 @@
       rel="noopener"
       target="_blank"
       :href="to"
-      class="text-grayscale-4 hover:text-primary-1 transition duration-150 ease-in-out"
+      class="text-grayscale-5 dark:text-grayscale-4 hover:text-primary-2 dark-hover:text-primary-1 transition duration-150 ease-in-out"
       :class="classes + ' ' + wideButton"
     >
       <slot></slot>

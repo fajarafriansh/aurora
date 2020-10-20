@@ -29,6 +29,7 @@ module.exports = {
           'yellow': '#fcc93f',
         },
         'dark': '#1d2023',
+        'light': '#cdcfd4',
       },
       spacing: {
         '0.5': '2px',
@@ -85,12 +86,17 @@ module.exports = {
       'none': 'none',
       'blur': 'blur(20px)',
     },
+    darkSelector: '.dark-mode',
   },
   variants: {
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'responsive'],
+    borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within', 'hover', 'focus', 'focus-within', 'responsive'],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'active', 'responsive'],
     filter: ['responsive', 'hover'],
     backdropFilter: ['responsive'],
   },
   plugins: [
     require('tailwindcss-filters'),
+    require('tailwindcss-dark-mode')(),
   ],
 }

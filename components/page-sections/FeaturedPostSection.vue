@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-dark mt-16 py-10">
+  <section class="bg-light dark:bg-dark mt-16 py-10">
     <div class="container mx-auto">
       <section-header>Featured Posts</section-header>
       <div class="flex mt-6 space-x-6 overflow-auto lg:overflow-hidden">

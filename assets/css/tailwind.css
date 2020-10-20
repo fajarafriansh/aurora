@@ -24,7 +24,7 @@
 }
 
 body {
-  @apply bg-grayscale-8 font-inter text-grayscale-4 text-base leading-normal tracking-wide antialiased box-border;
+  @apply bg-grayscale-3 font-inter text-grayscale-5 text-base leading-normal tracking-wide antialiased box-border;
 }
 
 *,
@@ -34,23 +34,23 @@ body {
 }
 
 .h1 {
-	@apply text-26 text-grayscale-2 font-medium leading-snug;
+	@apply text-26 text-grayscale-7 font-medium leading-snug;
 }
 
 .h2 {
-	@apply text-21 text-grayscale-2 font-medium leading-normal tracking-normal;
+	@apply text-21 text-grayscale-7 font-medium leading-normal tracking-normal;
 }
 
 .h3 {
-	@apply text-21 text-grayscale-2 font-medium leading-relaxed tracking-normal;
+	@apply text-21 text-grayscale-7 font-medium leading-relaxed tracking-normal;
 }
 
 .h4 {
-	@apply text-lg text-grayscale-2 font-medium leading-relaxed tracking-normal;
+	@apply text-lg text-grayscale-7 font-medium leading-relaxed tracking-normal;
 }
 
 .headline {
-	@apply text-lg font-medium leading-loose uppercase;
+	@apply text-lg text-grayscale-5 font-medium leading-loose uppercase;
 }
 
 .subhead {
@@ -58,11 +58,39 @@ body {
 }
 
 .text-body-2 {
-	@apply text-xs text-grayscale-4 leading-relaxed;
+	@apply text-xs text-grayscale-5 leading-relaxed;
 }
 
 .callout {
-	@apply text-sm text-grayscale-2 font-medium leading-normal;
+	@apply text-sm text-grayscale-7 font-medium leading-normal;
+}
+
+#logo .mobile {
+	@apply block;
+}
+
+#logo.not-responsive .mobile {
+	@apply hidden;
+}
+
+#logo .desktop {
+	@apply hidden;
+}
+
+#logo.not-responsive .desktop {
+	@apply block;
+}
+
+.category-card:hover div {
+	@apply bg-primary-2 text-grayscale-6 transition duration-300 ease-in-out;
+}
+
+.article-card:hover .callout-shape {
+	@apply text-grayscale-1 transition duration-300 ease-in-out;
+}
+
+.article-card:hover .overlay {
+	@apply opacity-25 transition duration-300 ease-in-out;
 }
 
 @screen md {
@@ -70,7 +98,7 @@ body {
 		@apply text-36 font-semibold;
 	}
 	.h2 {
-		@apply text-24;
+		@apply text-24 font-semibold;
 	}
 
 	.text-body-2 {
@@ -84,20 +112,37 @@ body {
 	.callout {
 		@apply text-base;
 	}
+
+	#logo .mobile {
+		@apply hidden;
+	}
+
+	#logo .desktop {
+		@apply block;
+	}
 }
 
-.category-card:hover div {
-	@apply bg-primary-1 text-grayscale-6 transition duration-300 ease-in-out;
+.dark-mode body {
+  @apply bg-grayscale-8 text-grayscale-4;
 }
 
-.article-card:hover .callout-shape {
-	@apply text-grayscale-6 transition duration-300 ease-in-out;
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode .callout {
+	@apply text-grayscale-2;
 }
 
-.article-card:hover .overlay {
-	@apply opacity-25 transition duration-300 ease-in-out;
+.dark-mode .text-body-2,
+.dark-mode .headline {
+	@apply text-grayscale-4
 }
 
-/*#footer #logo #text {
-	@apply hidden;
-}*/
+.dark-mode .category-card:hover div {
+	@apply bg-primary-1;
+}
+
+.dark-mode .article-card:hover .callout-shape {
+	@apply text-grayscale-6;
+}
