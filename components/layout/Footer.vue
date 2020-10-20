@@ -3,8 +3,8 @@
     <div class="container mx-auto">
       <div class="grid grid-cols-2 lg:grid-cols-3">
         <div class="flex items-center">
-          <nuxt-link to="/" class="flex items-center justify-start h-10 w-10 md:w-34">
-            <Logo />
+          <nuxt-link to="/" class="flex items-center justify-start h-10 w-34">
+            <Logo class="not-responsive" />
           </nuxt-link>
         </div>
         <div class="row-start-2 col-span-2 lg:row-start-auto lg:col-auto flex flex-wrap items-center justify-center mt-6 lg:mt-0 text-base">
@@ -21,12 +21,12 @@
             Contact
           </link-secondary>
         </div>
-        <div class="flex items-center justify-end">
+        <div class="flex items-center justify-end text-xl">
           <link-bordered type="outbound" as="button" to="https://twitter.com">
-            <CloseButton class="h-4" />
+            <ion-icon name="logo-twitter"></ion-icon>
           </link-bordered>
           <link-bordered type="outbound" as="button" to="https://instgram.com" class="ml-4">
-            <CloseButton class="h-4" />
+            <ion-icon name="logo-instagram"></ion-icon>
           </link-bordered>
         </div>
       </div>

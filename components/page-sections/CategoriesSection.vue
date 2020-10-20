@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-grayscale-7 py-2">
+  <div class="bg-grayscale-2 dark:bg-grayscale-7 py-2">
     <div class="container mx-auto">
       <div class="flex items-center mt-2">
         <button-bordered
@@ -10,7 +10,7 @@
         >
           <CloseButton class="h-4" />
         </button-bordered>
-        <p class="text-sm font-medium uppercase leading-none tracking-wider">Categories</p>
+        <p class="text-grayscale-5 dark:text-grayscale-4 text-sm font-medium uppercase leading-none tracking-wider">Categories</p>
       </div>
       <div class="flex items-start justify-between space-x-2 lg:space-x-4 overflow-x-auto" :class="overflowClasses">
         <div class="flex items-center justify-start -mx-1 lg:-mx-2 mt-2" :class="wrapClasses">
@@ -23,7 +23,7 @@
             :borderClasses="borderClasses"
           />
         </div>
-        <button v-show="showLess" class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold focus:outline-none border-2 border-transparent hover:border-primary-1 hover:text-primary-1 transition duration-150 ease-in-out" @click="viewAll">All ...</button>
+        <button v-show="showLess" class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-3 dark:bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold text-grayscale-5 dark:text-grayscale-4 focus:outline-none border-2 border-transparent hover:border-primary-2 hover:text-primary-2 dark-hover:border-primary-1 dark-hover:text-primary-1 transition duration-150 ease-in-out" @click="viewAll">All ...</button>
       </div>
     </div>
   </div>
