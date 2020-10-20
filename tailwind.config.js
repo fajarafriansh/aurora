@@ -89,9 +89,9 @@ module.exports = {
     darkSelector: '.dark-mode',
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'responsive'],
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'focus', 'responsive'],
     borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within', 'hover', 'focus', 'focus-within', 'responsive'],
-    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'active', 'responsive'],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'focus', 'active', 'responsive'],
     filter: ['responsive', 'hover'],
     backdropFilter: ['responsive'],
   },

@@ -8,7 +8,7 @@
       </nuxt-link>
       <div class="flex items-center justify-end ml-6">
         <SearchBox :search="fetchSuggestions" class="flex-1 max-w-sm" />
-        <ColormodePicker class="ml-8" />
+        <ColormodePicker class="ml-6 lg:ml-8" />
       </div>
     </div>
   </header>

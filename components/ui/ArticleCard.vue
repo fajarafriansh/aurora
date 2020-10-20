@@ -37,7 +37,7 @@
         <div class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"></div>
       </div>
       <div class="w-full p-6">
-        <header class="h2">{{ title }}</header>
+        <h2 class="h2">{{ title }}</h2>
         <p class="mt-8 hidden lg:block">{{ description }}</p>
         <footer class="flex items-center mt-8">
           <img
@@ -46,7 +46,7 @@
             :alt="author.name"
           />
           <div class="ml-4">
-            <p class="text-sm font-semibold">{{ author.name }}</p>
+            <p class="callout">{{ author.name }}</p>
           </div>
         </footer>
       </div>

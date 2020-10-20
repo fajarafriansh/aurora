@@ -10,10 +10,49 @@
         <p class="flex items-center callout col-span-3 lg:col-span-8">Fashion</p>
         <p class="flex items-center justify-end text-body-2 col-span-2 lg:col-span-3">{{ new Date() | formatDate }}</p>
         <h1 class="h1 col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6 lg:mt-0">How to make your articles Vuetiful, and its so ease. Just try it sometime</h1>
+        <div class="flex items-center col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6">
+          <div class="flex items-center">
+            <span class="flex items-center text-2xl">
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            </span>
+            <span class="flex items-center ml-3">
+              <p>3</p>
+              <p class="hidden md:block ml-1">Comments</p>
+            </span>
+          </div>
+          <dropdown class="ml-12" width="56">
+            <template v-slot:trigger>
+              <div class="flex items-center hover:text-primary-2 dark-hover:text-primary-1">
+                <span class="flex items-center text-2xl">
+                  <ion-icon name="share-outline"></ion-icon>
+                </span>
+                <span class="flex items-center ml-3">
+                  <p class="hidden md:block">Share</p>
+                </span>
+              </div>
+            </template>
+            <template v-slot:content>
+              <div class="grid grid-cols-3 gap-4">
+                <a class="flex items-center w-12 h-12 text-3xl text-grayscale-1 text-center p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a class="flex items-center w-12 h-12 text-3xl text-grayscale-1 text-center p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a class="flex items-center w-12 h-12 text-3xl text-grayscale-1 text-center p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a class="flex items-center w-12 h-12 text-3xl text-grayscale-1 text-center p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                  <ion-icon name="logo-reddit"></ion-icon>
+                </a>
+              </div>
+            </template>
+          </dropdown>
+        </div>
       </div>
     </div>
     <div class="container mx-auto">
-      <article class="article max-w-screen-md mx-auto py-8 text-grayscale-7 dark:text-grayscale-2">
+      <article class="article max-w-screen-md mx-auto py-4 lg:py-8 text-grayscale-7 dark:text-grayscale-2">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

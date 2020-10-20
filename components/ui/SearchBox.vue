@@ -1,6 +1,8 @@
 <template>
   <div class="relative text-grayscale-5 dark:text-grayscale-4 text-sm lg:text-base">
-    <CloseButton class="absolute left-0 inset-y-1/2 h-10 p-2 mr-3 transform -translate-y-1/2" />
+    <div class="flex items-center w-12 text-2xl text-center absolute inset-0 py-2 px-3">
+      <ion-icon name="search-outline"></ion-icon>
+    </div>
     <input
       v-model="searchInput"
       ref="search"
