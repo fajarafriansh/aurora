@@ -13,7 +13,7 @@
     <section-header class="mt-10">Trending Topics</section-header>
     <div class="flex flex-wrap mt-4 -mx-2">
       <TrendingTopicCard
-        v-for="topic in topics.slice(0, 4)"
+        v-for="topic in topics"
         :key="topic.title"
         :title="topic.title"
         :cover="topic.cover"

@@ -6,10 +6,11 @@
         v-for="article in articles"
         :key="article.title"
         :title="article.title"
-        :cover="article.cover"
-        :description="article.description"
+        :slug="article.slug"
+        :cover="article.coverImage"
+        :description="article.excerpt"
         :author="article.author"
-        :date="article.date.toLocaleDateString()"
+        :date="article.date"
         :category="article.category"
       />
     </div>

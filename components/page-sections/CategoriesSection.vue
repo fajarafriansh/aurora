@@ -15,10 +15,10 @@
       <div class="flex items-start justify-between space-x-2 lg:space-x-4 overflow-x-auto" :class="overflowClasses">
         <div class="flex items-center justify-start -mx-1 lg:-mx-2 mt-2" :class="wrapClasses">
           <CategoryCard
-            v-for="category in displayCategories"
+            v-for="category in categories"
             :key="category.title"
             :title="category.title"
-            :cover="category.cover"
+            :cover="category.coverImage.url"
             :widthClasses="widthClasses"
             :borderClasses="borderClasses"
           />
@@ -45,7 +45,7 @@ export default {
   computed: {
     displayCategories() {
       if (this.showLess) {
-        return this.categories.slice(0, 6)
+        return this.categories
       } else {
         return this.categories
       }
