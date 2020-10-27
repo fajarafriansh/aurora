@@ -87,16 +87,100 @@ module.exports = {
       'blur': 'blur(20px)',
     },
     darkSelector: '.dark-mode',
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.grayscale.8'),
+          a: {
+            color: theme('colors.primary.2'),
+            '&:hover': {
+              color: theme('colors.primary.3'),
+            },
+          },
+        },
+      },
+      dark: {
+        css: {
+          color: theme('colors.grayscale.2'),
+          a: {
+            color: theme('colors.primary.1'),
+            '&:hover': {
+              color: theme('colors.primary.2'),
+            },
+          },
+          h1: {
+            color: theme('colors.grayscale.2'),
+          },
+          h2: {
+          color: theme('colors.grayscale.2'),
+          },
+          h3: {
+            color: theme('colors.grayscale.2'),
+          },
+          h4: {
+            color: theme('colors.grayscale.2'),
+          },
+          h5: {
+            color: theme('colors.grayscale.2'),
+          },
+          h6: {
+            color: theme('colors.grayscale.2'),
+          },
+          strong: {
+            color: theme('colors.grayscale.2'),
+          },
+          code: {
+            color: theme('colors.grayscale.3'),
+          },
+          figcaption: {
+            color: theme('colors.grayscale.3'),
+          },
+        },
+      },
+    }),
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'focus', 'responsive'],
-    borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within', 'hover', 'focus', 'focus-within', 'responsive'],
-    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'focus', 'active', 'responsive'],
-    filter: ['responsive', 'hover'],
+    backgroundColor: [
+      'dark',
+      'dark-hover',
+      'dark-group-hover',
+      'dark-even',
+      'dark-odd',
+      'hover',
+      'focus',
+      'responsive',
+    ],
+    borderColor: [
+      'dark',
+      'dark-hover',
+      'dark-focus',
+      'dark-focus-within',
+      'hover', 'focus',
+      'focus-within',
+      'responsive',
+    ],
+    textColor: [
+      'dark',
+      'dark-hover',
+      'dark-active',
+      'hover',
+      'focus',
+      'active',
+      'responsive',
+    ],
+    filter: [
+      'responsive',
+      'hover',
+    ],
     backdropFilter: ['responsive'],
+    typography: [
+      'responsive',
+      'dark',
+    ],
   },
   plugins: [
     require('tailwindcss-filters'),
     require('tailwindcss-dark-mode')(),
+    require('@tailwindcss/typography'),
   ],
 }
