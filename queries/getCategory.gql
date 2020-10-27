@@ -1,0 +1,9 @@
+query getCategory($slug: String!) {
+  category(stage: PUBLISHED, where: {slug: $slug}) {
+    title
+    posts {
+      title
+      slug
+    }
+  }
+}
