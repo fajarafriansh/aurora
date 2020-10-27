@@ -1,7 +1,7 @@
 <template>
   <div class="relative text-grayscale-5 dark:text-grayscale-4 text-sm lg:text-base">
-    <div class="flex items-center w-12 text-2xl text-center absolute inset-0 py-2 px-3">
-      <ion-icon name="search-outline"></ion-icon>
+    <div class="flex items-center justify-center w-12 absolute inset-0 py-2 px-3">
+      <unicon name="search" />
     </div>
     <input
       v-model="searchInput"

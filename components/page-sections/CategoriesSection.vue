@@ -18,6 +18,7 @@
             v-for="category in categories"
             :key="category.title"
             :title="category.title"
+            :slug="category.slug"
             :cover="category.coverImage.url"
             :widthClasses="widthClasses"
             :borderClasses="borderClasses"

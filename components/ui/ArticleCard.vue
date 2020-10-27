@@ -2,7 +2,7 @@
   <div class="">
     <nuxt-link
       class="article-card flex flex-col rounded-lg shadow-md bg-grayscale-2 dark:bg-grayscale-7 lg:ml-22 lg:relative hover:shadow-lg hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
-      :to="`/${slug}`"
+      :to="'/article/' + slug"
     >
       <div class="flex items-center justify-between px-4 py-3 lg:px-6 lg:py-4">
         <div class="flex items-center justify-start">

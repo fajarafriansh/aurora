@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="lg:w-1/6 lg:h-24 lg:p-2 relative"
-    :to="`/${slug}`"
+    :to="'/category/' + slug"
     :class="widthClasses"
   >
     <img class="w-full h-full object-cover rounded-lg" :src="cover" />
@@ -26,6 +26,10 @@
 export default {
   props: {
     title: {
+      type: String,
+      default: null,
+    },
+    slug: {
       type: String,
       default: null,
     },

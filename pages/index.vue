@@ -9,7 +9,7 @@
           <PostListSection :articles="posts" />
         </section>
         <aside class="lg:w-1/3 mt-8 lg:mt-0 lg:pl-14">
-          <SidebarSection :showcase="articles[0]" :topics="categories" />
+          <!-- <SidebarSection :showcase="articles[0]" :topics="categories" /> -->
         </aside>
       </div>
     </div>
@@ -31,24 +31,6 @@ export default {
       prefetch: true,
       query: getCategories,
     },
-  },
-  asyncData() {
-    const articles = [
-      {
-        title: 'How to make your articles Vuetiful, and its so ease. Just try it sometime',
-        cover: '/img.jpg',
-        description:
-          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
-        author: {
-          name: 'Naruto Uzumaki',
-          image: '/oni.jpg',
-        },
-        date: new Date(),
-        category: "Fashion",
-      },
-    ]
-
-    return { articles }
   },
 }
 </script>
