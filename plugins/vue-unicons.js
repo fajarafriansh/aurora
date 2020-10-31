@@ -10,7 +10,10 @@ import {
   uniRedditAlienAlt,
   uniCommentDots,
   uniUpload,
-  uniSearch
+  uniSearch,
+  uniArrowLeft,
+  uniEllipsisH,
+  uniFileTimes,
 } from 'vue-unicons/src/icons'
 import 'vue-unicons/dist/vue-unicons-ssr.css'
 
@@ -24,7 +27,10 @@ Unicon.add([
   uniRedditAlienAlt,
   uniCommentDots,
   uniUpload,
-  uniSearch
+  uniSearch,
+  uniArrowLeft,
+  uniEllipsisH,
+  uniFileTimes,
 ])
 Vue.use(Unicon, {
   fill: 'currentColor',

@@ -41,12 +41,17 @@ module.exports = {
         '36': '9rem',
         '38': '9.5rem',
         '42': '10.5rem',
+        '68': '17rem',
+        '72': '18rem',
         '100': '25rem',
       },
       borderWidth: {
         '3': '3px',
       },
       fontSize: {
+        '18xl': '12rem',
+        '14xl': '10rem',
+        '12xl': '8rem',
         '62': '62px',
         '48': '48px',
         '38': '38px',
@@ -84,7 +89,8 @@ module.exports = {
     },
     backdropFilter: {
       'none': 'none',
-      'blur': 'blur(20px)',
+      'blur': 'blur(10px)',
+      'blur20': 'blur(20px)',
     },
     darkSelector: '.dark-mode',
     typography: (theme) => ({

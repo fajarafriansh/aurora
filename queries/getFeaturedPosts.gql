@@ -1,0 +1,23 @@
+{
+  posts(stage: PUBLISHED, orderBy: publishedAt_DESC, where: {tags: featured}) {
+    title
+    slug
+    excerpt
+    date
+    coverImage {
+      url(transformation: {image: {resize: {width: 300}}})
+    }
+    category {
+      title
+      coverImage {
+        url(transformation: {image: {resize: {height: 60}}})
+      }
+    }
+    author {
+      name
+      picture {
+        url(transformation: {image: {resize: {height: 60}}})
+      }
+    }
+  }
+}

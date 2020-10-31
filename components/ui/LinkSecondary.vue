@@ -39,13 +39,13 @@ export default {
     },
     wide: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   computed: {
     classes() {
       if (this.as === 'button') {
-        return 'block bg-grayscale-6 text-center font-semibold rounded-lg border-2 border-transparent hover:border-primary-1'
+        return 'block bg-grayscale-2 dark:bg-grayscale-6 text-center font-semibold rounded-lg border-2 border-transparent hover:border-primary-1'
       } else {
         return 'font-medium'
       }

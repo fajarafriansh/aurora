@@ -142,3 +142,15 @@ body {
 .dark-mode .article-card:hover .callout-shape {
 	@apply text-grayscale-6;
 }
+
+.vm--modal {
+	background-color: transparent;
+}
+
+div.vm--modal {
+	@apply bg-grayscale-2;
+}
+
+.dark-mode div.vm--modal {
+	@apply bg-grayscale-7
+}

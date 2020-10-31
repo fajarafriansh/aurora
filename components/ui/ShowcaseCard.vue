@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    class="flex flex-col rounded-lg bg-grayscale-2 dark:bg-grayscale-7 shadow-md hover:shadow-lg hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
+    class="flex flex-col rounded-lg bg-grayscale-2 dark:bg-grayscale-7 hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
     :to="`/${slug}`"
   >
     <div class="flex items-center justify-between px-4 py-3">

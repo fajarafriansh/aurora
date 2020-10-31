@@ -23,6 +23,7 @@ export default {
   plugins: [
     '~plugins/filters.js',
     { src: '~/plugins/vue-unicons', mode: 'client' },
+    '~plugins/vue-js-modal.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
