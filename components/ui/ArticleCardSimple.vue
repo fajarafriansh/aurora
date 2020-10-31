@@ -1,10 +1,10 @@
 <template>
   <nuxt-link
     class="flex flex-col justify-between rounded-lg bg-grayscale-2 dark:bg-grayscale-7 hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
-    :to="`/${slug}`"
+    :to="'/' + slug"
   >
     <div>
-      <p class="callout px-6 py-4">{{ category }}</p>
+      <p class="callout px-6 py-4">{{ category.title }}</p>
       <div class="article-cover relative w-full">
         <img
           class="w-full h-40 object-cover"
@@ -35,7 +35,7 @@ export default {
       default: null,
     },
     category: {
-      type: String,
+      type: Object,
       default: null,
     },
   },

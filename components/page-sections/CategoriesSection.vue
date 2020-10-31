@@ -47,7 +47,9 @@ export default {
   computed: {
     displayCategories() {
       if (this.showLess) {
-        return this.categories
+        if (this.categories.length > 6) {
+          return this.categories.slice(0, 6)
+        }
       } else {
         return this.categories
       }

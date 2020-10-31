@@ -1,8 +1,7 @@
-{
-  posts(stage: PUBLISHED, orderBy: publishedAt_DESC, where: {tags: featured}) {
+query getFeaturedPosts {
+  posts(first: 4, where: {tags_contains_all: "featured"}, stage: PUBLISHED) {
     title
     slug
-    excerpt
     date
     coverImage {
       url(transformation: {image: {resize: {width: 300}}})

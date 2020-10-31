@@ -9,7 +9,7 @@
           <PostListSection :articles="posts" />
         </section>
         <aside class="lg:w-1/3 mt-8 lg:mt-0 lg:pl-14">
-          <!-- <SidebarSection :showcase="articles[0]" :topics="categories" /> -->
+          <SidebarSection />
         </aside>
       </div>
     </div>

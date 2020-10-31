@@ -1,16 +1,16 @@
 <template>
   <nuxt-link
     class="flex flex-col rounded-lg bg-grayscale-2 dark:bg-grayscale-7 hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
-    :to="`/${slug}`"
+    :to="'/' + slug"
   >
     <div class="flex items-center justify-between px-4 py-3">
       <div class="flex items-center justify-start">
         <img
           class="w-8 h-8 object-cover rounded-md lg:rounded-lg"
-          :src="author.image"
-          :alt="title"
+          :src="category.coverImage.url"
+          :alt="category.title"
         />
-        <p class="callout ml-4">{{ category }}</p>
+        <p class="callout ml-4">{{ category.title }}</p>
       </div>
       <p class="text-body-2">UP</p>
     </div>
@@ -45,7 +45,7 @@ export default {
       default: null,
     },
     category: {
-      type: String,
+      type: Object,
       default: null,
     },
     author: {

@@ -3,14 +3,16 @@
     <section-header>Showcase</section-header>
     <div class="mt-6 space-y-4">
       <ShowcaseCard
-        :key="showcase.title"
-        :title="showcase.title"
-        :cover="showcase.cover"
-        :author="showcase.author"
-        :category="showcase.category"
+        v-for="post in posts"
+        :key="post.title"
+        :title="post.title"
+        :slug="post.slug"
+        :cover="post.coverImage.url"
+        :author="post.author"
+        :category="post.category"
       />
     </div>
-    <section-header class="mt-10">Trending Topics</section-header>
+    <!-- <section-header class="mt-10">Trending Topics</section-header>
     <div class="flex flex-wrap mt-4 -mx-2">
       <TrendingTopicCard
         v-for="topic in topics"
@@ -18,21 +20,29 @@
         :title="topic.title"
         :cover="topic.cover"
       />
-    </div>
+    </div> -->
   </aside>
 </template>
 
 <script>
+import getShowcasePost from '~/queries/getShowcasePost'
+
 export default {
-  props: {
-    showcase: {
-      type: Object,
-      default: null,
-    },
-    topics: {
-      type: Array,
-      default: null,
+  apollo: {
+    posts: {
+      prefetch: true,
+      query: getShowcasePost,
     },
   },
+  // props: {
+  //   showcase: {
+  //     type: Object,
+  //     default: null,
+  //   },
+  //   topics: {
+  //     type: Array,
+  //     default: null,
+  //   },
+  // },
 }
 </script>

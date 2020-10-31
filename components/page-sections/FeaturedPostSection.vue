@@ -7,9 +7,10 @@
           v-for="article in posts"
           :key="article.title"
           :title="article.title"
-          :cover="article.cover"
-          :description="article.description"
-          :date="article.date.toLocaleDateString()"
+          :slug="article.slug"
+          :cover="article.coverImage.url"
+          :description="article.excerpt"
+          :date="article.date"
           :category="article.category"
           class="w-3/4 md:w-64 lg:w-1/4 lg:w-1/4 flex-shrink-0 lg:flex-shrink"
         />
