@@ -3,7 +3,7 @@
     <section-header>Showcase</section-header>
     <div class="mt-6 space-y-4">
       <ShowcaseCard
-        v-for="post in posts"
+        v-for="post in postShow.posts"
         :key="post.title"
         :title="post.title"
         :slug="post.slug"
@@ -29,7 +29,7 @@ import getShowcasePost from '~/queries/getShowcasePost'
 
 export default {
   apollo: {
-    posts: {
+    postShow: {
       prefetch: true,
       query: getShowcasePost,
     },

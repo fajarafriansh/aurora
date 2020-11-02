@@ -4,7 +4,7 @@
       <section-header>Featured Posts</section-header>
       <div class="flex mt-6 space-x-6 overflow-auto lg:overflow-hidden">
         <ArticleCardSimple
-          v-for="article in posts"
+          v-for="article in postShow.posts"
           :key="article.title"
           :title="article.title"
           :slug="article.slug"
@@ -20,11 +20,13 @@
 </template>
 
 <script>
+import getFeaturedPosts from '~/queries/getFeaturedPosts'
+
 export default {
-  props: {
-    posts: {
-      type: Array,
-      default: null,
+  apollo: {
+    postShow: {
+      prefetch: true,
+      query: getFeaturedPosts,
     },
   },
 }

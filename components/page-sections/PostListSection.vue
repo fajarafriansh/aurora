@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full">
+  <section>
     <section-header>Post List</section-header>
     <div class="mt-6 space-y-8">
       <ArticleCard

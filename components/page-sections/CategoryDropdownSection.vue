@@ -1,12 +1,10 @@
 <template>
-  <div class="bg-grayscale-2 dark:bg-grayscale-7 py-5 border-b border-grayscale-3 dark:border-grayscale-6">
+  <div class="bg-grayscale-2 dark:bg-grayscale-7 py-5">
     <div class="container mx-auto">
       <div class="flex items-center justify-between w-full">
         <link-secondary type="internal" to="/article">
-          <div class="flex items-center">
-            <unicon name="arrow-left" />
-            <span class="ml-2 font-medium">Back</span>
-          </div>
+          <unicon name="arrow-left" />
+          <span class="ml-2 font-medium">Back</span>
         </link-secondary>
         <div class="flex items-center justify-end">
           <button-secondary as="link" :function="show">
@@ -24,7 +22,8 @@
             v-for="category in categories"
             :key="category.title"
             :title="category.title"
-            :cover="category.cover"
+            :slug="category.slug"
+            :cover="category.coverImage.url"
             class="w-1/2 h-20 md:w-1/4 md:h-24 p-2"
           />
         </div>
@@ -34,13 +33,21 @@
 </template>
 
 <script>
+import getCategories from '~/queries/getCategories'
+
 export default {
-  props: {
+  apollo: {
     categories: {
-      type: Array,
-      default: null,
+      prefetch: true,
+      query: getCategories,
     },
   },
+  // props: {
+  //   categories: {
+  //     type: Array,
+  //     default: null,
+  //   },
+  // },
   methods: {
     show() {
       this.$modal.show('categories');

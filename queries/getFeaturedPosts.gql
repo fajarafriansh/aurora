@@ -1,21 +1,19 @@
 query getFeaturedPosts {
-  posts(first: 4, where: {tags_contains_all: "featured"}, stage: PUBLISHED) {
+  postShow(where: {id: "ckgz0tgls212n0a35wkhqgpjg"}, stage: PUBLISHED) {
     title
-    slug
-    date
-    coverImage {
-      url(transformation: {image: {resize: {width: 300}}})
-    }
-    category {
+    posts(first: 4, orderBy: date_DESC) {
       title
+      slug
+      date
       coverImage {
-        url(transformation: {image: {resize: {height: 60}}})
+        url(transformation: {image: {resize: {width: 300}}})
       }
-    }
-    author {
-      name
-      picture {
-        url(transformation: {image: {resize: {height: 60}}})
+      category {
+        title
+        slug
+        coverImage {
+          url(transformation: {image: {resize: {height: 60}}})
+        }
       }
     }
   }

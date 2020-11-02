@@ -14,6 +14,7 @@ import {
   uniArrowLeft,
   uniEllipsisH,
   uniFileTimes,
+  uniTimes,
 } from 'vue-unicons/src/icons'
 import 'vue-unicons/dist/vue-unicons-ssr.css'
 
@@ -31,6 +32,7 @@ Unicon.add([
   uniArrowLeft,
   uniEllipsisH,
   uniFileTimes,
+  uniTimes,
 ])
 Vue.use(Unicon, {
   fill: 'currentColor',

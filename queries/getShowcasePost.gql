@@ -1,24 +1,18 @@
 query getShowcasePost {
-  postsConnection(first: 1, where: {tags_contains_all: "showcase"}, stage: PUBLISHED) {
-    edges {
-      node {
+  postShow(where: {id: "ckgz0rtyo211g0a35lgo88c8j"}, stage: PUBLISHED) {
+    title
+    posts(first: 1, orderBy: date_DESC) {
+      title
+      slug
+      date
+      coverImage {
+        url(transformation: {image: {resize: {width: 300}}})
+      }
+      category {
         title
         slug
-        date
         coverImage {
-          url(transformation: {image: {resize: {width: 300}}})
-        }
-        category {
-          title
-          coverImage {
-            url(transformation: {image: {resize: {height: 60}}})
-          }
-        }
-        author {
-          name
-          picture {
-            url(transformation: {image: {resize: {height: 60}}})
-          }
+          url(transformation: {image: {resize: {height: 60}}})
         }
       }
     }

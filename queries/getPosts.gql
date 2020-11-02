@@ -1,5 +1,5 @@
 {
-  posts(stage: PUBLISHED, orderBy: publishedAt_DESC) {
+  posts(first: 4, stage: PUBLISHED, orderBy: date_DESC) {
     title
     slug
     excerpt

@@ -13,6 +13,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
+      },
     ],
   },
 
@@ -36,6 +40,7 @@ export default {
     '@nuxtjs/tailwindcss', // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/svg',
     '@nuxtjs/color-mode',
+    '@nuxtjs/pwa',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

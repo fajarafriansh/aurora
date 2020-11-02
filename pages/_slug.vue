@@ -1,14 +1,14 @@
 <template>
   <main>
-    <CategoryDropdownSection :categories="categories" />
+    <CategoryDropdownSection />
     <div
-      class="bg-grayscale-3 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-6 lg:pt-8 lg:pb-12"
+      class="bg-grayscale-3 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-6 lg:pt-8 lg:pb-12 border-t border-grayscale-3 dark:border-grayscale-6"
     >
       <div class="container mx-auto grid grid-cols-6 lg:grid-cols-12 lg:gap-x-6 lg:gap-y-2">
         <img
           class="flex items-center w-10 h-10 lg:w-14 lg:h-14 object-cover rounded-lg"
           :src="category.coverImage.url"
-          alt="title"
+          :alt="category.title"
         />
         <p class="flex items-center callout col-span-3 lg:col-span-8">
           {{ category.title }}
@@ -64,14 +64,12 @@
       <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
       </article>
     </div>
-    <FeaturedPostSection :posts="posts" />
+    <FeaturedPostSection />
   </main>
 </template>
 
 <script>
 import getArticle from '~/queries/getArticle'
-import getFeaturedPosts from '~/queries/getFeaturedPosts'
-import getCategories from '~/queries/getCategories'
 
 export default {
   async asyncData({ app, route, redirect }) {
@@ -90,16 +88,6 @@ export default {
       console.log('error', error)
       redirect('/404')
     }
-  },
-  apollo: {
-    posts: {
-      prefetch: true,
-      query: getFeaturedPosts,
-    },
-    categories: {
-      prefetch: true,
-      query: getCategories,
-    },
   },
 }
 </script>
