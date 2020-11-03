@@ -2,14 +2,18 @@ query getArticle($slug: String!) {
   post(stage: PUBLISHED, where: {slug: $slug}) {
     title
     date
+    excerpt
+    content {
+      markdown
+    }
+    coverImage {
+      url(transformation: {image: {resize: {width: 600}}})
+    }
     category {
       title
       coverImage {
         url(transformation: {image: {resize: {height: 60}}})
       }
-    }
-    content {
-      markdown
     }
   }
 }

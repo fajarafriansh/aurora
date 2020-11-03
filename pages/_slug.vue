@@ -70,9 +70,10 @@
 
 <script>
 import getArticle from '~/queries/getArticle'
+import { createSEOMeta } from "~/utils/seo"
 
 export default {
-  async asyncData({ app, route, redirect }) {
+  async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
         query: getArticle,
@@ -84,10 +85,25 @@ export default {
         article: data.post,
         category: data.post.category,
       }
-    }catch(error) {
-      console.log('error', error)
-      redirect('/404')
+    }catch(e) {
+      console.log('error', e)
+      error({
+        statusCode: 404,
+        message: "Page not found",
+      })
+      // redirect('/404')
     }
   },
+  head() {
+    const title = this.article.title
+    const url = this.article.slug
+    const description = this.article.excerpt
+    const image = this.article.coverImage.url
+
+    return {
+      title,
+      meta: createSEOMeta({ title, description, image, url }),
+    }
+  }
 }
 </script>

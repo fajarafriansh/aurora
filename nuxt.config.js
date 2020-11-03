@@ -1,3 +1,5 @@
+import { createSEOMeta } from "./utils/seo"
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -8,7 +10,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      ...createSEOMeta({
+        title: "Archivil",
+        description: "Get to know all about Engineering and its related in tiny bits of info",
+        image: "https://a.storyblok.com/f/83078/500x500/cb27fcd15a/naruto-avatar.jpg",
+        url: process.env.HOST_NAME,
+      }),
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -25,9 +32,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~plugins/filters.js',
+    '~/plugins/filters.js',
     { src: '~/plugins/vue-unicons', mode: 'client' },
-    '~plugins/vue-js-modal.js',
+    '~/plugins/vue-js-modal.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -47,6 +54,7 @@ export default {
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap',
   ],
 
   apollo: {
@@ -61,6 +69,11 @@ export default {
     html: true,
     injected: true,
     use: ['markdown-it-prism'],
+  },
+
+  sitemap: {
+    hostname: process.env.HOST_NAME,
+    routes: [],
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
