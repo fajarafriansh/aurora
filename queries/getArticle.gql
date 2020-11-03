@@ -1,6 +1,7 @@
 query getArticle($slug: String!) {
   post(stage: PUBLISHED, where: {slug: $slug}) {
     title
+    slug
     date
     excerpt
     content {
