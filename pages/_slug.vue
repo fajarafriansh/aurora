@@ -72,7 +72,7 @@
       <Disqus
         v-if="article"
         :identifier="`archivil-${article.slug}`"
-        :url="process.env.HOST_NAME + '/' + article.slug"
+        :url="baseUrl + '/' + article.slug"
         :title="article.title"
       />
     </div>
@@ -85,6 +85,11 @@ import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
 
 export default {
+  mounted() {
+    baseUrl() {
+      return process.env.HOST_NAME
+    },
+  },
   async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
