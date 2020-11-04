@@ -85,9 +85,9 @@ import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
 
 export default {
-  mounted() {
-    baseUrl() {
-      return process.env.HOST_NAME
+  data() {
+    return {
+      baseUrl: process.env.HOST_NAME
     }
   },
   async asyncData({ app, route, error }) {
