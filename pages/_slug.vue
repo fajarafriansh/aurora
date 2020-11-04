@@ -87,7 +87,7 @@ import { createSEOMeta } from "~/utils/seo"
 export default {
   data() {
     return {
-      baseUrl: process.env.HOST_NAME
+      baseUrl: process.env.baseUrl,
     }
   },
   async asyncData({ app, route, error }) {
