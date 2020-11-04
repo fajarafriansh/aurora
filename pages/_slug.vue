@@ -24,10 +24,14 @@
             <div class="flex items-center">
               <unicon name="comment-dots" />
             </div>
-            <div class="flex items-center ml-3">
+            <DisqusCount
+              class="ml-3"
+              :identifier="`archivil-${article.slug}`"
+            />
+            <!-- <div class="flex items-center ml-3">
               <span>3</span>
               <span class="hidden md:block ml-1">Comments</span>
-            </div>
+            </div> -->
           </div>
           <dropdown class="ml-12" width="56">
             <template v-slot:trigger>
@@ -64,7 +68,14 @@
       <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
       </article>
     </div>
-    <Comment :data="article" />
+    <div class="container mx-auto">
+      <Disqus
+        v-if="article"
+        :identifier="`archivil-${article.slug}`"
+        :url="process.env.HOST_NAME + '/' + article.slug"
+        :title="article.title"
+      />
+    </div>
     <FeaturedPostSection />
   </main>
 </template>
