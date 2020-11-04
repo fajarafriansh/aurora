@@ -88,7 +88,7 @@ export default {
   mounted() {
     baseUrl() {
       return process.env.HOST_NAME
-    },
+    }
   },
   async asyncData({ app, route, error }) {
     try {
