@@ -1,6 +1,9 @@
 import { createSEOMeta } from "./utils/seo"
 
 export default {
+  env: {
+    baseUrl: process.env.HOST_NAME,
+  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
