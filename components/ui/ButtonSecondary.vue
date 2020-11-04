@@ -1,8 +1,8 @@
 <template>
   <button
     :type="type"
-    class="bg-grayscale-3 dark:bg-grayscale-6 text-grayscale-5 dark:text-grayscale-4 font-semibold text-center rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1 hover:text-primary-2 dark-hover:text-primary-1 transition duration-150 ease-in-out focus:outline-none"
-    :class="wideButton"
+    class="flex items-center justify-center text-grayscale-5 dark:text-grayscale-4 font-semibold hover:text-primary-2 dark-hover:text-primary-1 transition duration-150 ease-in-out focus:outline-none"
+    :class="buttonClasses + ' ' + wideButton"
     @click="this.function"
   >
     <slot></slot>
@@ -16,6 +16,10 @@ export default {
       type: String,
       default: 'button',
     },
+    as: {
+      type: String,
+      default: 'button',
+    },
     wide: {
       type: Boolean,
       default: true,
@@ -26,11 +30,18 @@ export default {
     },
   },
   computed: {
+    buttonClasses() {
+      if (this.as === 'button') {
+        return 'bg-grayscale-3 dark:bg-grayscale-6 rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1'
+      }
+    },
     wideButton() {
-      if (this.wide) {
-        return 'px-4 py-2'
-      } else {
-        return 'p-2'
+      if (this.as === 'button') {
+        if (this.wide) {
+          return 'px-4 py-2'
+        } else {
+          return 'p-2'
+        }
       }
     },
   },

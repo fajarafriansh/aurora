@@ -1,0 +1,5 @@
+{
+  posts(stage: PUBLISHED, orderBy: date_DESC) {
+    slug
+  }
+}

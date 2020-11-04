@@ -2,27 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer base {
-  @font-face {
-    font-family: 'Inter';
-    src: url(~assets/fonts/Inter-Regular.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url(~assets/fonts/Inter-Medium.ttf) format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url(~assets/fonts/Inter-SemiBold.ttf) format("truetype");
-    font-weight: 600;
-    font-style: normal;
-  }
-}
-
 body {
   @apply bg-grayscale-3 font-inter text-grayscale-5 text-base leading-normal tracking-wide antialiased box-border;
 }
@@ -162,4 +141,16 @@ body {
 
 .dark-mode .article-card:hover .callout-shape {
 	@apply text-grayscale-6;
+}
+
+.vm--modal {
+	background-color: transparent;
+}
+
+div.vm--modal {
+	@apply bg-grayscale-2;
+}
+
+.dark-mode div.vm--modal {
+	@apply bg-grayscale-7
 }

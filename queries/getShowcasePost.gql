@@ -1,0 +1,20 @@
+query getShowcasePost {
+  postShow(where: {id: "ckgz0rtyo211g0a35lgo88c8j"}, stage: PUBLISHED) {
+    title
+    posts(first: 1, orderBy: date_DESC) {
+      title
+      slug
+      date
+      coverImage {
+        url(transformation: {image: {resize: {width: 300}}})
+      }
+      category {
+        title
+        slug
+        coverImage {
+          url(transformation: {image: {resize: {height: 60}}})
+        }
+      }
+    }
+  }
+}

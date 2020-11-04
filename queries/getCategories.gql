@@ -1,0 +1,9 @@
+{
+  categories(stage: PUBLISHED, orderBy: title_ASC) {
+    title
+    slug
+    coverImage {
+      url(transformation: {image: {resize: {width: 200}}})
+    }
+  }
+}

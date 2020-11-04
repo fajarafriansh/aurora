@@ -1,0 +1,20 @@
+query getFeaturedPosts {
+  postShow(where: {id: "ckgz0tgls212n0a35wkhqgpjg"}, stage: PUBLISHED) {
+    title
+    posts(first: 4, orderBy: date_DESC) {
+      title
+      slug
+      date
+      coverImage {
+        url(transformation: {image: {resize: {width: 300}}})
+      }
+      category {
+        title
+        slug
+        coverImage {
+          url(transformation: {image: {resize: {height: 60}}})
+        }
+      }
+    }
+  }
+}

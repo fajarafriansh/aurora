@@ -1,15 +1,16 @@
 <template>
-  <section class="w-full">
+  <section>
     <section-header>Post List</section-header>
     <div class="mt-6 space-y-8">
       <ArticleCard
         v-for="article in articles"
         :key="article.title"
         :title="article.title"
-        :cover="article.cover"
-        :description="article.description"
+        :slug="article.slug"
+        :cover="article.coverImage"
+        :description="article.excerpt"
         :author="article.author"
-        :date="article.date.toLocaleDateString()"
+        :date="article.date"
         :category="article.category"
       />
     </div>

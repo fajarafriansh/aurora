@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
-    class="lg:w-1/6 lg:h-24 lg:p-2 relative"
-    :to="`/${slug}`"
+    class="lg:p-2 relative"
+    :to="'/category/' + slug"
     :class="widthClasses"
   >
     <img class="w-full h-full object-cover rounded-lg" :src="cover" />
@@ -13,7 +13,7 @@
         class="category-card flex items-center justify-center w-full h-full rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1 transition duration-150 ease-in-out"
       >
         <div
-          class="backdrop-blur text-grayscale-2 text-sm lg:text-base font-medium rounded-md py-2 px-4"
+          class="backdrop-blur text-grayscale-2 text-sm lg:text-base font-medium text-center rounded-md py-2 px-4"
         >
           {{ title }}
         </div>
@@ -26,6 +26,10 @@
 export default {
   props: {
     title: {
+      type: String,
+      default: null,
+    },
+    slug: {
       type: String,
       default: null,
     },

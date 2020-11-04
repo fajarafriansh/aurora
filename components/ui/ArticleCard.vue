@@ -1,15 +1,15 @@
 <template>
   <div class="">
     <nuxt-link
-      class="article-card flex flex-col rounded-lg shadow-md bg-grayscale-2 dark:bg-grayscale-7 lg:ml-22 lg:relative hover:shadow-lg hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
-      :to="`/${slug}`"
+      class="article-card flex flex-col rounded-lg bg-grayscale-2 dark:bg-grayscale-7 lg:ml-22 lg:relative hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
+      :to="'/' + slug"
     >
       <div class="flex items-center justify-between px-4 py-3 lg:px-6 lg:py-4">
         <div class="flex items-center justify-start">
           <img
             class="w-8 h-8 lg:w-14 lg:h-14 object-cover rounded-md lg:rounded-lg lg:absolute lg:inset-0 lg:-ml-22"
-            :src="author.image"
-            :alt="title"
+            :src="category.coverImage.url"
+            :alt="category.title"
           />
           <div class="callout-shape text-grayscale-2 dark:text-grayscale-7 hidden lg:block">
             <svg
@@ -24,14 +24,14 @@
               />
             </svg>
           </div>
-          <p class="callout ml-4 lg:ml-0">{{ category }}</p>
+          <p class="callout ml-4 lg:ml-0">{{ category.title }}</p>
         </div>
         <p class="text-body-2">{{ date | formatDate }}</p>
       </div>
       <div class="article-cover relative w-full">
         <img
           class="w-full h-48 md:h-auto object-cover"
-          :src="cover"
+          :src="cover.url"
           :alt="title"
         />
         <div class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"></div>
@@ -42,7 +42,7 @@
         <footer class="flex items-center mt-8">
           <img
             class="w-8 h-8 object-cover rounded-full"
-            :src="author.image"
+            :src="author.picture.url"
             :alt="author.name"
           />
           <div class="ml-4">
@@ -66,7 +66,7 @@ export default {
       default: null,
     },
     cover: {
-      type: String,
+      type: Object,
       default: null,
     },
     description: {
@@ -74,7 +74,7 @@ export default {
       default: null,
     },
     category: {
-      type: String,
+      type: Object,
       default: null,
     },
     author: {

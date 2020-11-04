@@ -1,7 +1,7 @@
 <template>
   <button
     :type="type"
-    class="text-center text-grayscale-5 dark:text-grayscale-4 font-medium rounded-lg border-2 border-grayscale-4 dark:border-grayscale-5 hover:text-primary-2 dark-hover:text-primary-1 hover:border-primary-2 dark-hover:border-primary-1 transition duration-150 ease-in-out focus:outline-none"
+    class="flex items-center text-grayscale-5 dark:text-grayscale-4 font-medium rounded-lg border-2 border-grayscale-4 dark:border-grayscale-5 hover:text-primary-2 dark-hover:text-primary-1 hover:border-primary-2 dark-hover:border-primary-1 transition duration-150 ease-in-out focus:outline-none"
     :class="wideButton"
     @click="this.function"
   >

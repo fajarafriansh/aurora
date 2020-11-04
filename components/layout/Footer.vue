@@ -21,18 +21,18 @@
             Contact
           </link-secondary>
         </div>
-        <div class="flex items-center justify-end text-xl">
+        <div class="flex items-center justify-end">
           <link-bordered type="outbound" as="button" to="https://twitter.com">
-            <ion-icon name="logo-twitter"></ion-icon>
+            <unicon name="twitter" height="20" width="20" />
           </link-bordered>
           <link-bordered type="outbound" as="button" to="https://instgram.com" class="ml-4">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <unicon name="instagram" height="20" width="20" />
           </link-bordered>
         </div>
       </div>
       <div class="text-sm mt-6 lg:mt-8 text-center">
         <p>
-          &copy; 2018-present Aurora by
+          &copy; 2018-present Archivil by
           <a
             rel="noopener"
             target="_blank"

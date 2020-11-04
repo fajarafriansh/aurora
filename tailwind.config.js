@@ -41,12 +41,17 @@ module.exports = {
         '36': '9rem',
         '38': '9.5rem',
         '42': '10.5rem',
+        '68': '17rem',
+        '72': '18rem',
         '100': '25rem',
       },
       borderWidth: {
         '3': '3px',
       },
       fontSize: {
+        '18xl': '12rem',
+        '14xl': '10rem',
+        '12xl': '8rem',
         '62': '62px',
         '48': '48px',
         '38': '38px',
@@ -84,19 +89,104 @@ module.exports = {
     },
     backdropFilter: {
       'none': 'none',
-      'blur': 'blur(20px)',
+      'blur': 'blur(10px)',
+      'blur20': 'blur(20px)',
     },
     darkSelector: '.dark-mode',
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.grayscale.8'),
+          a: {
+            color: theme('colors.primary.2'),
+            '&:hover': {
+              color: theme('colors.primary.3'),
+            },
+          },
+        },
+      },
+      dark: {
+        css: {
+          color: theme('colors.grayscale.2'),
+          a: {
+            color: theme('colors.primary.1'),
+            '&:hover': {
+              color: theme('colors.primary.2'),
+            },
+          },
+          h1: {
+            color: theme('colors.grayscale.2'),
+          },
+          h2: {
+          color: theme('colors.grayscale.2'),
+          },
+          h3: {
+            color: theme('colors.grayscale.2'),
+          },
+          h4: {
+            color: theme('colors.grayscale.2'),
+          },
+          h5: {
+            color: theme('colors.grayscale.2'),
+          },
+          h6: {
+            color: theme('colors.grayscale.2'),
+          },
+          strong: {
+            color: theme('colors.grayscale.2'),
+          },
+          code: {
+            color: theme('colors.grayscale.3'),
+          },
+          figcaption: {
+            color: theme('colors.grayscale.3'),
+          },
+        },
+      },
+    }),
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd', 'hover', 'focus', 'responsive'],
-    borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within', 'hover', 'focus', 'focus-within', 'responsive'],
-    textColor: ['dark', 'dark-hover', 'dark-active', 'hover', 'focus', 'active', 'responsive'],
-    filter: ['responsive', 'hover'],
+    backgroundColor: [
+      'dark',
+      'dark-hover',
+      'dark-group-hover',
+      'dark-even',
+      'dark-odd',
+      'hover',
+      'focus',
+      'responsive',
+    ],
+    borderColor: [
+      'dark',
+      'dark-hover',
+      'dark-focus',
+      'dark-focus-within',
+      'hover', 'focus',
+      'focus-within',
+      'responsive',
+    ],
+    textColor: [
+      'dark',
+      'dark-hover',
+      'dark-active',
+      'hover',
+      'focus',
+      'active',
+      'responsive',
+    ],
+    filter: [
+      'responsive',
+      'hover',
+    ],
     backdropFilter: ['responsive'],
+    typography: [
+      'responsive',
+      'dark',
+    ],
   },
   plugins: [
     require('tailwindcss-filters'),
     require('tailwindcss-dark-mode')(),
+    require('@tailwindcss/typography'),
   ],
 }

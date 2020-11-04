@@ -1,14 +1,14 @@
 <template>
-  <header class="top-0 h-17 absolute z-50 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3">
+  <header class="top-0 h-17 absolute z-20 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3">
     <div
       class="container mx-auto flex items-center justify-between"
     >
       <nuxt-link to="/" class="flex items-center justify-start h-10 w-10 md:w-34">
         <Logo />
       </nuxt-link>
-      <div class="flex items-center justify-end ml-6">
+      <div class="flex items-center justify-end ml-4">
         <SearchBox :search="fetchSuggestions" class="flex-1 max-w-sm" />
-        <ColormodePicker class="ml-6 lg:ml-8" />
+        <ColormodePicker class="ml-4 lg:ml-8" />
       </div>
     </div>
   </header>
