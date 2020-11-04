@@ -65,18 +65,13 @@
       </div>
     </div>
     <div class="container mx-auto">
-      <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
-      </article>
+      <div class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
+        <article v-html="$md.render(article.content.markdown)">
+        </article>
+        <Comment :data="article" />
+      </div>
     </div>
-    <div class="container mx-auto">
-      <Disqus
-        v-if="article"
-        :identifier="`archivil-${article.slug}`"
-        :url="baseUrl + '/' + article.slug"
-        :title="article.title"
-      />
-    </div>
-    <FeaturedPostSection />
+    <FeaturedPostSection class="mt-16" />
   </main>
 </template>
 
@@ -85,11 +80,6 @@ import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
 
 export default {
-  data() {
-    return {
-      baseUrl: process.env.baseUrl,
-    }
-  },
   async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({

@@ -1,5 +1,4 @@
 <template>
-	<div class="container mx-auto">
 	<Disqus
 		v-if="data"
 		:identifier="`archivil-${data.slug}`"
@@ -12,7 +11,7 @@
 export default {
   data() {
     return {
-      baseUrl: process.env.baseUrl
+      baseUrl: process.env.baseUrl,
     }
   },
 	props: {
