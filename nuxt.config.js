@@ -35,6 +35,7 @@ export default {
     '~/plugins/filters.js',
     { src: '~/plugins/vue-unicons', mode: 'client' },
     '~/plugins/vue-js-modal.js',
+    '~/plugins/disqus',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
