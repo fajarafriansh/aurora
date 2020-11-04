@@ -68,10 +68,10 @@
       <div class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
         <article v-html="$md.render(article.content.markdown)">
         </article>
-        <Comment :data="article" />
+        <Comment :data="article" class="mt-16" />
       </div>
     </div>
-    <FeaturedPostSection class="mt-16" />
+    <FeaturedPostSection />
   </main>
 </template>
 
