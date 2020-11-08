@@ -27,6 +27,7 @@
             <client-only>
               <DisqusCount
                 class="ml-3"
+                shortname="archivil"
                 :identifier="`archivil-${article.slug}`"
               />
             </client-only>
@@ -50,7 +51,7 @@
               <div class="grid grid-cols-3 gap-4">
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`https://twitter.com/intent/tweet?text=${article.title}url=${baseUrl}/${article.slug}`"
+                  :href="`https://twitter.com/intent/tweet?text=${article.title} url=${baseUrl}/${article.slug}`"
                   alt="Share to Twitter"
                   target="_blank"
                 >
@@ -92,6 +93,7 @@
 <script>
 import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
+import { DisqusCount } from 'vue-disqus'
 
 export default {
   data() {
