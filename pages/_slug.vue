@@ -24,10 +24,14 @@
             <div class="flex items-center">
               <unicon name="comment-dots" />
             </div>
-            <div class="flex items-center ml-3">
+            <DisqusCount
+              class="ml-3"
+              :identifier="article.slug"
+            />
+            <!-- <div class="flex items-center ml-3">
               <span>3</span>
               <span class="hidden md:block ml-1">Comments</span>
-            </div>
+            </div> -->
           </div>
           <dropdown class="ml-12" width="56">
             <template v-slot:trigger>
@@ -42,10 +46,20 @@
             </template>
             <template v-slot:content>
               <div class="grid grid-cols-3 gap-4">
-                <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                <a
+                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
+                  :href="`https://twitter.com/intent/tweet?text=${article.title} url=${baseUrl}/${article.slug}`"
+                  alt="Share to Twitter"
+                  target="_blank"
+                >
                   <unicon name="twitter" />
                 </a>
-                <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                <a
+                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
+                  :href="`http://www.facebook.com/share.php?u=${baseUrl}/${article.slug}`"
+                  alt="Share to Facebook"
+                  target="_blank"
+                >
                   <unicon name="facebook-f" />
                 </a>
                 <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
@@ -61,8 +75,13 @@
       </div>
     </div>
     <div class="container mx-auto">
-      <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
-      </article>
+      <div class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
+        <article v-html="$md.render(article.content.markdown)">
+        </article>
+        <!-- <client-only> -->
+          <Comment :data="article" class="mt-16" />
+        <!-- </client-only> -->
+      </div>
     </div>
     <FeaturedPostSection />
   </main>
@@ -73,6 +92,11 @@ import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
 
 export default {
+  data() {
+    return {
+      baseUrl: process.env.baseUrl,
+    }
+  },
   async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
@@ -85,8 +109,8 @@ export default {
         article: data.post,
         category: data.post.category,
       }
-    }catch(e) {
-      console.log('error', e)
+    }catch(err) {
+      console.log('error', err)
       error({
         statusCode: 404,
         message: "Page not found",

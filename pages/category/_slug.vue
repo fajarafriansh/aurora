@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div v-if="posts.lenght != 0" class="container mx-auto">
+    <div v-if="posts" class="container mx-auto">
       <section-header class="mt-12">Post List</section-header>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mt-6 lg:mt-10 ">
         <ArticleCardSimple
@@ -65,8 +65,8 @@ export default {
         category: data.category,
         posts: data.category.posts,
       }
-    }catch(e) {
-      console.log('error', e)
+    }catch(err) {
+      console.log('error', err)
       error({
         statusCode: 404,
         message: "Page not found",
