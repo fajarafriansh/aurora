@@ -24,13 +24,11 @@
             <div class="flex items-center">
               <unicon name="comment-dots" />
             </div>
-            <client-only>
-              <DisqusCount
-                class="ml-3"
-                shortname="archivil"
-                :identifier="`archivil-${article.slug}`"
-              />
-            </client-only>
+            <DisqusCount
+              class="ml-3"
+              shortname="archivil"
+              :identifier="`archivil-${article.slug}`"
+            />
             <!-- <div class="flex items-center ml-3">
               <span>3</span>
               <span class="hidden md:block ml-1">Comments</span>
