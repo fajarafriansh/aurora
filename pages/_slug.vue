@@ -26,8 +26,7 @@
             </div>
             <DisqusCount
               class="ml-3"
-              shortname="archivil"
-              :identifier="`archivil-${article.slug}`"
+              :identifier="article.slug"
             />
             <!-- <div class="flex items-center ml-3">
               <span>3</span>
@@ -91,7 +90,6 @@
 <script>
 import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
-import { DisqusCount } from 'vue-disqus'
 
 export default {
   data() {
