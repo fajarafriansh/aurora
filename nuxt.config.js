@@ -1,9 +1,6 @@
 import { createSEOMeta } from "./utils/seo"
 
 export default {
-  env: {
-    baseUrl: process.env.HOST_NAME,
-  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -13,16 +10,23 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Archivil' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@fajarafriansh' },
       ...createSEOMeta({
-        title: "Archivil",
-        description: "Get to know all about Engineering and its related in tiny bits of info",
-        image: "https://a.storyblok.com/f/83078/500x500/cb27fcd15a/naruto-avatar.jpg",
+        title: 'Archivil',
+        description: 'Get to know all about Civil Engineering and its related in tiny bits of info',
+        image: '/archivil-card.png',
         url: process.env.HOST_NAME,
       }),
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
+      // { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap',
+      },
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
@@ -61,6 +65,13 @@ export default {
     '@nuxtjs/sitemap',
   ],
 
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {},
+
+  purgeCSS: {
+    whitelist: ['dark-mode'],
+  },
+
   apollo: {
     clientConfigs: {
       default: {
@@ -75,15 +86,18 @@ export default {
     use: ['markdown-it-prism'],
   },
 
+  pwa: {
+    manifest: {
+      name: 'Archivil'
+    }
+  },
+
   sitemap: {
     hostname: process.env.HOST_NAME,
     routes: [],
   },
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
-
-  purgeCSS: {
-    whitelist: ['dark-mode'],
+  env: {
+    baseUrl: process.env.HOST_NAME,
   },
 }
