@@ -24,10 +24,12 @@
             <div class="flex items-center">
               <unicon name="comment-dots" />
             </div>
-            <DisqusCount
-              class="ml-3"
-              :identifier="`archivil-${article.slug}`"
-            />
+            <client-only>
+              <DisqusCount
+                class="ml-3"
+                :identifier="`archivil-${article.slug}`"
+              />
+            </client-only>
             <!-- <div class="flex items-center ml-3">
               <span>3</span>
               <span class="hidden md:block ml-1">Comments</span>
@@ -46,10 +48,20 @@
             </template>
             <template v-slot:content>
               <div class="grid grid-cols-3 gap-4">
-                <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                <a
+                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
+                  :href="`https://twitter.com/intent/tweet?text=${article.title}url=${baseUrl}/${article.slug}`"
+                  alt="Share to Twitter"
+                  target="_blank"
+                >
                   <unicon name="twitter" />
                 </a>
-                <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
+                <a
+                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
+                  :href="`http://www.facebook.com/share.php?u=${baseUrl}/${article.slug}`"
+                  alt="Share to Facebook"
+                  target="_blank"
+                >
                   <unicon name="facebook-f" />
                 </a>
                 <a class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75" href="#" alt="Share to Twitter">
@@ -82,6 +94,11 @@ import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from "~/utils/seo"
 
 export default {
+  data() {
+    return {
+      baseUrl: process.env.baseUrl,
+    }
+  },
   async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
