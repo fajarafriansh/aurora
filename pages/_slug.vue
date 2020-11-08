@@ -68,7 +68,9 @@
       <div class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
         <article v-html="$md.render(article.content.markdown)">
         </article>
-        <Comment :data="article" class="mt-16" />
+        <!-- <client-only> -->
+          <Comment :data="article" class="mt-16" />
+        <!-- </client-only> -->
       </div>
     </div>
     <FeaturedPostSection />
@@ -92,8 +94,8 @@ export default {
         article: data.post,
         category: data.post.category,
       }
-    }catch(e) {
-      console.log('error', e)
+    }catch(err) {
+      console.log('error', err)
       error({
         statusCode: 404,
         message: "Page not found",
