@@ -25,10 +25,7 @@
         class="appearance-none block w-full bg-grayscale-1 dark:bg-grayscale-2 text-grayscale-5 border-current border-2 rounded-md placeholder-current focus:border-primary-2 focus:outline-none px-4 py-2 mt-2"
       />
     </label>
-    <button-primary
-      type="submit"
-      class="mt-6 mx-auto md:w-full"
-    >
+    <button-primary type="submit" class="mt-6 mx-auto md:w-full">
       Subscribe
     </button-primary>
   </form>

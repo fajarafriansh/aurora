@@ -14,10 +14,16 @@
         </div>
       </div>
     </div>
-    <modal name="categories" :width="800" :adaptive="true" :shiftY="0.2">
+    <modal name="categories" :width="800" :adaptive="true" :shift-y="0.2">
       <div class="p-4 md:p-8">
-        <span class="text-grayscale-5 dark:text-grayscale-4 text-sm font-medium uppercase leading-none tracking-wider">Categories</span>
-        <div class="flex flex-wrap items-center justify-start -mx-1 lg:-mx-2 mt-2">
+        <span
+          class="text-grayscale-5 dark:text-grayscale-4 text-sm font-medium uppercase leading-none tracking-wider"
+        >
+          Categories
+        </span>
+        <div 
+          class="flex flex-wrap items-center justify-start -mx-1 lg:-mx-2 mt-2"
+        >
           <CategoryCard
             v-for="category in categories"
             :key="category.title"
@@ -50,11 +56,11 @@ export default {
   // },
   methods: {
     show() {
-      this.$modal.show('categories');
+      this.$modal.show('categories')
     },
     hide() {
-      this.$modal.hide('categories');
-    }
+      this.$modal.hide('categories')
+    },
   },
 }
 </script>

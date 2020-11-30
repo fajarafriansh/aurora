@@ -7,7 +7,9 @@
             <Logo class="not-responsive" />
           </nuxt-link>
         </div>
-        <div class="row-start-2 col-span-2 lg:row-start-auto lg:col-auto flex flex-wrap items-center justify-center mt-6 lg:mt-0 text-base">
+        <div
+          class="row-start-2 col-span-2 lg:row-start-auto lg:col-auto flex flex-wrap items-center justify-center mt-6 lg:mt-0 text-base"
+        >
           <link-secondary type="internal" to="/about" class="p-1">
             About
           </link-secondary>
@@ -25,7 +27,12 @@
           <link-bordered type="outbound" as="button" to="https://twitter.com">
             <unicon name="twitter" height="20" width="20" />
           </link-bordered>
-          <link-bordered type="outbound" as="button" to="https://instgram.com" class="ml-4">
+          <link-bordered
+            type="outbound"
+            as="button"
+            to="https://instgram.com"
+            class="ml-4"
+          >
             <unicon name="instagram" height="20" width="20" />
           </link-bordered>
         </div>
@@ -47,7 +54,7 @@
 </template>
 
 <script>
-import Logo from "~/assets/svg/archivil-logo.svg?inline"
+import Logo from '~/assets/svg/archivil-logo.svg?inline'
 
 export default {
   components: { Logo },

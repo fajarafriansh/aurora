@@ -49,7 +49,6 @@ module.exports = async function getAppRoutes() {
 export const fetchSitemapRoutes = async () => {
   const routes = []
   const httpEndpoint: process.env.GRAPHCMS_ENDPOINT
-
   const { data: articlesData } = await client.get('cdn/links', {
     starts_with: 'articles/',
   })

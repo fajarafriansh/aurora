@@ -9,113 +9,113 @@ body {
 *,
 *::before,
 *::after {
-	@apply box-border m-0;
+  @apply box-border m-0;
 }
 
 .h1 {
-	@apply text-26 text-grayscale-7 font-medium leading-snug;
+  @apply text-26 text-grayscale-7 font-medium leading-snug;
 }
 
 .h2 {
-	@apply text-21 text-grayscale-7 font-medium leading-normal tracking-normal;
+  @apply text-21 text-grayscale-7 font-medium leading-normal tracking-normal;
 }
 
 .h3 {
-	@apply text-21 text-grayscale-7 font-medium leading-relaxed tracking-normal;
+  @apply text-21 text-grayscale-7 font-medium leading-relaxed tracking-normal;
 }
 
 .h4 {
-	@apply text-lg text-grayscale-7 font-medium leading-relaxed tracking-normal;
+  @apply text-lg text-grayscale-7 font-medium leading-relaxed tracking-normal;
 }
 
 .headline {
-	@apply text-lg text-grayscale-5 font-medium leading-loose uppercase;
+  @apply text-lg text-grayscale-5 font-medium leading-loose uppercase;
 }
 
 .subhead {
-	@apply text-xs font-medium leading-snug
+  @apply text-xs font-medium leading-snug
 }
 
 .text-body-2 {
-	@apply text-xs text-grayscale-5 leading-relaxed;
+  @apply text-xs text-grayscale-5 leading-relaxed;
 }
 
 .callout {
-	@apply text-sm text-grayscale-7 font-medium leading-normal;
+  @apply text-sm text-grayscale-7 font-medium leading-normal;
 }
 
 #logo .mobile {
-	@apply block;
+  @apply block;
 }
 
 #logo.not-responsive .mobile {
-	@apply hidden;
+  @apply hidden;
 }
 
 #logo .desktop {
-	@apply hidden;
+  @apply hidden;
 }
 
 #logo.not-responsive .desktop {
-	@apply block;
+  @apply block;
 }
 
 .category-card:hover div {
-	@apply bg-primary-2 text-grayscale-6 transition duration-300 ease-in-out;
+  @apply bg-primary-2 text-grayscale-6 transition duration-300 ease-in-out;
 }
 
 .article-card:hover .callout-shape {
-	@apply text-grayscale-1 transition duration-300 ease-in-out;
+  @apply text-grayscale-1 transition duration-300 ease-in-out;
 }
 
 .article-card:hover .overlay {
-	@apply opacity-25 transition duration-300 ease-in-out;
+  @apply opacity-25 transition duration-300 ease-in-out;
 }
 
 .label-floating input:focus-within ~ label,
 .label-floating input:not(:placeholder-shown) ~ label {
-	@apply transition ease-in-out duration-300 text-xs transform -translate-y-3
+  @apply transition ease-in-out duration-300 text-xs transform -translate-y-3
 }
 
 .label-floating input:focus-within ~ label {
-	@apply text-primary-2;
+  @apply text-primary-2;
 }
 
 .label-floating input:not(:placeholder-shown) ~ label {
-	@apply text-primary-2;
+  @apply text-primary-2;
 }
 
 .dark-mode .label-floating input:not(:placeholder-shown) ~ label {
-	@apply text-primary-1;
+  @apply text-primary-1;
 }
 
 @screen md {
-	.h1 {
-		@apply text-36 font-semibold;
-	}
-	.h2 {
-		@apply text-24 font-semibold;
-	}
+  .h1 {
+    @apply text-36 font-semibold;
+  }
+  .h2 {
+    @apply text-24 font-semibold;
+  }
 
-	.text-body-2 {
-		@apply text-sm;
-	}
+  .text-body-2 {
+    @apply text-sm;
+  }
 
-	.headline {
-		@apply font-semibold;
-	}
+  .headline {
+    @apply font-semibold;
+  }
 
-	.callout {
-		@apply text-base;
-	}
+  .callout {
+    @apply text-base;
+  }
 
-	#logo .mobile {
-		@apply hidden;
-	}
+  #logo .mobile {
+    @apply hidden;
+  }
 
-	#logo .desktop {
-		@apply block;
-	}
+  #logo .desktop {
+    @apply block;
+  }
 }
 
 .dark-mode body {
@@ -127,30 +127,42 @@ body {
 .dark-mode .h3,
 .dark-mode .h4,
 .dark-mode .callout {
-	@apply text-grayscale-2;
+  @apply text-grayscale-2;
 }
 
 .dark-mode .text-body-2,
 .dark-mode .headline {
-	@apply text-grayscale-4
+  @apply text-grayscale-4
 }
 
 .dark-mode .category-card:hover div {
-	@apply bg-primary-1;
+  @apply bg-primary-1;
 }
 
 .dark-mode .article-card:hover .callout-shape {
-	@apply text-grayscale-6;
+  @apply text-grayscale-6;
 }
 
 .vm--modal {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 div.vm--modal {
-	@apply bg-grayscale-2;
+  @apply bg-grayscale-2;
 }
 
 .dark-mode div.vm--modal {
-	@apply bg-grayscale-7
+  @apply bg-grayscale-7
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }

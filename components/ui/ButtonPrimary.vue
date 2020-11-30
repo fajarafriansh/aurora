@@ -22,16 +22,15 @@ export default {
     },
     function: {
       type: Function,
-      default: () => {}
+      default: () => {},
     },
   },
   computed: {
     wideButton() {
       if (this.wide) {
         return 'px-4 py-2'
-      } else {
-        return 'p-2'
       }
+      return 'p-2'
     },
   },
 }

@@ -11,7 +11,9 @@
             :src="category.coverImage.url"
             :alt="category.title"
           />
-          <div class="callout-shape text-grayscale-2 dark:text-grayscale-7 hidden lg:block">
+          <div
+            class="callout-shape text-grayscale-2 dark:text-grayscale-7 hidden lg:block"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -34,7 +36,9 @@
           :src="cover.url"
           :alt="title"
         />
-        <div class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"></div>
+        <div
+          class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
+        ></div>
       </div>
       <div class="w-full p-6">
         <h2 class="h2">{{ title }}</h2>
