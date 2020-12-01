@@ -51,7 +51,7 @@ export default {
         type: 'text/javascript',
         ...algoliasearchNetlify({
           appId: process.env.ALGOLIA_APP_ID,
-          apiKey: process.env.ALGOLIA_API_KEY,
+          apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
           siteId: process.env.ALGOLIA_SITE_ID,
         }),
       },
@@ -83,7 +83,8 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit'],
+  // modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
@@ -112,10 +113,10 @@ export default {
     },
   },
 
-  sitemap: {
-    hostname: process.env.HOST_NAME,
-    routes: [],
-  },
+  // sitemap: {
+  //   hostname: process.env.HOST_NAME,
+  //   routes: [],
+  // },
 
   env: {
     baseUrl: process.env.HOST_NAME,
