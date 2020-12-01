@@ -21,7 +21,7 @@
         >
           Categories
         </span>
-        <div 
+        <div
           class="flex flex-wrap items-center justify-start -mx-1 lg:-mx-2 mt-2"
         >
           <CategoryCard

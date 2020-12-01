@@ -45,7 +45,7 @@
             target="_blank"
             href="https://twitter.com/fajarafriansh"
             class="outbound-link underline"
-          >Fajar Afriansh</a
+            >Fajar Afriansh</a
           >. All rights reserved.
         </p>
       </div>

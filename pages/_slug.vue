@@ -25,7 +25,9 @@
         >
           {{ article.title }}
         </h1>
-        <div class="flex items-center col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6">
+        <div
+          class="flex items-center col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6"
+        >
           <div class="flex items-center">
             <div class="flex items-center">
               <unicon name="comment-dots" />
@@ -88,7 +90,9 @@
       </div>
     </div>
     <div class="container mx-auto">
-      <div class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16">
+      <div
+        class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16"
+      >
         <article v-html="$md.render(article.content.markdown)"></article>
         <!-- <client-only> -->
         <Comment :data="article" class="mt-16" />
@@ -117,7 +121,6 @@ export default {
         category: data.post.category,
       }
     } catch (err) {
-      console.log('error', err)
       error({
         statusCode: 404,
         message: 'Page not found',

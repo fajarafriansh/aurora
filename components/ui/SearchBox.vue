@@ -10,10 +10,10 @@
     <input
       ref="search"
       v-model="searchInput"
-      @focus="isFocus = true"
-      @blur="isFocus = false"
       placeholder="Search (Press ''/'' to focus)"
       class="w-full bg-grayscale-1 dark:bg-grayscale-6 rounded-md border-2 border-grayscale-3 dark:border-grayscale-5 placeholder-current outline-none focus:border-primary-2 dark-focus:border-primary-1 pl-12 pr-4 py-2"
+      @focus="isFocus = true"
+      @blur="isFocus = false"
       @keydown.esc="blurInput"
     />
   </div>

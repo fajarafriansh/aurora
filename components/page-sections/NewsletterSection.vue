@@ -14,8 +14,8 @@
               <span class="-ml-1">, your favourite topic.</span>
             </h2>
             <p class="mt-6">
-              Subscribe to receive all the articles we publish in a concise format,
-              perfect for busy engineers.
+              Subscribe to receive all the articles we publish in a concise
+              format, perfect for busy engineers.
             </p>
           </div>
           <Newsletter />
