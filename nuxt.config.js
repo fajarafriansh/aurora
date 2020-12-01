@@ -1,4 +1,4 @@
-import { createSEOMeta } from "./utils/seo"
+import { createSEOMeta } from './utils/seo'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -15,7 +15,8 @@ export default {
       { hid: 'twitter:site', name: 'twitter:site', content: '@fajarafriansh' },
       ...createSEOMeta({
         title: 'Archivil',
-        description: 'Get to know all about Civil Engineering and its related in tiny bits of info',
+        description:
+          'Get to know all about Civil Engineering and its related in tiny bits of info',
         image: '/archivil-card.png',
         url: process.env.HOST_NAME,
       }),
@@ -25,11 +26,13 @@ export default {
       // { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap',
+        href:
+          'https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap',
       },
       {
         rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
+        href:
+          'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
       },
     ],
   },
@@ -51,7 +54,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss', // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/svg',
     '@nuxtjs/color-mode',
@@ -59,11 +62,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    '@nuxtjs/apollo',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap',
-  ],
+  modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
@@ -75,7 +74,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.GRAPHCMS_ENDPOINT,
+        httpEndpoint: process.env.GRAPHCMS_ENDPOINT || 'http://localhost:3000/',
       },
     },
   },
@@ -88,8 +87,8 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'Archivil'
-    }
+      name: 'Archivil',
+    },
   },
 
   sitemap: {

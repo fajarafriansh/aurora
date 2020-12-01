@@ -27,7 +27,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'internal'
+      default: 'internal',
     },
     as: {
       type: String,
@@ -46,20 +46,17 @@ export default {
     classes() {
       if (this.as === 'button') {
         return 'block bg-grayscale-2 dark:bg-grayscale-6 font-semibold rounded-lg border-2 border-transparent hover:border-primary-1'
-      } else {
-        return 'font-medium'
       }
+      return 'font-medium'
     },
     wideButton() {
       if (this.as === 'button') {
         if (this.wide) {
           return 'px-4 py-2'
-        } else {
-          return 'p-2'
         }
-      } else {
-        return ' '
+        return 'p-2'
       }
+      return ' '
     },
   },
 }

@@ -2,12 +2,12 @@ export const createSEOMeta = (data) => [
   {
     hid: 'og:title',
     property: 'og:title',
-    content: data.title
+    content: data.title,
   },
   {
     hid: 'description',
     name: 'description',
-    content: data.description
+    content: data.description,
   },
   {
     hid: 'og:description',
@@ -17,22 +17,22 @@ export const createSEOMeta = (data) => [
   {
     hid: 'og:url',
     property: 'og:url',
-    content: process.env.HOST_NAME + '/' + data.url,
+    content: `${process.env.HOST_NAME}/${data.url}`,
   },
   {
     hid: 'og:image',
     property: 'og:image',
-    content: data.image
+    content: data.image,
   },
   {
     hid: 'og:image:secure_url',
     property: 'og:image:secure_url',
-    content: data.image
+    content: data.image,
   },
   {
     hid: 'og:image:alt',
     property: 'og:image:alt',
-    content: data.title
+    content: data.title,
   },
   {
     hid: 'twitter:card',
@@ -42,6 +42,6 @@ export const createSEOMeta = (data) => [
   {
     hid: 'twitter:image',
     name: 'twitter:image',
-    content: data.image
-  }
+    content: data.image,
+  },
 ]

@@ -8,8 +8,12 @@
         class="w-14 h-14 object-cover rounded-full shadow-md"
         :src="cover"
         :alt="title"
+      />
+      <h4
+        class="text-base text-grayscale-7 dark:text-grayscale-2 font-medium lowercase leading-relaxed tracking-normal mt-2"
       >
-      <h4 class="text-base text-grayscale-7 dark:text-grayscale-2 font-medium lowercase leading-relaxed tracking-normal mt-2">{{ '#' + title }}</h4>
+        {{ '#' + title }}
+      </h4>
       <p class="text-sm mt-2">16 posts</p>
     </nuxt-link>
   </div>

@@ -26,7 +26,7 @@ export default {
     },
     function: {
       type: Function,
-      default: () => {}
+      default: () => {},
     },
   },
   computed: {
@@ -34,15 +34,16 @@ export default {
       if (this.as === 'button') {
         return 'bg-grayscale-3 dark:bg-grayscale-6 rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1'
       }
+      return ' '
     },
     wideButton() {
       if (this.as === 'button') {
         if (this.wide) {
           return 'px-4 py-2'
-        } else {
-          return 'p-2'
         }
+        return 'p-2'
       }
+      return ' '
     },
   },
 }

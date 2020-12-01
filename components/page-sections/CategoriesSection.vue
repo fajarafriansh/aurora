@@ -30,8 +30,8 @@
             :title="category.title"
             :slug="category.slug"
             :cover="category.coverImage.url"
-            :widthClasses="widthClasses"
-            :borderClasses="borderClasses"
+            :width-classes="widthClasses"
+            :border-classes="borderClasses"
             class="lg:w-1/6 lg:h-24"
           />
         </div>
@@ -74,34 +74,33 @@ export default {
         if (this.categories.length > 6) {
           return this.categories.slice(0, 6)
         }
-      } else {
-        return this.categories
       }
+      return this.categories
     },
     wrapClasses() {
       if (!this.showLess) {
         return 'flex-wrap'
       }
+      return ' '
     },
     widthClasses() {
       if (!this.showLess) {
         return 'w-1/2 h-20 md:w-1/4 p-2'
-      } else {
-        return 'w-36 h-18 px-1 py-2'
       }
+      return 'w-36 h-18 px-1 py-2'
     },
     borderClasses() {
       if (!this.showLess) {
         return 'p-2'
-      } else {
-        return 'px-1 py-2'
       }
+      return 'px-1 py-2'
     },
     overflowClasses() {
-       if (!this.showLess) {
+      if (!this.showLess) {
         return 'overflow-x-hidden'
       }
-    }
+      return ' '
+    },
   },
   methods: {
     viewAll() {
@@ -109,7 +108,7 @@ export default {
     },
     viewLess() {
       this.showLess = !this.showLess
-    }
+    },
   },
 }
 </script>

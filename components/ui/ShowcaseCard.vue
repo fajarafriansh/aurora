@@ -20,7 +20,9 @@
         :src="cover"
         :alt="title"
       />
-      <div class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"></div>
+      <div
+        class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
+      ></div>
     </div>
     <div class="w-full p-6">
       <h3 class="h3">{{ title }}</h3>

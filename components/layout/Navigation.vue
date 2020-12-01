@@ -1,9 +1,12 @@
 <template>
-  <header class="top-0 h-17 absolute z-20 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3">
-    <div
-      class="container mx-auto flex items-center justify-between"
-    >
-      <nuxt-link to="/" class="flex items-center justify-start h-10 w-10 md:w-34">
+  <header
+    class="top-0 h-17 absolute z-20 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3"
+  >
+    <div class="container mx-auto flex items-center justify-between">
+      <nuxt-link
+        to="/"
+        class="flex items-center justify-start h-10 w-10 md:w-34"
+      >
         <Logo />
       </nuxt-link>
       <div class="flex items-center justify-end ml-4">
@@ -15,7 +18,7 @@
 </template>
 
 <script>
-import Logo from "~/assets/svg/archivil-logo.svg?inline"
+import Logo from '~/assets/svg/archivil-logo.svg?inline'
 
 export default {
   components: { Logo },
@@ -28,9 +31,7 @@ export default {
     toggleNavbar() {
       this.showMenu = !this.showMenu
     },
-    async fetchSuggestions(searchInput) {
-
-    },
+    async fetchSuggestions(searchInput) {},
   },
 }
 </script>
