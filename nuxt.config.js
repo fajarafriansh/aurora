@@ -53,8 +53,8 @@ export default {
           appId: process.env.ALGOLIA_APP_ID,
           apiKey: process.env.ALGOLIA_API_KEY,
           siteId: process.env.ALGOLIA_SITE_ID,
-        })
-      }
+        }),
+      },
     ],
   },
 

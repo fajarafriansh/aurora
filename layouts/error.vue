@@ -22,7 +22,7 @@
             Oops! We can't find that page
           </span>
           <div class="w-full flex items-center mt-6">
-            <SearchBox :search="fetchSuggestions" class="flex-1" />
+            <SearchBox class="flex-1" />
             <button-primary class="ml-2">Search</button-primary>
           </div>
           <div class="flex items-center justify-center mt-6">
@@ -66,9 +66,6 @@ export default {
       type: Object,
       default: () => {},
     },
-  },
-  methods: {
-    async fetchSuggestions(searchInput) {},
   },
   head() {
     return {
