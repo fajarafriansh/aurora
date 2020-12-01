@@ -1,4 +1,5 @@
 import { createSEOMeta } from './utils/seo'
+import { algoliasearchNetlify } from './utils/algolia-netlify'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -34,6 +35,26 @@ export default {
         href:
           'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
       },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.css',
+      },
+    ],
+    script: [
+      {
+        type: 'text/javascript',
+        src:
+          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.js',
+      },
+      {
+        type: 'text/javascript',
+        ...algoliasearchNetlify({
+          appId: process.env.ALGOLIA_APP_ID,
+          apiKey: process.env.ALGOLIA_API_KEY,
+          siteId: process.env.ALGOLIA_SITE_ID,
+        })
+      }
     ],
   },
 
