@@ -41,7 +41,7 @@
             </div>
           </div>
           <dropdown class="ml-12" width="56">
-            <template v-slot:trigger>
+            <template #trigger>
               <div
                 class="flex items-center hover:text-primary-2 dark-hover:text-primary-1"
               >
@@ -53,7 +53,7 @@
                 </div>
               </div>
             </template>
-            <template v-slot:content>
+            <template #content>
               <div class="grid grid-cols-3 gap-4">
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
