@@ -12,9 +12,12 @@
           :src="category.coverImage.url"
           :alt="category.title"
         />
-        <p class="flex items-center callout col-span-3 lg:col-span-8">
+        <nuxt-link
+          class="flex items-center callout col-span-3 lg:col-span-8"
+          :to="`/category/${category.slug}`"
+        >
           {{ category.title }}
-        </p>
+        </nuxt-link>
         <p
           class="flex items-center justify-end text-body-2 col-span-2 lg:col-span-3"
         >
@@ -30,13 +33,12 @@
         >
           <div class="flex items-center">
             <div class="flex items-center">
-              <unicon name="comment-dots" />
+              <unicon name="calendar-alt" />
             </div>
-            <DisqusCount class="ml-3" :identifier="article.slug" />
-            <!-- <div class="flex items-center ml-3">
-              <span>3</span>
-              <span class="hidden md:block ml-1">Comments</span>
-            </div> -->
+            <div class="flex items-center ml-3">
+              <span>{{ article.date | formatDate }}</span>
+              <!-- <span class="hidden md:block ml-1">Comments</span> -->
+            </div>
           </div>
           <dropdown class="ml-12" width="56">
             <template v-slot:trigger>

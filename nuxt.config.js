@@ -1,5 +1,4 @@
 import { createSEOMeta } from './utils/seo'
-// import { algoliasearchNetlify } from './utils/algolia-netlify'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -24,7 +23,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
       {
         rel: 'stylesheet',
         href:
@@ -34,27 +32,6 @@ export default {
         rel: 'stylesheet',
         href:
           'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.css',
-      },
-    ],
-    script: [
-      {
-        type: 'text/javascript',
-        src:
-          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.js',
-      },
-      {
-        type: 'text/javascript',
-        src: './utils/algolia-netlify.js'
-        // ...algoliasearchNetlify({
-        //   appId: process.env.ALGOLIA_APP_ID,
-        //   apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-        //   siteId: process.env.ALGOLIA_SITE_ID,
-        // }),
       },
     ],
   },
@@ -88,7 +65,9 @@ export default {
   // modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
+  },
 
   purgeCSS: {
     whitelist: ['dark-mode'],
@@ -121,5 +100,7 @@ export default {
 
   env: {
     baseUrl: process.env.HOST_NAME,
+    algoliaAppId: process.env.ALGOLIA_APP_ID,
+    algoliaSearchApiKey: process.env.ALGOLIA_SEARCH_API_KEY
   },
 }

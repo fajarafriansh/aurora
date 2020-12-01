@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="lg:p-2 relative"
-    :to="'/category/' + slug"
+    :to="`/category/${slug}`"
     :class="widthClasses"
   >
     <img class="w-full h-full object-cover rounded-lg" :src="cover" />

@@ -12,6 +12,7 @@ query getArticle($slug: String!) {
     }
     category {
       title
+      slug
       coverImage {
         url(transformation: {image: {resize: {height: 60}}})
       }
