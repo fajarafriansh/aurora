@@ -1,5 +1,5 @@
 import { createSEOMeta } from './utils/seo'
-import { algoliasearchNetlify } from './utils/algolia-netlify'
+// import { algoliasearchNetlify } from './utils/algolia-netlify'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -49,11 +49,12 @@ export default {
       },
       {
         type: 'text/javascript',
-        ...algoliasearchNetlify({
-          appId: process.env.ALGOLIA_APP_ID,
-          apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-          siteId: process.env.ALGOLIA_SITE_ID,
-        }),
+        src: './utils/algolia-netlify.js'
+        // ...algoliasearchNetlify({
+        //   appId: process.env.ALGOLIA_APP_ID,
+        //   apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+        //   siteId: process.env.ALGOLIA_SITE_ID,
+        // }),
       },
     ],
   },
