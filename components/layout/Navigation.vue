@@ -10,7 +10,8 @@
         <Logo />
       </nuxt-link>
       <div class="flex items-center justify-end ml-4">
-        <SearchBox class="flex-1 max-w-sm" />
+        <input type="search" />
+        <!-- <SearchBox class="flex-1 max-w-sm" /> -->
         <ColormodePicker class="ml-4 lg:ml-8" />
       </div>
     </div>
