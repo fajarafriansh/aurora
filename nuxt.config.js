@@ -1,4 +1,5 @@
 import { createSEOMeta } from './utils/seo'
+// import { algoliasearchNetlify } from './utils/algolia-netlify'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -34,6 +35,27 @@ export default {
         href:
           'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
       },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.css',
+      },
+    ],
+    script: [
+      {
+        type: 'text/javascript',
+        src:
+          'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@0/dist/algoliasearchNetlify.js',
+      },
+      {
+        type: 'text/javascript',
+        src: './utils/algolia-netlify.js'
+        // ...algoliasearchNetlify({
+        //   appId: process.env.ALGOLIA_APP_ID,
+        //   apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+        //   siteId: process.env.ALGOLIA_SITE_ID,
+        // }),
+      },
     ],
   },
 
@@ -62,7 +84,8 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit'],
+  // modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
@@ -91,10 +114,10 @@ export default {
     },
   },
 
-  sitemap: {
-    hostname: process.env.HOST_NAME,
-    routes: [],
-  },
+  // sitemap: {
+  //   hostname: process.env.HOST_NAME,
+  //   routes: [],
+  // },
 
   env: {
     baseUrl: process.env.HOST_NAME,
