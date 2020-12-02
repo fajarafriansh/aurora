@@ -12,8 +12,16 @@ query getArticle($slug: String!) {
     }
     category {
       title
+      slug
       coverImage {
         url(transformation: {image: {resize: {height: 60}}})
+      }
+    }
+    topics(orderBy: title_ASC) {
+      title
+      slug
+      coverImage {
+        url(transformation: {image: {resize: {width: 30}}})
       }
     }
   }
