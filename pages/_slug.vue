@@ -37,7 +37,6 @@
             </div>
             <div class="flex items-center ml-3">
               <span>{{ article.date | formatDate }}</span>
-              <!-- <span class="hidden md:block ml-1">Comments</span> -->
             </div>
           </div>
           <dropdown class="ml-12" width="56">
@@ -92,14 +91,27 @@
       </div>
     </div>
     <div class="container mx-auto">
-      <div
-        class="max-w-screen-md mx-auto py-4 lg:py-16"
-      >
-        <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark"></article>
-        <div class="mt-16">
-          <div v-for="topic in topics">
-            {{ topic.title }}
-          </div>
+      <div class="max-w-screen-md mx-auto py-4 lg:py-16">
+        <article
+          class="prose lg:prose-lg dark:prose-dark"
+          v-html="$md.render(article.content.markdown)"
+        ></article>
+        <div class="flex mt-16 space-x-4">
+          <nuxt-link
+            v-for="topic in topics"
+            :key="topic.slug"
+            class="flex item-center p-1 bg-grayscale-7 rounded-full"
+            :to="`/topic/${topic.slug}`"
+          >
+            <img
+              class="flex items-center w-8 h-8 object-cover rounded-full"
+              :src="topic.coverImage ? topic.coverImage.url : '/topic.png'"
+              :alt="topic.slug"
+            />
+            <span class="flex items-center mx-2">
+              {{ `#${topic.slug}` }}
+            </span>
+          </nuxt-link>
         </div>
         <Comment :data="article" class="mt-16" />
       </div>

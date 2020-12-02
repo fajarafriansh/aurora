@@ -100,6 +100,6 @@ export default {
   env: {
     baseUrl: process.env.HOST_NAME,
     algoliaAppId: process.env.ALGOLIA_APP_ID,
-    algoliaSearchApiKey: process.env.ALGOLIA_SEARCH_API_KEY
+    algoliaSearchApiKey: process.env.ALGOLIA_SEARCH_API_KEY,
   },
 }
