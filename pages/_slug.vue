@@ -93,12 +93,15 @@
     </div>
     <div class="container mx-auto">
       <div
-        class="prose lg:prose-lg dark:prose-dark max-w-screen-md mx-auto py-4 lg:py-16"
+        class="max-w-screen-md mx-auto py-4 lg:py-16"
       >
-        <article v-html="$md.render(article.content.markdown)"></article>
-        <!-- <client-only> -->
+        <article v-html="$md.render(article.content.markdown)" class="prose lg:prose-lg dark:prose-dark"></article>
+        <div class="mt-16">
+          <div v-for="topic in topics">
+            {{ topic.title }}
+          </div>
+        </div>
         <Comment :data="article" class="mt-16" />
-        <!-- </client-only> -->
       </div>
     </div>
     <FeaturedPostSection />
@@ -121,13 +124,13 @@ export default {
       return {
         article: data.post,
         category: data.post.category,
+        topics: data.post.topics,
       }
     } catch (err) {
       error({
         statusCode: 404,
         message: 'Page not found',
       })
-      // redirect('/404')
     }
   },
   data() {

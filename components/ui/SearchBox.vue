@@ -13,9 +13,9 @@
               type="search"
               placeholder="Search"
               @input="refine($event.currentTarget.value)"
-            >
+            />
             <div v-if="keywords && !hideAutocomplete">
-              <a 
+              <a
                 v-for="hit in indices[0].hits"
                 :key="hit.objectID"
                 @click="goToBlog(hit.objectID)"
@@ -46,7 +46,6 @@
         @keydown.esc="blurInput"
       />
     </div> -->
-    
   </client-only>
 </template>
 
@@ -54,37 +53,37 @@
 import algoliasearch from 'algoliasearch/lite'
 
 export default {
-  data () {
+  data() {
     return {
       searchClient: algoliasearch(
         process.env.algoliaAppId,
         process.env.algoliaSearchApiKey
       ),
       keywords: '',
-      hideAutocomplete: false
+      hideAutocomplete: false,
     }
   },
   watch: {
-    keywords (value) {
+    keywords(value) {
       if (value) {
         this.hideAutocomplete = false
       }
-    }
+    },
   },
   methods: {
-    goToBlog (blogId) {
+    goToBlog(blogId) {
       this.keywords = ''
       this.$router.push({
         name: 'blog-id',
         params: {
-          id: blogId
-        }
+          id: blogId,
+        },
       })
     },
-    closeAutocomplete () {
+    closeAutocomplete() {
       this.hideAutocomplete = true
-    }
-  }
+    },
+  },
 }
 </script>
 
