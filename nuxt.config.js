@@ -45,7 +45,7 @@ export default {
     { src: '~/plugins/vue-unicons', mode: 'client' },
     '~/plugins/vue-js-modal',
     '~/plugins/disqus',
-    '~/plugins/vue-instantsearch'
+    { src: '~/plugins/vue-instantsearch', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
