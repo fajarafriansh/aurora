@@ -13,13 +13,25 @@
           <link-secondary type="internal" to="/about" class="p-1">
             About
           </link-secondary>
-          <link-secondary type="internal" to="/blog" class="p-1 ml-4 lg:ml-6">
+          <link-secondary
+            type="internal"
+            to="/articles"
+            class="p-1 ml-4 lg:ml-6"
+          >
             Articles
           </link-secondary>
-          <link-secondary type="internal" to="/about" class="p-1 ml-4 lg:ml-6">
+          <link-secondary
+            type="internal"
+            to="/sitemap.xml"
+            class="p-1 ml-4 lg:ml-6"
+          >
             RSS
           </link-secondary>
-          <link-secondary type="internal" to="/about" class="p-1 ml-4 lg:ml-6">
+          <link-secondary
+            type="internal"
+            to="/contact"
+            class="p-1 ml-4 lg:ml-6"
+          >
             Contact
           </link-secondary>
         </div>

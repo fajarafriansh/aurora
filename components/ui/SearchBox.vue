@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <ais-instant-search
-      @click-outside="closeAutocomplete"
+      v-click-outside="closeAutocomplete"
       :search-client="searchClient"
       index-name="netlify_aurora"
     >
@@ -43,7 +43,9 @@
                   <ais-highlight attribute="title" :hit="hit" />
                 </nuxt-link>
               </div>
-              <span v-else class="flex justify-center py-4">No results found.</span>
+              <span v-else class="flex justify-center py-4">
+                No results found.
+              </span>
             </div>
           </div>
         </div>
