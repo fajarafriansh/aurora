@@ -96,11 +96,11 @@
           class="prose lg:prose-lg dark:prose-dark"
           v-html="$md.render(article.content.markdown)"
         ></article>
-        <div class="flex mt-16 space-x-4">
+        <div class="flex flex-wrap mt-16 space-x-4">
           <nuxt-link
             v-for="topic in topics"
             :key="topic.slug"
-            class="flex item-center p-1 bg-grayscale-7 rounded-full"
+            class="flex item-center bg-grayscale-7 border-2 border-transparent hover:border-primary-2 rounded-full"
             :to="`/topic/${topic.slug}`"
           >
             <img
