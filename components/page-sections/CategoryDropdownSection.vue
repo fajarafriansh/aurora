@@ -2,7 +2,7 @@
   <div class="bg-grayscale-2 dark:bg-grayscale-7 py-5">
     <div class="container mx-auto">
       <div class="flex items-center justify-between w-full">
-        <link-secondary type="internal" to="/article">
+        <link-secondary type="internal" to="/articles">
           <unicon name="arrow-left" />
           <span class="ml-2 font-medium">Back</span>
         </link-secondary>

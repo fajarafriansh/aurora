@@ -22,13 +22,6 @@
           </link-secondary>
           <link-secondary
             type="internal"
-            to="/sitemap.xml"
-            class="p-1 ml-4 lg:ml-6"
-          >
-            RSS
-          </link-secondary>
-          <link-secondary
-            type="internal"
             to="/contact"
             class="p-1 ml-4 lg:ml-6"
           >
@@ -42,7 +35,7 @@
           <link-bordered
             type="outbound"
             as="button"
-            to="https://instgram.com"
+            to="https://instagram.com"
             class="ml-4"
           >
             <unicon name="instagram" height="20" width="20" />

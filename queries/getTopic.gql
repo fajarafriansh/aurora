@@ -1,0 +1,31 @@
+query getTopic($slug: String!) {
+  topic(stage: PUBLISHED, where: {slug: $slug}) {
+    title
+    slug
+    coverImage {
+      url
+    }
+    posts(orderBy: date_DESC) {
+      title
+      slug
+      date
+      excerpt
+      author {
+        name
+        picture {
+          url(transformation: {image: {resize: {height: 60}}})
+        }
+      }
+      category {
+        title
+        slug
+        coverImage {
+          url(transformation: {image: {resize: {height: 60}}})
+        }
+      }
+      coverImage {
+        url(transformation: {image: {resize: {width: 600}}})
+      }
+    }
+  }
+}

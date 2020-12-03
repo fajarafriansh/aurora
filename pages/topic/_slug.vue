@@ -4,22 +4,22 @@
     <div class="container mx-auto">
       <div class="relative -mx-4 lg:mx-0">
         <img
-          :src="category.coverImage ? category.coverImage.url : '/banner.jpg'"
-          :alt="category.title"
+          :src="topic.coverImage ? topic.coverImage.url : '/banner.jpg'"
+          :alt="`#${topic.slug}`"
           class="w-full h-32 lg:h-68 object-cover lg:rounded-b-md"
         />
         <div
           class="flex flex-row lg:flex-col items-center lg:justify-center absolute inset-0 w-full lg:w-68 h-32 lg:h-68 backdrop-blur lg:rounded-bl-md"
         >
           <img
-            :src="category.coverImage ? category.coverImage.url : '/banner.jpg'"
-            :alt="category.title"
-            class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-md lg:rounded-lg ml-6 lg:ml-0"
+            :src="topic.coverImage ? topic.coverImage.url : '/topic.png'"
+            :alt="`#${topic.slug}`"
+            class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-full ml-6 lg:ml-0"
           />
           <span
             class="text-21 md:text-24 text-grayscale-2 font-medium md:font-semibold leading-normal tracking-normal lg:mt-6 ml-6 lg:ml-0"
           >
-            {{ category.title }}
+            {{ `#${topic.slug}` }}
           </span>
         </div>
       </div>
@@ -85,21 +85,21 @@
 </template>
 
 <script>
-import getCategory from '~/queries/getCategory'
+import getTopic from '~/queries/getTopic'
 import { createSEOMeta } from '~/utils/seo'
 
 export default {
   async asyncData({ app, route, error }) {
     try {
       const { data } = await app.apolloProvider.defaultClient.query({
-        query: getCategory,
+        query: getTopic,
         variables: {
           slug: route.params.slug,
         },
       })
       return {
-        category: data.category,
-        posts: data.category.posts,
+        topic: data.topic,
+        posts: data.topic.posts,
       }
     } catch (err) {
       error({
@@ -110,11 +110,11 @@ export default {
     }
   },
   head() {
-    const title = `${this.category.title} - Archivil`
-    const url = this.category.slug
+    const title = `#${this.topic.slug} - Archivil`
+    const url = this.topic.slug
     const image = this.topic.coverImage
       ? this.topic.coverImage.url
-      : '/banner.jpg'
+      : '/topic.png'
 
     return {
       title,
