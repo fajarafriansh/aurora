@@ -34,7 +34,7 @@
             >
               <div v-if="indices[0].hits.length > 0" class="flex-col">
                 <nuxt-link
-                  v-for="hit in indices[0].hits"
+                  v-for="hit in indices[0].hits.slice(0, 5)"
                   :key="hit.objectID"
                   class="block w-full hover:text-primary-1 py-2 px-4 cursor-pointer"
                   :to="hit.url"

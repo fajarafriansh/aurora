@@ -63,7 +63,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit'],
-  // modules: ['@nuxtjs/apollo', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
@@ -91,11 +90,6 @@ export default {
       name: 'Archivil',
     },
   },
-
-  // sitemap: {
-  //   hostname: process.env.HOST_NAME,
-  //   routes: [],
-  // },
 
   env: {
     baseUrl: process.env.HOST_NAME,
