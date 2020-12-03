@@ -1,0 +1,9 @@
+{
+  topics(stage: PUBLISHED, orderBy: publisedAt_DESC) {
+    title
+    slug
+    coverImage {
+      url(transformation: {image: {resize: {width: 200}}})
+    }
+  }
+}

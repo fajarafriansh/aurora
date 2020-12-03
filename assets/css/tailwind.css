@@ -37,7 +37,7 @@ body {
 }
 
 .text-body-2 {
-  @apply text-xs text-grayscale-5 leading-relaxed;
+  @apply text-sm text-grayscale-5 leading-relaxed;
 }
 
 .callout {

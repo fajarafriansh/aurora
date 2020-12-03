@@ -13,7 +13,16 @@
       </div>
       <h4 class="h4 p-6 flex-shrink">{{ title }}</h4>
     </div>
-    <p class="text-body-2 p-6 -mt-6">16 Comments</p>
+    <div class="flex items-center p-6 -mt-6">
+      <img
+        class="w-8 h-8 object-cover rounded-full"
+        :src="author.picture.url"
+        :alt="author.name"
+      />
+      <div class="ml-2">
+        <p class="callout font-normal">{{ author.name }}</p>
+      </div>
+    </div>
   </nuxt-link>
 </template>
 
@@ -33,6 +42,10 @@ export default {
       default: null,
     },
     category: {
+      type: Object,
+      default: null,
+    },
+    author: {
       type: Object,
       default: null,
     },

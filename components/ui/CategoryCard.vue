@@ -10,7 +10,7 @@
         class="category-card flex items-center justify-center w-full h-full rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1 transition duration-150 ease-in-out"
       >
         <div
-          class="backdrop-blur text-grayscale-2 text-sm lg:text-base font-medium text-center rounded-md py-2 px-4"
+          class="backdrop-blur20 text-grayscale-2 text-sm lg:text-base font-medium text-center rounded-md py-2 px-4"
         >
           {{ title }}
         </div>

@@ -20,9 +20,7 @@
         </nuxt-link>
         <p
           class="flex items-center justify-end text-body-2 col-span-2 lg:col-span-3"
-        >
-          {{ article.date | formatDate }}
-        </p>
+        ></p>
         <h1
           class="h1 col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6 lg:mt-0"
         >
@@ -96,22 +94,26 @@
           class="prose lg:prose-lg dark:prose-dark"
           v-html="$md.render(article.content.markdown)"
         ></article>
-        <div class="flex flex-wrap mt-16 space-x-4">
-          <nuxt-link
+        <div class="flex flex-wrap mt-16 -mx-2">
+          <div
             v-for="topic in topics"
             :key="topic.slug"
-            class="flex item-center bg-grayscale-7 border-2 border-transparent hover:border-primary-2 rounded-full"
-            :to="`/topic/${topic.slug}`"
+            class="p-2"
           >
-            <img
-              class="flex items-center w-8 h-8 object-cover rounded-full"
-              :src="topic.coverImage ? topic.coverImage.url : '/topic.png'"
-              :alt="topic.slug"
-            />
-            <span class="flex items-center mx-2">
-              {{ `#${topic.slug}` }}
-            </span>
-          </nuxt-link>
+            <nuxt-link
+              class="flex item-center bg-grayscale-7 border-2 border-transparent hover:border-primary-2 rounded-full"
+              :to="`/topic/${topic.slug}`"
+            >
+              <img
+                class="flex items-center w-8 h-8 object-cover rounded-full"
+                :src="topic.coverImage ? topic.coverImage.url : '/topic.png'"
+                :alt="topic.slug"
+              />
+              <span class="flex items-center mx-2">
+                {{ `#${topic.slug}` }}
+              </span>
+            </nuxt-link>
+          </div>
         </div>
         <Comment :data="article" class="mt-16" />
       </div>

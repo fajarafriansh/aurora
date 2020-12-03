@@ -15,6 +15,7 @@
           :description="article.excerpt"
           :date="article.date"
           :category="article.category"
+          :author="article.author"
         />
       </div>
     </div>

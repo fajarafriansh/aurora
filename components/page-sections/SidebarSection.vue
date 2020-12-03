@@ -12,20 +12,22 @@
         :category="post.category"
       />
     </div>
-    <!-- <section-header class="mt-10">Trending Topics</section-header>
+    <section-header class="mt-10">Trending Topics</section-header>
     <div class="flex flex-wrap mt-4 -mx-2">
       <TrendingTopicCard
         v-for="topic in topics"
         :key="topic.title"
         :title="topic.title"
-        :cover="topic.cover"
+        :slug="topic.slug"
+        :cover="topic.coverImage"
       />
-    </div> -->
+    </div>
   </aside>
 </template>
 
 <script>
 import getShowcasePost from '~/queries/getShowcasePost'
+import getTopics from '~/queries/getTopics'
 
 export default {
   apollo: {
@@ -33,16 +35,10 @@ export default {
       prefetch: true,
       query: getShowcasePost,
     },
+    topics: {
+      prefetch: true,
+      query: getTopics,
+    },
   },
-  // props: {
-  //   showcase: {
-  //     type: Object,
-  //     default: null,
-  //   },
-  //   topics: {
-  //     type: Array,
-  //     default: null,
-  //   },
-  // },
 }
 </script>
