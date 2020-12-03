@@ -12,6 +12,7 @@
           :description="article.excerpt"
           :date="article.date"
           :category="article.category"
+          :author="article.author"
           class="w-3/4 md:w-64 lg:w-1/4 lg:w-1/4 flex-shrink-0 lg:flex-shrink"
         />
       </div>

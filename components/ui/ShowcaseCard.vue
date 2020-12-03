@@ -12,7 +12,7 @@
         />
         <p class="callout ml-4">{{ category.title }}</p>
       </div>
-      <p class="text-body-2">UP</p>
+      <p class="text-body-2"></p>
     </div>
     <div class="article-cover relative w-full">
       <img
@@ -26,7 +26,7 @@
     </div>
     <div class="w-full p-6">
       <h3 class="h3">{{ title }}</h3>
-      <p class="text-body-2 mt-8">16 Comments</p>
+      <p class="text-body-2 mt-8"></p>
     </div>
   </nuxt-link>
 </template>

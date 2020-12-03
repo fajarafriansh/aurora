@@ -1,0 +1,9 @@
+{
+  topics(first: 4, stage: PUBLISHED) {
+    title
+    slug
+    coverImage {
+      url(transformation: {image: {resize: {width: 200}}})
+    }
+  }
+}

@@ -38,6 +38,7 @@
           :description="article.excerpt"
           :date="article.date"
           :category="article.category"
+          :author="article.author"
         />
       </div>
     </div>
@@ -112,8 +113,8 @@ export default {
   head() {
     const title = `${this.category.title} - Archivil`
     const url = this.category.slug
-    const image = this.topic.coverImage
-      ? this.topic.coverImage.url
+    const image = this.category.coverImage
+      ? this.category.coverImage.url
       : '/banner.jpg'
 
     return {
