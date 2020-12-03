@@ -1,5 +1,5 @@
 {
-  topics(stage: PUBLISHED, orderBy: publisedAt_DESC) {
+  topics(first: 4, stage: PUBLISHED) {
     title
     slug
     coverImage {
