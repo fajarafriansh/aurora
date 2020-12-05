@@ -15,11 +15,11 @@
       />
     </div>
     <div class="flex justify-center mt-12">
-      <link-primary :to="`/slug`">
+      <link-primary to="/articles">
         <span
           class="flex-1 py-1 border-b-3 border-primary-1 hover:border-primary-2 text-xl"
         >
-          See all stories
+          See all articles
         </span>
       </link-primary>
     </div>

@@ -32,7 +32,7 @@ export default {
       default: null,
     },
     cover: {
-      type: String,
+      type: Object,
       default: null,
     },
   },

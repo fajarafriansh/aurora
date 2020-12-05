@@ -95,11 +95,7 @@
           v-html="$md.render(article.content.markdown)"
         ></article>
         <div class="flex flex-wrap mt-16 -mx-2">
-          <div
-            v-for="topic in topics"
-            :key="topic.slug"
-            class="p-2"
-          >
+          <div v-for="topic in topics" :key="topic.slug" class="p-2">
             <nuxt-link
               class="flex item-center bg-grayscale-7 border-2 border-transparent hover:border-primary-2 rounded-full"
               :to="`/topic/${topic.slug}`"
