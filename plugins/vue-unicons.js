@@ -17,6 +17,7 @@ import {
   uniTimes,
   uniCalendarAlt,
   uniRedo,
+  uniEnvelopes,
 } from 'vue-unicons/src/icons'
 import 'vue-unicons/dist/vue-unicons-ssr.css'
 
@@ -37,6 +38,7 @@ Unicon.add([
   uniTimes,
   uniCalendarAlt,
   uniRedo,
+  uniEnvelopes,
 ])
 Vue.use(Unicon, {
   fill: 'currentColor',
