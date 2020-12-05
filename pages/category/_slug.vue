@@ -115,7 +115,7 @@ export default {
     const url = this.category.slug
     const image = this.category.coverImage
       ? this.category.coverImage.url
-      : '/banner.jpg'
+      : `${process.env.baseUrl}/banner.jpg`
 
     return {
       title,

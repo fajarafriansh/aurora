@@ -3,7 +3,7 @@
     <ais-instant-search
       v-click-outside="closeAutocomplete"
       :search-client="searchClient"
-      index-name="netlify_aurora"
+      :index-name="process.env.algoliaIndexName"
     >
       <ais-autocomplete>
         <div slot-scope="{ indices, refine }">
