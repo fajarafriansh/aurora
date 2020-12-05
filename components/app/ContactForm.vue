@@ -6,7 +6,7 @@
     data-netlify-honeypot="bot-field"
     class="pb-1 w-full mt-10"
   >
-    <input type="hidden" name="form-name" value="newsletter" />
+    <input type="hidden" name="form-name" value="contact" />
     <label class="block text-grayscale-5 dark:text-grayscale-4">
       <span class="block font-medium">Name</span>
       <input
