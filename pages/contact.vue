@@ -29,11 +29,10 @@ export default {
   head() {
     const title = 'Contact Us - Archivil'
     const url = '/contact'
-    const image = '/archivil-card.png'
 
     return {
       title,
-      meta: createSEOMeta({ title, image, url }),
+      meta: createSEOMeta({ title, url }),
     }
   },
 }

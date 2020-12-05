@@ -17,7 +17,7 @@ export default {
         title: 'Archivil',
         description:
           'Get to know all about Civil Engineering and its related in tiny bits of info',
-        image: '/archivil-card.png',
+        image: `${process.env.HOST_NAME}/archivil-card.png`,
         url: process.env.HOST_NAME,
       }),
     ],
@@ -95,5 +95,6 @@ export default {
     baseUrl: process.env.HOST_NAME,
     algoliaAppId: process.env.ALGOLIA_APP_ID,
     algoliaSearchApiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+    algoliaIndexName: process.env.ALGOLIA_INDEX_NAME,
   },
 }

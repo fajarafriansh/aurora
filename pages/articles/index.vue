@@ -74,7 +74,7 @@ export default {
     },
   },
   head() {
-    const title = 'Articles'
+    const title = 'All Articles - Archivil'
     const url = '/articles'
 
     return {

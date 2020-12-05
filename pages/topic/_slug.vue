@@ -115,7 +115,7 @@ export default {
     const url = this.topic.slug
     const image = this.topic.coverImage
       ? this.topic.coverImage.url
-      : '/topic.png'
+      : `${process.env.baseUrl}/topic.png`
 
     return {
       title,
