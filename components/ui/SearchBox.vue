@@ -3,7 +3,7 @@
     <ais-instant-search
       v-click-outside="closeAutocomplete"
       :search-client="searchClient"
-      :index-name="process.env.algoliaIndexName"
+      :index-name="indexName"
     >
       <ais-autocomplete>
         <div slot-scope="{ indices, refine }">
@@ -64,6 +64,7 @@ export default {
         process.env.algoliaAppId,
         process.env.algoliaSearchApiKey
       ),
+      indexName: process.env.algoliaIndexName,
       keywords: '',
       hideAutocomplete: false,
       isFocus: false,
