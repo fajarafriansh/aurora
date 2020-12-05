@@ -13,7 +13,7 @@
         class="text-base text-grayscale-7 dark:text-grayscale-2 font-medium lowercase leading-relaxed tracking-normal mt-2"
         :title="`#${slug}`"
       >
-        {{ `#${slug}` | truncate(15) }}
+        {{ `#${slug}` | truncate(13) }}
       </h4>
       <p class="text-sm mt-2">16 posts</p>
     </nuxt-link>
