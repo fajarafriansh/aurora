@@ -37,7 +37,7 @@
     <label class="block text-grayscale-5 dark:text-grayscale-4 mt-4">
       <span class="block font-medium">Message</span>
       <textarea
-        name="subject"
+        name="message"
         required="required"
         class="appearance-none block w-full bg-grayscale-1 dark:bg-grayscale-2 text-grayscale-5 border-current border-2 rounded-md placeholder-current focus:border-primary-2 focus:outline-none px-4 py-2 mt-2"
         row="8"
