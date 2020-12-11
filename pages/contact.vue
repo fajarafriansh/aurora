@@ -2,7 +2,7 @@
   <main>
     <CategoryDropdownSection />
     <div
-      class="bg-grayscale-3 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-12 border-t border-grayscale-3 dark:border-grayscale-6"
+      class="bg-grayscale-3 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-24 border-t border-grayscale-3 dark:border-grayscale-6"
     >
       <div class="container mx-auto">
         <h1 class="h1 text-center">Contact Us</h1>
@@ -13,7 +13,7 @@
         <div class="prose lg:prose-lg dark:prose-dark">
           <p>
             For partnership inquiries or cooperation request, you can contact us by filling the form below.
-          </p>          
+          </p>
         </div>
         <ContactForm />
       </div>
