@@ -12,18 +12,31 @@
       <div class="max-w-screen-md mx-auto pt-4 lg:pt-16 pb-16">
         <div class="prose lg:prose-lg dark:prose-dark">
           <p>
-            <strong>Archivil</strong> adalah sebuah portal Teknik Sipil berbahasa Indonesia. Kami fokus membahas berbagai hal seputar Teknik Sipil, Arsitektur, serta berbagai hal lainnya yang menarik untuk diberitakan.
+            <strong>Archivil</strong> adalah sebuah portal Teknik Sipil
+            berbahasa Indonesia. Kami fokus membahas berbagai hal seputar Teknik
+            Sipil, Arsitektur, serta berbagai hal lainnya yang menarik untuk
+            diberitakan.
           </p>
           <p>
-            Mulai dibangun sejak sejak 22 Januari 2018 dengan nama awal <strong>Civil Portal</strong>, pada pertengahan 2019 kami memutuskan untuk vakum. Akhirnya pada akhir 2020 kami memutuskan untuk kembali dan mengganti nama menjadi <strong>Archivil</strong>.
+            Mulai dibangun sejak sejak 22 Januari 2018 dengan nama awal
+            <strong>Civil Portal</strong>, pada pertengahan 2019 kami memutuskan
+            untuk vakum. Akhirnya pada akhir 2020 kami memutuskan untuk kembali
+            dan mengganti nama menjadi <strong>Archivil</strong>.
           </p>
           <p>
-            Kami hadir untuk membuat teknik sipil Indonesia menjadi lebih baik. Kami juga berusaha untuk memberikan solusi terhadap permasalahan-permasalahan mengenai teknik sipil maupun arsitektur.
+            Kami hadir untuk membuat teknik sipil Indonesia menjadi lebih baik.
+            Kami juga berusaha untuk memberikan solusi terhadap
+            permasalahan-permasalahan mengenai teknik sipil maupun arsitektur.
           </p>
           <p>
-            Ingin bergabung bersama kami atau ingin melakukan kerjasama? Silakan hubungi kami melalui halaman <nuxt-link to="/contact">Contact Us</nuxt-link>.
+            Ingin bergabung bersama kami atau ingin melakukan kerjasama? Silakan
+            hubungi kami melalui halaman
+            <nuxt-link to="/contact">Contact Us</nuxt-link>.
           </p>
-          <p class="mt-8">Kami bukanlah yang terbaik, tetapi kami selalu berusaha menghadirkan solusi yang terbaik</p>
+          <p class="mt-8">
+            Kami bukanlah yang terbaik, tetapi kami selalu berusaha menghadirkan
+            solusi yang terbaik.
+          </p>
         </div>
       </div>
     </div>

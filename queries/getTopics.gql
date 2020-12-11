@@ -5,5 +5,8 @@
     coverImage {
       url(transformation: {image: {resize: {width: 200}}})
     }
+    posts {
+      id
+    }
   }
 }

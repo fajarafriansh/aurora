@@ -15,7 +15,9 @@
       >
         {{ `#${slug}` | truncate(13) }}
       </h4>
-      <p class="text-sm mt-2">16 posts</p>
+      <p class="text-sm mt-2">
+        {{ `${posts.length} post${posts.length > 1 ? 's' : ''}` }}
+      </p>
     </nuxt-link>
   </div>
 </template>
@@ -32,6 +34,10 @@ export default {
       default: null,
     },
     cover: {
+      type: Object,
+      default: null,
+    },
+    posts: {
       type: Object,
       default: null,
     },

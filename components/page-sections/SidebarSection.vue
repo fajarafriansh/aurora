@@ -20,6 +20,7 @@
         :title="topic.title"
         :slug="topic.slug"
         :cover="topic.coverImage"
+        :posts="topic.posts"
       />
     </div>
   </aside>

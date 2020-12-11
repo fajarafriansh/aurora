@@ -12,7 +12,8 @@
       <div class="max-w-screen-md mx-auto pt-4 lg:pt-16 pb-16">
         <div class="prose lg:prose-lg dark:prose-dark">
           <p>
-            For partnership inquiries or cooperation request, you can contact us by filling the form below.
+            For partnership inquiries or cooperation request, you can contact us
+            by filling the form below.
           </p>
         </div>
         <ContactForm />
