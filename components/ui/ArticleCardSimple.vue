@@ -21,6 +21,7 @@
       />
       <div class="ml-2">
         <p class="callout font-normal">{{ author.name }}</p>
+        <p class="callout font-normal">{{ date | formatDate }}</p>
       </div>
     </div>
   </nuxt-link>
@@ -34,6 +35,10 @@ export default {
       default: null,
     },
     slug: {
+      type: String,
+      default: null,
+    },
+    date: {
       type: String,
       default: null,
     },
