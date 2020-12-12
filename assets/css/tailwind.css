@@ -178,3 +178,15 @@ div.vm--modal {
 .layout-leave-to {
   opacity: 0;
 }
+
+.prose a {
+  @apply no-underline
+}
+
+.prose ul > li::before {
+  @apply bg-grayscale-5
+}
+
+.dark-mode .prose ul > li::before {
+  @apply bg-grayscale-4
+}

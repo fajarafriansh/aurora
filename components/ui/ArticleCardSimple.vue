@@ -20,8 +20,8 @@
         :alt="author.name"
       />
       <div class="ml-2">
-        <p class="callout font-normal">{{ author.name }}</p>
-        <p class="callout font-normal">{{ date | formatDate }}</p>
+        <p class="text-sm text-grayscale-7 dark:text-grayscale-2 font-normal leading-normal">{{ author.name }}</p>
+        <p class="text-xs text-grayscale-5 dark:text-grayscale-4 leading-relaxed">{{ date | formatDate }}</p>
       </div>
     </div>
   </nuxt-link>

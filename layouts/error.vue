@@ -47,7 +47,7 @@
           class="flex flex-col items-center justify-center mt-12 md:mt-14 lg:mt-20"
         >
           <span class="text-xl md:text-3xl font-semibold text-center">
-            Oops! We found ome error
+            Oops! We found some error
           </span>
           <link-secondary to="/" as="button" class="flex flex-grow-0 mt-6">
             Back to Home
