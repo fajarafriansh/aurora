@@ -13,11 +13,11 @@ body {
 }
 
 .h1 {
-  @apply text-26 text-grayscale-7 font-medium leading-snug;
+  @apply text-26 text-grayscale-7 font-bold leading-snug;
 }
 
 .h2 {
-  @apply text-21 text-grayscale-7 font-medium leading-normal tracking-normal;
+  @apply text-21 text-grayscale-7 font-semibold leading-normal tracking-normal;
 }
 
 .h3 {
@@ -91,10 +91,10 @@ body {
 
 @screen md {
   .h1 {
-    @apply text-36 font-semibold;
+    @apply text-36;
   }
   .h2 {
-    @apply text-24 font-semibold;
+    @apply text-24;
   }
 
   .text-body-2 {
@@ -183,10 +183,12 @@ div.vm--modal {
   @apply no-underline
 }
 
-.prose ul > li::before {
+.prose ul > li::before,
+.prose ol > li::before {
   @apply bg-grayscale-5
 }
 
-.dark-mode .prose ul > li::before {
+.dark-mode .prose ul > li::before,
+.dark-mode .prose ol > li::before {
   @apply bg-grayscale-4
 }

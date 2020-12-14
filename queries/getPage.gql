@@ -1,0 +1,9 @@
+query getPage($slug: String!) {
+  page(stage: PUBLISHED, where: {slug: $slug}) {
+    title
+    slug
+    content {
+      markdown
+    }
+  }
+}

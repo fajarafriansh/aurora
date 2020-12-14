@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="flex flex-col justify-between rounded-lg bg-grayscale-2 dark:bg-grayscale-7 hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
-    :to="`/${slug}`"
+    :to="`/article/${slug}`"
   >
     <div>
       <p class="callout px-6 py-4">{{ category.title }}</p>
@@ -20,8 +20,16 @@
         :alt="author.name"
       />
       <div class="ml-2">
-        <p class="text-sm text-grayscale-7 dark:text-grayscale-2 font-normal leading-normal">{{ author.name }}</p>
-        <p class="text-xs text-grayscale-5 dark:text-grayscale-4 leading-relaxed">{{ date | formatDate }}</p>
+        <p
+          class="text-sm text-grayscale-7 dark:text-grayscale-2 font-normal leading-normal"
+        >
+          {{ author.name }}
+        </p>
+        <p
+          class="text-xs text-grayscale-5 dark:text-grayscale-4 leading-relaxed"
+        >
+          {{ date | formatDate }}
+        </p>
       </div>
     </div>
   </nuxt-link>

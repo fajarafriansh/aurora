@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-grayscale-2 dark:bg-grayscale-7 py-5">
+  <div class="bg-grayscale-2 dark:bg-grayscale-7 py-4 lg:py-5">
     <div class="container mx-auto">
       <div class="flex items-center justify-between w-full">
         <link-secondary type="internal" to="/articles">
