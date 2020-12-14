@@ -8,14 +8,16 @@
               Don't miss out anything about
               <span
                 class="text-primary-2 dark:text-primary-1 text-2xl lg:text-3xl"
-              >
-                Civil Engineering
-              </span>
-              <span class="-ml-1">, your favourite topic.</span>
+                >Civil Engineering</span
+              ><span>, your favourite topic.</span>
             </h2>
             <p class="mt-6">
               Subscribe to receive all the articles we publish in a concise
               format, perfect for busy engineers.
+            </p>
+            <p class="text-sm mt-4">
+              We will protect your data in accordance with our
+              <link-primary to="/kebijakan-privasi">privacy policy</link-primary>
             </p>
           </div>
           <Newsletter />

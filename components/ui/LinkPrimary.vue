@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <span>
     <nuxt-link
       v-if="type === 'internal'"
       :to="to"
@@ -19,7 +19,7 @@
     >
       <slot></slot>
     </a>
-  </div>
+  </span>
 </template>
 
 <script>
