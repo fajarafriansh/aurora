@@ -103,6 +103,9 @@ module.exports = {
               color: theme('colors.primary.3'),
             },
           },
+          blockquote: {
+            color: theme('colors.grayscale.7'),
+          },
         },
       },
       dark: {
@@ -140,6 +143,9 @@ module.exports = {
           },
           figcaption: {
             color: theme('colors.grayscale.3'),
+          },
+          blockquote: {
+            color: theme('colors.grayscale.4'),
           },
         },
       },

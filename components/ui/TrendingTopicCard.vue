@@ -38,7 +38,7 @@ export default {
       default: null,
     },
     posts: {
-      type: Object,
+      type: Array,
       default: null,
     },
   },
