@@ -183,12 +183,18 @@ div.vm--modal {
   @apply no-underline
 }
 
-.prose ul > li::before,
-.prose ol > li::before {
+.prose ul > li::before {
   @apply bg-grayscale-5
 }
 
-.dark-mode .prose ul > li::before,
-.dark-mode .prose ol > li::before {
+.dark-mode .prose ul > li::before {
   @apply bg-grayscale-4
+}
+
+.prose ol > li::before {
+  @apply text-grayscale-5
+}
+
+.dark-mode .prose ol > li::before {
+  @apply text-grayscale-4
 }
