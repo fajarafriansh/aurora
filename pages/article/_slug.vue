@@ -54,31 +54,32 @@
               <div class="grid grid-cols-3 gap-4">
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`https://twitter.com/intent/tweet?text=${article.title} ${baseUrl}/${article.slug}`"
-                  alt="Share to Twitter"
+                  :href="`https://twitter.com/intent/tweet?text=${article.title} ${baseUrl}/article/${article.slug}`"
+                  title="Share to Twitter"
                   target="_blank"
                 >
                   <unicon name="twitter" />
                 </a>
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`http://www.facebook.com/share.php?u=${baseUrl}/${article.slug}`"
-                  alt="Share to Facebook"
+                  :href="`http://www.facebook.com/share.php?u=${baseUrl}/article/${article.slug}`"
+                  title="Share to Facebook"
                   target="_blank"
                 >
                   <unicon name="facebook-f" />
                 </a>
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  href="#"
-                  alt="Share to Twitter"
+                  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${baseUrl}/article/${article.slug}&title=${encodeURIComponent(article.title)}`"
+                  title="Share to LinkedIn"
+                  target="_blank"
                 >
                   <unicon name="linkedin-alt" icon-style="monochrome" />
                 </a>
                 <a
                   class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
                   href="#"
-                  alt="Share to Twitter"
+                  title="Share to Twitter"
                 >
                   <unicon name="reddit-alien-alt" />
                 </a>

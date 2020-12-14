@@ -17,7 +17,9 @@
             </p>
             <p class="text-sm mt-4">
               We will protect your data in accordance with our
-              <link-primary to="/kebijakan-privasi">privacy policy</link-primary>
+              <link-primary to="/kebijakan-privasi">
+                privacy policy
+              </link-primary>
             </p>
           </div>
           <Newsletter />
