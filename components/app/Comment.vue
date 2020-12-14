@@ -2,7 +2,7 @@
   <Disqus
     v-if="data"
     :identifier="`archivil-${data.slug}`"
-    :url="baseUrl + '/' + data.slug"
+    :url="`${baseUrl}/article/${data.slug}`"
     :title="data.title"
   />
 </template>

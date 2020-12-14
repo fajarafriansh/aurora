@@ -2,7 +2,7 @@
   <main>
     <CategoryDropdownSection />
     <div
-      class="bg-grayscale-1 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-6 lg:pt-8 lg:pb-12 border-t border-grayscale-3 dark:border-grayscale-6"
+      class="bg-grayscale-1 dark:bg-grayscale-8 lg:bg-grayscale-2 lg:dark:bg-grayscale-7 py-6 lg:pt-8 lg:pb-12 border-t border-transparent lg:border-grayscale-3 dark:border-grayscale-6"
     >
       <div
         class="container mx-auto grid grid-cols-6 lg:grid-cols-12 lg:gap-x-6 lg:gap-y-2"
@@ -27,7 +27,7 @@
           {{ article.title }}
         </h1>
         <div
-          class="flex items-center col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6"
+          class="flex items-center justify-between lg:justify-start col-start-auto col-span-6 lg:col-start-2 lg:col-span-11 mt-6"
         >
           <div class="flex items-center">
             <div class="flex items-center">
@@ -37,57 +37,81 @@
               <span>{{ article.date | formatDate }}</span>
             </div>
           </div>
-          <dropdown class="ml-12" width="56">
-            <template #trigger>
-              <div
-                class="flex items-center hover:text-primary-2 dark-hover:text-primary-1"
-              >
-                <div class="flex items-center">
-                  <unicon name="upload" />
-                </div>
-                <div class="flex items-center ml-3">
-                  <span class="hidden md:block">Share</span>
-                </div>
-              </div>
-            </template>
-            <template #content>
-              <div class="grid grid-cols-3 gap-4">
-                <a
-                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`https://twitter.com/intent/tweet?text=${article.title} ${baseUrl}/article/${article.slug}`"
-                  title="Share to Twitter"
-                  target="_blank"
-                >
-                  <unicon name="twitter" />
-                </a>
-                <a
-                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`http://www.facebook.com/share.php?u=${baseUrl}/article/${article.slug}`"
-                  title="Share to Facebook"
-                  target="_blank"
-                >
-                  <unicon name="facebook-f" />
-                </a>
-                <a
-                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${baseUrl}/article/${article.slug}&title=${encodeURIComponent(article.title)}`"
-                  title="Share to LinkedIn"
-                  target="_blank"
-                >
-                  <unicon name="linkedin-alt" icon-style="monochrome" />
-                </a>
-                <a
-                  class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-blue-400 hover:bg-opacity-75"
-                  href="#"
-                  title="Share to Twitter"
-                >
-                  <unicon name="reddit-alien-alt" />
-                </a>
-              </div>
-            </template>
-          </dropdown>
+          <button
+            type="button"
+            class="flex items-center hover:text-primary-2 dark-hover:text-primary-1 ml-12 focus:outline-none"
+            @click="show"
+          >
+            <div class="flex items-center">
+              <unicon name="upload" />
+            </div>
+            <div class="flex items-center ml-3">
+              <span class="hidden md:block">Share</span>
+            </div>
+          </button>
         </div>
       </div>
+      <modal name="share" :width="400">
+        <div class="p-6">
+          <div class="w-full text-lg font-semibold text-center">Share</div>
+          <div class="grid grid-cols-4 gap-4 mt-4">
+            <a
+              class="flex flex-col items-center"
+              :href="`https://twitter.com/intent/tweet?text=${article.title} ${baseUrl}/article/${article.slug}`"
+              title="Share to Twitter"
+              target="_blank"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-twitter hover:bg-opacity-75"
+              >
+                <unicon name="twitter" />
+              </div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Twitter</div>
+            </a>
+            <a
+              class="flex flex-col items-center"
+              :href="`http://www.facebook.com/share.php?u=${baseUrl}/article/${article.slug}`"
+              title="Share to Facebook"
+              target="_blank"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-facebook hover:bg-opacity-75"
+              >
+                <unicon name="facebook-f" />
+              </div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Facebook</div>
+            </a>
+            <a
+              class="flex flex-col items-center"
+              :href="`https://www.linkedin.com/shareArticle?mini=true&url=${baseUrl}/article/${
+                article.slug
+              }&title=${encodeURIComponent(article.title)}`"
+              title="Share to LinkedIn"
+              target="_blank"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-linkedin hover:bg-opacity-75"
+              >
+                <unicon name="linkedin-alt" icon-style="monochrome" />
+              </div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">LinkedIn</div>
+            </a>
+            <a
+              class="flex flex-col items-center"
+              :href="`http://www.reddit.com/submit?url=${baseUrl}/article/${article.slug}&title=${encodeURIComponent(article.title)}`"
+              title="Share to Reddit"
+              target="_blank"
+            >
+              <div
+                class="flex items-center justify-center w-12 h-12 text-grayscale-1 p-2 rounded-md bg-reddit hover:bg-opacity-75"
+              >
+                <unicon name="reddit-alien-alt" />
+              </div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Reddit</div>
+            </a>
+          </div>              
+        </div>
+      </modal>
     </div>
     <div class="bg-grayscale-1 dark:bg-grayscale-8">
       <div class="container mx-auto">
@@ -150,6 +174,14 @@ export default {
     return {
       baseUrl: process.env.baseUrl,
     }
+  },
+  methods: {
+    show() {
+      this.$modal.show('share')
+    },
+    hide() {
+      this.$modal.hide('share')
+    },
   },
   head() {
     const title = this.article.title
