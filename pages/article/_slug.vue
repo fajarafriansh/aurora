@@ -66,7 +66,9 @@
               >
                 <unicon name="twitter" />
               </div>
-              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Twitter</div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">
+                Twitter
+              </div>
             </a>
             <a
               class="flex flex-col items-center"
@@ -79,7 +81,9 @@
               >
                 <unicon name="facebook-f" />
               </div>
-              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Facebook</div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">
+                Facebook
+              </div>
             </a>
             <a
               class="flex flex-col items-center"
@@ -94,11 +98,15 @@
               >
                 <unicon name="linkedin-alt" icon-style="monochrome" />
               </div>
-              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">LinkedIn</div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">
+                LinkedIn
+              </div>
             </a>
             <a
               class="flex flex-col items-center"
-              :href="`http://www.reddit.com/submit?url=${baseUrl}/article/${article.slug}&title=${encodeURIComponent(article.title)}`"
+              :href="`http://www.reddit.com/submit?url=${baseUrl}/article/${
+                article.slug
+              }&title=${encodeURIComponent(article.title)}`"
               title="Share to Reddit"
               target="_blank"
             >
@@ -107,9 +115,11 @@
               >
                 <unicon name="reddit-alien-alt" />
               </div>
-              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">Reddit</div>
+              <div class="mt-2 text-sm text-grayscale-6 dark:text-grayscale-3">
+                Reddit
+              </div>
             </a>
-          </div>              
+          </div>
         </div>
       </modal>
     </div>
@@ -175,14 +185,6 @@ export default {
       baseUrl: process.env.baseUrl,
     }
   },
-  methods: {
-    show() {
-      this.$modal.show('share')
-    },
-    hide() {
-      this.$modal.hide('share')
-    },
-  },
   head() {
     const title = this.article.title
     const url = `/article/${this.article.slug}`
@@ -193,6 +195,14 @@ export default {
       title,
       meta: createSEOMeta({ title, description, image, url }),
     }
+  },
+  methods: {
+    show() {
+      this.$modal.show('share')
+    },
+    hide() {
+      this.$modal.hide('share')
+    },
   },
 }
 </script>
