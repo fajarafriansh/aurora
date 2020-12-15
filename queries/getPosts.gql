@@ -5,18 +5,18 @@
     excerpt
     date
     coverImage {
-      url(transformation: {image: {resize: {width: 600}}})
+      url(transformation: {image: {resize: {width: 600}}, document: {output: {format: webp}}})
     }
     category {
       title
       coverImage {
-        url(transformation: {image: {resize: {height: 60}}})
+        url(transformation: {image: {resize: {height: 60}}, document: {output: {format: webp}}})
       }
     }
     author {
       name
       picture {
-        url(transformation: {image: {resize: {height: 60}}})
+        url(transformation: {image: {resize: {height: 60}}, document: {output: {format: webp}}})
       }
     }
   }

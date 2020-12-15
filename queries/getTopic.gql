@@ -13,18 +13,18 @@ query getTopic($slug: String!) {
       author {
         name
         picture {
-          url(transformation: {image: {resize: {height: 60}}})
+          url(transformation: {image: {resize: {height: 60}}, document: {output: {format: webp}}})
         }
       }
       category {
         title
         slug
         coverImage {
-          url(transformation: {image: {resize: {height: 60}}})
+          url(transformation: {image: {resize: {height: 60}}, document: {output: {format: webp}}})
         }
       }
       coverImage {
-        url(transformation: {image: {resize: {width: 600}}})
+        url(transformation: {image: {resize: {width: 600}}, document: {output: {format: webp}}})
       }
     }
   }

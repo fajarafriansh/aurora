@@ -3,7 +3,7 @@
     title
     slug
     coverImage {
-      url(transformation: {image: {resize: {width: 200}}})
+      url(transformation: {image: {resize: {width: 200}}, document: {output: {format: webp}}})
     }
     posts {
       id
