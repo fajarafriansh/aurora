@@ -30,6 +30,10 @@ module.exports = {
         },
         dark: '#1d2023',
         light: '#cdcfd4',
+        facebook: '#1778F2',
+        twitter: '#1DA1F2',
+        linkedin: '#0077B5',
+        reddit: '#FF4500',
       },
       spacing: {
         0.5: '2px',
