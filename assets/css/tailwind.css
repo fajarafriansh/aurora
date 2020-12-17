@@ -209,5 +209,5 @@ div.vm--modal {
 }
 
 .prose img {
-  @apply shadow-xl
+  @apply shadow-lg
 }
