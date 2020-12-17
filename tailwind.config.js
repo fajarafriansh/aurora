@@ -73,10 +73,14 @@ module.exports = {
         'little-wide': '.01em',
       },
       inset: {
+        2: '2px',
         '1/2': '50%',
       },
       zIndex: {
         '-10': '-10',
+      },
+      transitionDuration: {
+        0: '0ms',
       },
     },
     container: {

@@ -179,8 +179,17 @@ div.vm--modal {
   opacity: 0;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .prose a {
-  @apply no-underline
+  @apply no-underline font-medium
 }
 
 .prose ul > li::before {
@@ -197,4 +206,8 @@ div.vm--modal {
 
 .dark-mode .prose ol > li::before {
   @apply text-grayscale-4
+}
+
+.prose img {
+  @apply shadow-xl
 }

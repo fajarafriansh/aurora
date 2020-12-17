@@ -2,7 +2,7 @@ query getCategory($slug: String!) {
   category(stage: PUBLISHED, where: {slug: $slug}) {
     title
     coverImage {
-      url
+      url(transformation: {document: {output: {format: webp}}})
     }
     posts(orderBy: date_DESC) {
       title

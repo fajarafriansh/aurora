@@ -28,25 +28,43 @@
                 @keydown.esc="blurInput"
               />
             </div>
-            <div
-              v-if="keywords && !hideAutocomplete"
-              class="w-full bg-grayscale-1 dark:bg-grayscale-6 absolute z-50 border-2 border-primary-2 dark:border-primary-1 rounded-lg transform translate-y-2"
+            <transition
+              enter-active-class="transition ease-out duration-200"
+              enter-class="transform opacity-0"
+              enter-to-class="transform opacity-100"
+              leave-active-class="transition ease-in duration-75"
+              leave-class="transform opacity-100"
+              leave-to-class="transform opacity-0"
             >
-              <div v-if="indices[0].hits.length > 0" class="flex-col">
-                <nuxt-link
-                  v-for="hit in indices[0].hits.slice(0, 5)"
-                  :key="hit.objectID"
-                  class="block w-full hover:text-primary-1 py-2 px-4 cursor-pointer"
-                  :to="hit.url"
-                  @click.native="goToBlog"
+              <div
+                v-if="keywords && !hideAutocomplete"
+                class="w-full bg-grayscale-1 dark:bg-grayscale-6 absolute z-50 border-2 border-primary-2 dark:border-primary-1 rounded-lg transform translate-y-2"
+              >
+                <transition
+                  enter-active-class="transition ease-out duration-200"
+                  enter-class="transform opacity-0"
+                  enter-to-class="transform opacity-100"
+                  leave-active-class="transition ease-in duration-75"
+                  leave-class="transform opacity-100"
+                  leave-to-class="transform opacity-0"
                 >
-                  <ais-highlight attribute="title" :hit="hit" />
-                </nuxt-link>
+                  <div v-if="indices[0].hits.length > 0" class="flex-col">
+                    <nuxt-link
+                      v-for="hit in indices[0].hits.slice(0, 5)"
+                      :key="hit.objectID"
+                      class="block w-full hover:text-primary-1 py-2 px-4 cursor-pointer"
+                      :to="hit.url"
+                      @click.native="goToBlog"
+                    >
+                      <ais-highlight attribute="title" :hit="hit" />
+                    </nuxt-link>
+                  </div>
+                  <span v-else class="flex justify-center py-4">
+                    No results found.
+                  </span>
+                </transition>
               </div>
-              <span v-else class="flex justify-center py-4">
-                No results found.
-              </span>
-            </div>
+            </transition>
           </div>
         </div>
       </ais-autocomplete>
