@@ -51,7 +51,7 @@
           </button>
         </div>
       </div>
-      <modal name="share" :width="400">
+      <modal name="share" :width="400" :adaptive="true">
         <div class="p-6">
           <div class="w-full text-lg font-semibold text-center">Share</div>
           <div class="grid grid-cols-4 gap-4 mt-4">
