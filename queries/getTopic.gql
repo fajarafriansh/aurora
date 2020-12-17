@@ -3,7 +3,7 @@ query getTopic($slug: String!) {
     title
     slug
     coverImage {
-      url
+      url(transformation: {document: {output: {format: webp}}})
     }
     posts(orderBy: date_DESC) {
       title

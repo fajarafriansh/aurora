@@ -1,5 +1,7 @@
 <template>
-  <section class="bg-grayscale-2 dark:bg-grayscale-7 py-2">
+  <section
+    class="bg-grayscale-2 dark:bg-grayscale-7 py-2 transition duration-75 ease-in-out"
+  >
     <div class="container mx-auto">
       <div class="flex items-center mt-2">
         <button-bordered
@@ -37,7 +39,7 @@
         </div>
         <button
           v-show="showLess"
-          class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-3 dark:bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold text-grayscale-5 dark:text-grayscale-4 focus:outline-none border-2 border-transparent hover:border-primary-2 hover:text-primary-2 dark-hover:border-primary-1 dark-hover:text-primary-1 transition duration-150 ease-in-out"
+          class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-3 dark:bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold text-grayscale-5 dark:text-grayscale-4 focus:outline-none border-2 border-transparent hover:border-primary-2 hover:text-primary-2 dark-hover:border-primary-1 dark-hover:text-primary-1"
           @click="viewAll"
         >
           All ...
