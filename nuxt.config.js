@@ -42,10 +42,11 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~/plugins/filters',
-    { src: '~/plugins/vue-unicons', mode: 'client' },
     '~/plugins/vue-js-modal',
     '~/plugins/disqus',
+    { src: '~/plugins/vue-unicons', mode: 'client' },
     { src: '~/plugins/vue-instantsearch', mode: 'client' },
+    { src: '~/plugins/vue-gtag', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
