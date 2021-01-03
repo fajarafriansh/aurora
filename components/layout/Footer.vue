@@ -44,7 +44,7 @@
       </div>
       <div class="text-sm mt-6 lg:mt-8 text-center">
         <p>
-          &copy; 2018-present Archivil by
+          &copy; 2018-{{ currentYear }} Archivil by
           <a
             rel="noopener"
             target="_blank"
@@ -63,5 +63,10 @@ import Logo from '~/assets/svg/archivil-logo.svg?inline'
 
 export default {
   components: { Logo },
+  data() {
+    return {
+      currentYear: new Date().getFullYear(),
+    }
+  },
 }
 </script>
