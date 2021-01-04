@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between w-full">
         <link-secondary type="internal" to="/articles">
           <unicon name="arrow-left" />
-          <span class="ml-2 font-medium">Back</span>
+          <span class="ml-2 font-medium">All articles</span>
         </link-secondary>
         <div class="flex items-center justify-end">
           <button-secondary as="link" :function="show">

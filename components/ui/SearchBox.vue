@@ -79,10 +79,10 @@ export default {
   data() {
     return {
       searchClient: algoliasearch(
-        process.env.algoliaAppId,
-        process.env.algoliaSearchApiKey
+        process.env.ALGOLIA_APP_ID,
+        process.env.ALGOLIA_SEARCH_API_KEY
       ),
-      indexName: process.env.algoliaIndexName,
+      indexName: process.env.ALGOLIA_INDEX_NAME,
       keywords: '',
       hideAutocomplete: false,
       isFocus: false,

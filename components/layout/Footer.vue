@@ -35,7 +35,7 @@
           <link-bordered
             type="outbound"
             as="button"
-            to="https://instagram.com"
+            to="https://instagram.com/archivil.id"
             class="ml-4"
           >
             <unicon name="instagram" height="20" width="20" />
@@ -44,7 +44,7 @@
       </div>
       <div class="text-sm mt-6 lg:mt-8 text-center">
         <p>
-          &copy; 2018-{{ currentYear }} Archivil by
+          &copy; 2018-{{ present }} Archivil by
           <a
             rel="noopener"
             target="_blank"
@@ -55,6 +55,7 @@
         </p>
       </div>
     </div>
+    <CookieBanner />
   </div>
 </template>
 
@@ -65,7 +66,7 @@ export default {
   components: { Logo },
   data() {
     return {
-      currentYear: new Date().getFullYear(),
+      present: new Date().getFullYear(),
     }
   },
 }

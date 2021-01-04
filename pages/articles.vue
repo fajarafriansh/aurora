@@ -2,7 +2,7 @@
   <main>
     <CategoryDropdownSection />
     <div class="container mx-auto">
-      <section-header class="mt-12">Post List</section-header>
+      <section-header class="mt-12">All Articles</section-header>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mt-6 lg:mt-10"
       >

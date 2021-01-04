@@ -159,6 +159,13 @@
 import getArticle from '~/queries/getArticle'
 import { createSEOMeta } from '~/utils/seo'
 
+const truncate = (value, length) => {
+  if (value.length > length) {
+    return value.substring(0, length - 3) + '...'
+  }
+  return value
+}
+
 export default {
   async asyncData({ app, route, error }) {
     try {
@@ -182,13 +189,13 @@ export default {
   },
   data() {
     return {
-      baseUrl: process.env.baseUrl,
+      baseUrl: process.env.BASE_URL,
     }
   },
   head() {
     const title = this.article.title
     const url = `/article/${this.article.slug}`
-    const description = this.article.excerpt
+    const description = truncate(this.article.excerpt, 160)
     const image = this.article.coverImage.url
 
     return {

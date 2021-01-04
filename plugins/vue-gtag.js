@@ -7,8 +7,8 @@ export default ({ app }) => {
   Vue.use(
     VueGtag,
     {
-      config: { id: 'G-JPR30SPHFF' },
-      appName: 'Archivil',
+      config: { id: process.env.GA_MEASUREMENT_ID },
+      appName: process.env.GA_APP_NAME,
       bootstrap: getGDPR === 'true',
       enabled: getGDPR === 'true',
       pageTrackerScreenviewEnabled: true,

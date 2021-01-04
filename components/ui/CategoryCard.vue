@@ -4,7 +4,11 @@
     :to="`/category/${slug}`"
     :class="widthClasses"
   >
-    <img class="w-full h-full object-cover rounded-lg" :src="cover" :alt="title" />
+    <img
+      class="w-full h-full object-cover rounded-lg"
+      :src="cover"
+      :alt="title"
+    />
     <div class="absolute inset-0 mx-auto lg:p-2" :class="borderClasses">
       <div
         class="category-card flex items-center justify-center w-full h-full rounded-lg border-2 border-transparent hover:border-primary-2 dark-hover:border-primary-1 transition duration-150 ease-in-out"

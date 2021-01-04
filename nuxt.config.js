@@ -93,9 +93,11 @@ export default {
   },
 
   env: {
-    baseUrl: process.env.HOST_NAME,
-    algoliaAppId: process.env.ALGOLIA_APP_ID,
-    algoliaSearchApiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-    algoliaIndexName: process.env.ALGOLIA_INDEX_NAME,
+    BASE_URL: process.env.HOST_NAME,
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY,
+    ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
+    GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
+    GA_APP_NAME: process.env.GA_APP_NAME,
   },
 }
