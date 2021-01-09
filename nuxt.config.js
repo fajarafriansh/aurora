@@ -34,6 +34,14 @@ export default {
           'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
       },
     ],
+    script: [
+      {
+        src: 'https://static.cloudflareinsights.com/beacon.min.js',
+        'data-cf-beacon': '{"token": "8e3d9d66306a4599a3e448e23daf7fc2"}',
+        body: true,
+        async: true,
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
