@@ -40,6 +40,7 @@ export default {
         'data-cf-beacon': '{"token": "8e3d9d66306a4599a3e448e23daf7fc2"}',
         body: true,
         async: true,
+        defer: true,
       },
     ],
   },
