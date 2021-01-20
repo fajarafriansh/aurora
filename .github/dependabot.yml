@@ -10,6 +10,7 @@ updates:
     - fajarafriansh
   assignees:
     - fajarafriansh
+  target-branch: "develop"
   labels:
     - dependencies
   commit-message:
