@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
-    "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.4",
     "@tailwindcss/typography": "^0.2.0",
-    "algoliasearch": "^4.8.3",
+    "algoliasearch": "^4.8.4",
     "core-js": "^3.8.3",
     "graphql-tag": "^2.11.0",
     "markdown-it-prism": "^2.1.4",
