@@ -8,6 +8,7 @@
       class="w-full h-full object-cover rounded-lg"
       :src="cover"
       :alt="title"
+      loading="lazy"
     />
     <div class="absolute inset-0 mx-auto lg:p-2" :class="borderClasses">
       <div
