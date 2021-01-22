@@ -7,6 +7,7 @@
           :src="topic.coverImage ? topic.coverImage.url : '/banner.jpg'"
           :alt="`#${topic.slug}`"
           class="w-full h-32 lg:h-68 object-cover lg:rounded-b-md"
+          loading="lazy"
         />
         <div
           class="flex flex-row lg:flex-col items-center lg:justify-center absolute inset-0 w-full lg:w-68 h-32 lg:h-68 backdrop-blur lg:rounded-bl-md"
@@ -15,6 +16,7 @@
             :src="topic.coverImage ? topic.coverImage.url : '/topic.png'"
             :alt="`#${topic.slug}`"
             class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-full ml-6 lg:ml-0"
+            loading="lazy"
           />
           <span
             class="text-21 md:text-24 text-grayscale-2 font-medium md:font-semibold leading-normal tracking-normal lg:mt-6 ml-6 lg:ml-0"

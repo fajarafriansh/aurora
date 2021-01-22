@@ -9,6 +9,7 @@
           class="w-8 h-8 object-cover rounded-md lg:rounded-lg"
           :src="category.coverImage.url"
           :alt="category.title"
+          loading="lazy"
         />
         <p class="callout ml-4">{{ category.title }}</p>
       </div>
@@ -19,6 +20,7 @@
         class="w-full h-48 md:h-auto object-cover"
         :src="cover"
         :alt="title"
+        loading="lazy"
       />
       <div
         class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
