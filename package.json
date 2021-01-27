@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/markdownit": "^2.0.0",
-    "@nuxtjs/pwa": "^3.3.4",
+    "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/typography": "^0.2.0",
     "algoliasearch": "^4.8.4",
     "core-js": "^3.8.3",
