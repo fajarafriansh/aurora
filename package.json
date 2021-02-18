@@ -19,7 +19,7 @@
     "core-js": "^3.8.3",
     "graphql-tag": "^2.11.0",
     "markdown-it-prism": "^2.1.4",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.0",
     "tailwindcss-filters": "^3.0.0",
     "vue-disqus": "^4.0.1",
     "vue-gtag": "^1.11.0",
