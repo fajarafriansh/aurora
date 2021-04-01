@@ -16,7 +16,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/typography": "^0.2.0",
     "algoliasearch": "^4.8.5",
-    "core-js": "^3.9.0",
+    "core-js": "^3.10.0",
     "graphql-tag": "^2.11.0",
     "markdown-it-prism": "^2.1.4",
     "nuxt": "^2.15.2",
