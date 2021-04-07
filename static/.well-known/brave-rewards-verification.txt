@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: civilportal.ga
+Token: b1eecd391b136fe42c42fb51acf7c93a35d4668b14de14b728f53af5f57560cc
