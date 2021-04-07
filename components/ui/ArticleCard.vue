@@ -10,7 +10,6 @@
             class="w-8 h-8 lg:w-14 lg:h-14 object-cover rounded-md lg:rounded-lg lg:absolute lg:inset-0 lg:-ml-22"
             :src="category.coverImage.url"
             :alt="category.title"
-            loading="lazy"
           />
           <div
             class="callout-shape text-grayscale-2 dark:text-grayscale-7 hidden lg:block"
@@ -36,7 +35,6 @@
           class="w-full h-48 md:h-auto object-cover"
           :src="cover.url"
           :alt="title"
-          loading="lazy"
         />
         <div
           class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
@@ -50,7 +48,6 @@
             class="w-8 h-8 object-cover rounded-full"
             :src="author.picture.url"
             :alt="author.name"
-            loading="lazy"
           />
           <div class="ml-4">
             <p class="callout">{{ author.name }}</p>
