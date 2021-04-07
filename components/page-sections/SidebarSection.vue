@@ -13,17 +13,19 @@
       />
     </div>
     <div class="lg:sticky lg:top-0 lg:pt-1">
-      <section-header class="mt-10">Trending Topics</section-header>
-      <div class="flex flex-wrap mt-4 -mx-2">
-        <TrendingTopicCard
-          v-for="topic in topics"
-          :key="topic.title"
-          :title="topic.title"
-          :slug="topic.slug"
-          :cover="topic.coverImage"
-          :posts="topic.posts"
-        />
-      </div>
+      <section-header class="mt-10">Topics for You</section-header>
+      <client-only>
+        <div class="flex flex-wrap mt-4 -mx-2">
+          <TrendingTopicCard
+            v-for="topic in topics.slice(0, 4)"
+            :key="topic.title"
+            :title="topic.title"
+            :slug="topic.slug"
+            :cover="topic.coverImage"
+            :posts="topic.posts"
+          />
+        </div>
+      </client-only>
     </div>
   </aside>
 </template>
@@ -41,6 +43,21 @@ export default {
     topics: {
       prefetch: true,
       query: getTopics,
+    },
+  },
+  created() {
+    this.randomize()
+  },
+  methods: {
+    randomize() {
+      if (this.topics) {
+        for (let i = this.topics.length - 1; i > 0; i--) {
+          const randomIndex = Math.floor(Math.random() * i)
+          const temp = this.topics[i]
+          this.$set(this.topics, i, this.topics[randomIndex])
+          this.$set(this.topics, randomIndex, temp)
+        }
+      }
     },
   },
 }

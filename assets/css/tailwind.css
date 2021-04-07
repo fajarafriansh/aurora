@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   @apply bg-grayscale-3 font-inter text-grayscale-5 text-base leading-normal tracking-wide antialiased box-border;

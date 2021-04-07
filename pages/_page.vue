@@ -30,7 +30,7 @@ export default {
       const { data } = await app.apolloProvider.defaultClient.query({
         query: getPage,
         variables: {
-          slug: route.params.slug,
+          slug: route.params.page,
         },
       })
       return {
