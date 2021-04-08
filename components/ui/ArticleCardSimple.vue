@@ -6,12 +6,7 @@
     <div>
       <p class="callout px-6 py-4">{{ category.title }}</p>
       <div class="article-cover relative w-full">
-        <img
-          class="w-full h-40 object-cover"
-          :src="cover"
-          :alt="title"
-          loading="lazy"
-        />
+        <img class="w-full h-40 object-cover" :src="cover" :alt="title" />
         <div
           class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
         ></div>
@@ -23,7 +18,6 @@
         class="w-8 h-8 object-cover rounded-full"
         :src="author.picture.url"
         :alt="author.name"
-        loading="lazy"
       />
       <div class="ml-2">
         <p
