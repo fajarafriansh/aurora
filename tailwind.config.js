@@ -144,8 +144,9 @@ module.exports = {
       }),
     },
     container: {
+      center: true,
       padding: {
-        default: '1rem',
+        DEFAULT: '1rem',
         md: '3rem',
       },
     },
