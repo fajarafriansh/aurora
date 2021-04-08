@@ -85,10 +85,68 @@ module.exports = {
       transitionDuration: {
         0: '0ms',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.grayscale.8'),
+            a: {
+              color: theme('colors.primary.2'),
+              '&:hover': {
+                color: theme('colors.primary.3'),
+              },
+            },
+            blockquote: {
+              color: theme('colors.grayscale.7'),
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.grayscale.2'),
+            a: {
+              color: theme('colors.primary.1'),
+              '&:hover': {
+                color: theme('colors.primary.2'),
+              },
+            },
+            h1: {
+              color: theme('colors.grayscale.2'),
+            },
+            h2: {
+              color: theme('colors.grayscale.2'),
+            },
+            h3: {
+              color: theme('colors.grayscale.2'),
+            },
+            h4: {
+              color: theme('colors.grayscale.2'),
+            },
+            h5: {
+              color: theme('colors.grayscale.2'),
+            },
+            h6: {
+              color: theme('colors.grayscale.2'),
+            },
+            strong: {
+              color: theme('colors.grayscale.2'),
+            },
+            code: {
+              color: theme('colors.grayscale.3'),
+            },
+            figcaption: {
+              color: theme('colors.grayscale.3'),
+            },
+            blockquote: {
+              color: theme('colors.grayscale.4'),
+            },
+          },
+        },
+      }),
     },
     container: {
+      center: true,
       padding: {
-        default: '1rem',
+        DEFAULT: '1rem',
         md: '3rem',
       },
     },
@@ -104,63 +162,6 @@ module.exports = {
       blur20: 'blur(20px)',
     },
     darkSelector: '.dark-mode',
-    typography: (theme) => ({
-      default: {
-        css: {
-          color: theme('colors.grayscale.8'),
-          a: {
-            color: theme('colors.primary.2'),
-            '&:hover': {
-              color: theme('colors.primary.3'),
-            },
-          },
-          blockquote: {
-            color: theme('colors.grayscale.7'),
-          },
-        },
-      },
-      dark: {
-        css: {
-          color: theme('colors.grayscale.2'),
-          a: {
-            color: theme('colors.primary.1'),
-            '&:hover': {
-              color: theme('colors.primary.2'),
-            },
-          },
-          h1: {
-            color: theme('colors.grayscale.2'),
-          },
-          h2: {
-            color: theme('colors.grayscale.2'),
-          },
-          h3: {
-            color: theme('colors.grayscale.2'),
-          },
-          h4: {
-            color: theme('colors.grayscale.2'),
-          },
-          h5: {
-            color: theme('colors.grayscale.2'),
-          },
-          h6: {
-            color: theme('colors.grayscale.2'),
-          },
-          strong: {
-            color: theme('colors.grayscale.2'),
-          },
-          code: {
-            color: theme('colors.grayscale.3'),
-          },
-          figcaption: {
-            color: theme('colors.grayscale.3'),
-          },
-          blockquote: {
-            color: theme('colors.grayscale.4'),
-          },
-        },
-      },
-    }),
   },
   variants: {
     backgroundColor: [
