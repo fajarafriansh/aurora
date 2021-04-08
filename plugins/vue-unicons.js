@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Unicon from 'vue-unicons'
+import Unicon from 'vue-unicons/dist/vue-unicons-vue2.umd'
 import {
   uniMoon,
   uniSun,
@@ -18,8 +18,8 @@ import {
   uniCalendarAlt,
   uniRedo,
   uniEnvelopes,
-} from 'vue-unicons/src/icons'
-import 'vue-unicons/dist/vue-unicons-ssr.css'
+} from 'vue-unicons/dist/icons'
+// import 'vue-unicons/dist/vue-unicons-ssr.css'
 
 Unicon.add([
   uniSun,
