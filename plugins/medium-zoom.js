@@ -12,4 +12,4 @@ Vue.mixin({
   updated() {
     initZoom()
   },
-}
+})
