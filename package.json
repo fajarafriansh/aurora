@@ -19,6 +19,7 @@
     "core-js": "^3.11.1",
     "graphql-tag": "^2.11.0",
     "markdown-it-prism": "^2.1.6",
+    "medium-zoom": "^1.0.6",
     "nuxt": "^2.15.4",
     "tailwindcss-filters": "^3.0.0",
     "vue-disqus": "^4.0.1",
