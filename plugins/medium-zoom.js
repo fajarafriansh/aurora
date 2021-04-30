@@ -5,10 +5,11 @@ const initZoom = () => {
   mediumZoom('#app img:not(.medium-zoom-image)')
 }
 
-mounted() {
-  initZoom()
-}
-
-updated() {
-  initZoom()
+Vue.mixin({
+  mounted() {
+    initZoom()
+  },
+  updated() {
+    initZoom()
+  },
 }
