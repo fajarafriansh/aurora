@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import zoom from 'medium-zoom'
+import mediumZoom from 'medium-zoom'
 
 const initZoom = () => {
-  zoom('img:not(.medium-zoom-image)')
+  mediumZoom('#app img:not(.medium-zoom-image)')
 }
 
 mounted() {
