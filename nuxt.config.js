@@ -56,7 +56,6 @@ export default {
     { src: '~/plugins/vue-unicons', mode: 'client' },
     { src: '~/plugins/vue-instantsearch', mode: 'client' },
     { src: '~/plugins/vue-gtag', mode: 'client' },
-    '~/plugins/medium-zoom',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
