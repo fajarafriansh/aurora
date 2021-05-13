@@ -20,7 +20,7 @@
     "graphql-tag": "^2.12.4",
     "markdown-it-prism": "^2.1.6",
     "medium-zoom": "^1.0.6",
-    "nuxt": "^2.15.5",
+    "nuxt": "^2.15.6",
     "tailwindcss-filters": "^3.0.0",
     "vue-disqus": "^4.0.1",
     "vue-gtag": "^1.16.1",
