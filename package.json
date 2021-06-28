@@ -18,7 +18,7 @@
     "algoliasearch": "^4.10.2",
     "core-js": "^3.15.1",
     "graphql-tag": "^2.12.5",
-    "markdown-it-prism": "^2.1.6",
+    "markdown-it-prism": "^2.1.7",
     "nuxt": "^2.15.7",
     "tailwindcss-filters": "^3.0.0",
     "vue-disqus": "^4.0.1",
