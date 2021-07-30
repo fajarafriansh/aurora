@@ -1,8 +1,15 @@
 <template>
   <section
-    class="bg-grayscale-2 dark:bg-grayscale-7 py-2 transition duration-75 ease-in-out"
+    class="
+      py-2
+      transition
+      duration-75
+      ease-in-out
+      bg-grayscale-2
+      dark:bg-grayscale-7
+    "
   >
-    <div class="container mx-auto">
+    <div class="container">
       <div class="flex items-center mt-2">
         <button-bordered
           v-show="!showLess"
@@ -13,17 +20,32 @@
           <unicon name="times" height="20" width="20" />
         </button-bordered>
         <span
-          class="text-grayscale-5 dark:text-grayscale-4 text-sm font-medium uppercase leading-none tracking-wider"
+          class="
+            text-sm
+            font-medium
+            leading-none
+            tracking-wider
+            uppercase
+            text-grayscale-5
+            dark:text-grayscale-4
+          "
         >
           Categories
         </span>
       </div>
       <div
-        class="flex items-start justify-between space-x-2 lg:space-x-4 overflow-x-auto"
+        class="
+          flex
+          items-start
+          justify-between
+          space-x-2
+          overflow-x-auto
+          lg:space-x-4
+        "
         :class="overflowClasses"
       >
         <div
-          class="flex items-center justify-start -mx-1 lg:-mx-2 mt-2"
+          class="flex items-center justify-start w-full mt-2 -mx-1 lg:-mx-2"
           :class="wrapClasses"
         >
           <CategoryCard
@@ -39,7 +61,26 @@
         </div>
         <button
           v-show="showLess"
-          class="w-12 h-14 lg:w-16 lg:h-20 bg-grayscale-3 dark:bg-grayscale-6 rounded-lg mt-4 p-2 lg:p-4 text-center text-sm lg:text-base font-semibold text-grayscale-5 dark:text-grayscale-4 focus:outline-none border-2 border-transparent hover:border-primary-2 hover:text-primary-2 dark-hover:border-primary-1 dark-hover:text-primary-1"
+          class="
+            w-12
+            p-2
+            mt-4
+            text-sm
+            font-semibold
+            text-center
+            border-2 border-transparent
+            rounded-lg
+            h-14
+            lg:w-16 lg:h-20
+            bg-grayscale-3
+            dark:bg-grayscale-6
+            lg:p-4 lg:text-base
+            text-grayscale-5
+            dark:text-grayscale-4
+            focus:outline-none
+            hover:border-primary-2 hover:text-primary-2
+            dark-hover:border-primary-1 dark-hover:text-primary-1
+          "
           @click="viewAll"
         >
           All ...
