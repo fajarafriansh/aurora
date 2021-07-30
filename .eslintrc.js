@@ -13,7 +13,11 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'tailwindcss'],
   // add your custom rules here
-  rules: {},
+  rules: {
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/no-contradicting-classname": "error"
+  },
 }

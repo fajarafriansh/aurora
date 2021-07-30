@@ -148,6 +148,7 @@ module.exports = {
       padding: {
         DEFAULT: '1rem',
         md: '3rem',
+        lg: '5rem',
       },
     },
     filter: {

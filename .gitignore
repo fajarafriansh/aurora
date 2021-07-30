@@ -93,3 +93,4 @@ sw.*
 .netlify
 
 .theia
+.vscode
