@@ -45,7 +45,7 @@
         :class="overflowClasses"
       >
         <div
-          class="flex items-center justify-start w-full mt-2 -mx-1 lg:-mx-2"
+          class="flex items-center justify-start mt-2 -mx-1 lg:w-full lg:-mx-2"
           :class="wrapClasses"
         >
           <CategoryCard
