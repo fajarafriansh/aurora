@@ -1,19 +1,19 @@
 <template>
   <header
-    class="top-0 h-17 fixed z-20 w-full bg-grayscale-1 dark:bg-grayscale-6 py-3 border-b border-grayscale-2 dark:border-grayscale-6 transform translate-y-0 transition duration-300 ease-out"
+    class="fixed top-0 z-20 w-full py-3 transition duration-300 ease-out transform translate-y-0 border-b h-17 bg-grayscale-1 dark:bg-grayscale-6 border-grayscale-2 dark:border-grayscale-6"
     :class="[
       { 'transform -translate-y-full shadow-none': !showNavbar },
       lastScrollPosition > 10 ? 'shadow-lg' : '',
     ]"
   >
-    <div class="container mx-auto flex items-center justify-between">
+    <div class="container flex items-center justify-between mx-auto">
       <nuxt-link
         to="/"
-        class="flex items-center justify-start h-10 w-10 md:w-34"
+        class="flex items-center justify-start w-10 h-10 md:w-34"
       >
         <Logo />
       </nuxt-link>
-      <div class="flex items-center justify-end ml-4">
+      <div class="flex items-center justify-end w-full ml-4 lg:w-1/3">
         <SearchBox class="flex-1 max-w-sm" />
         <ColormodePicker class="ml-4 lg:ml-8" />
       </div>
