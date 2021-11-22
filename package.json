@@ -25,7 +25,7 @@
     "vue-gtag": "^1.16.1",
     "vue-instantsearch": "^4.0.0",
     "vue-js-modal": "^2.0.1",
-    "vue-unicons": "^3.2.1"
+    "vue-unicons": "^3.3.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
