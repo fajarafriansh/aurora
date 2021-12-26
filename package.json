@@ -23,7 +23,7 @@
     "tailwindcss-filters": "^3.0.0",
     "vue-disqus": "^4.0.1",
     "vue-gtag": "^1.16.1",
-    "vue-instantsearch": "^4.0.0",
+    "vue-instantsearch": "^4.3.0",
     "vue-js-modal": "^2.0.1",
     "vue-unicons": "^3.3.1"
   },
