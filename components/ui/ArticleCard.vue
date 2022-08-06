@@ -14,7 +14,7 @@
         hover:bg-grayscale-1
         dark-hover:bg-grayscale-6
       "
-      :to="`/article/${slug}`"
+      :to="`/blog/${slug}`"
     >
       <div class="flex items-center justify-between px-4 py-3 lg:px-6 lg:py-4">
         <div class="flex items-center justify-start">

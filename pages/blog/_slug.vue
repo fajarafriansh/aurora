@@ -194,7 +194,7 @@ export default {
   },
   head() {
     const title = this.article.title
-    const url = `/article/${this.article.slug}`
+    const url = `/blog/${this.article.slug}`
     const description = truncate(this.article.excerpt, 160)
     const image = this.article.coverImage.url
 

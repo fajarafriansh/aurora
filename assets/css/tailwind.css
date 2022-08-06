@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-grayscale-3 font-inter text-grayscale-5 text-base leading-normal tracking-wide antialiased box-border;
+  @apply bg-white font-inter text-grayscale-5 text-base leading-normal tracking-wide antialiased box-border;
 }
 
 *,
@@ -17,7 +17,7 @@ body {
 }
 
 .h2 {
-  @apply text-21 text-grayscale-7 font-semibold leading-normal tracking-normal;
+  @apply text-lg text-grayscale-7 font-semibold leading-normal tracking-normal;
 }
 
 .h3 {
@@ -42,6 +42,11 @@ body {
 
 .callout {
   @apply text-sm text-grayscale-7 font-medium leading-normal;
+}
+
+a.nuxt-link-active,
+a.nuxt-link-exact-active {
+  @apply text-primary-2;
 }
 
 #logo .mobile {

@@ -15,7 +15,7 @@
       />
     </div>
     <div class="flex justify-center mt-12">
-      <link-primary to="/articles">
+      <link-primary to="/blog">
         <span
           class="flex-1 py-1 border-b-3 border-primary-1 hover:border-primary-2 text-xl"
         >

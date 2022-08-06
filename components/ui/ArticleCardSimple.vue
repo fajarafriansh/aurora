@@ -1,17 +1,27 @@
 <template>
   <nuxt-link
-    class="flex flex-col justify-between rounded-lg bg-grayscale-2 dark:bg-grayscale-7 hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
+    class="flex flex-col justify-between rounded-3x hover:bg-grayscale-1 dark-hover:bg-grayscale-6 transition duration-300 ease-in-out"
     :to="`/article/${slug}`"
   >
     <div>
-      <p class="callout px-6 py-4">{{ category.title }}</p>
       <div class="article-cover relative w-full">
-        <img class="w-full h-40 object-cover" :src="cover" :alt="title" />
-        <div
+        <img class="w-full h-3/5 object-cover rounded-3xl" :src="cover" :alt="title" />
+        <!-- <div
           class="overlay bg-grayscale-8 opacity-0 absolute inset-0 w-full h-full"
-        ></div>
+        ></div> -->
       </div>
-      <h4 class="h4 p-6 flex-shrink">{{ title }}</h4>
+      <div class="p-6">
+        <nuxt-link
+          class="flex items-center callout col-span-3 lg:col-span-8"
+          :to="`/category/${category.slug}`"
+        >
+          {{ category.title }}
+        </nuxt-link>
+        <h2 class="h2 mt-6 flex-shrink">{{ title }}</h2>
+        <h2 class="mt-8">{{ excerpt }}</h2>
+      </div>
+
+
     </div>
     <div class="flex items-center p-6 -mt-6">
       <img
@@ -43,6 +53,10 @@ export default {
       default: null,
     },
     slug: {
+      type: String,
+      default: null,
+    },
+    excerpt: {
       type: String,
       default: null,
     },

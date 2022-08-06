@@ -13,8 +13,27 @@
       >
         <Logo />
       </nuxt-link>
-      <div class="flex items-center justify-end w-full ml-4 lg:w-1/3">
-        <SearchBox class="flex-1 max-w-sm" />
+      <div class="flex items-center justify-center w-full">
+        <link-secondary type="internal" to="/about" class="p-1">
+          About us
+        </link-secondary>
+        <link-secondary
+          type="internal"
+          to="/blog"
+          class="p-1 ml-4 lg:ml-6"
+        >
+          Blog
+        </link-secondary>
+        <link-secondary
+          type="internal"
+          to="/contact"
+          class="p-1 ml-4 lg:ml-6"
+        >
+          Contact
+        </link-secondary>
+      </div>
+      <div class="flex items-center justify-end">
+        <!-- <SearchBox class="flex-1 max-w-sm" /> -->
         <ColormodePicker class="ml-4 lg:ml-8" />
       </div>
     </div>
