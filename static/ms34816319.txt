@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "dtengineer.xyz",
+  "Id": "ec072755-d46a-4e9c-aa61-ee137580d060"
+}
